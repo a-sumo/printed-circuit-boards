@@ -1,0 +1,12 @@
+[
+  {
+    "name": "Arduino Nano",
+    "file": "arduino-nano.json",
+    "size": "134KB"
+  },
+  {
+    "name": "StickHub USB",
+    "file": "stickhub-usb.json",
+    "size": "510KB"
+  }
+]

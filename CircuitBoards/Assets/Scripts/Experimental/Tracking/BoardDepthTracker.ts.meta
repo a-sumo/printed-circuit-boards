@@ -1,0 +1,68 @@
+- !<AssetImportMetadata/0558ebf4-8808-4008-97bd-cc3cd9f92b59>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 0dc30803-56e7-484f-acb8-b9ab98a7a1e4
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 0dc30803-56e7-484f-acb8-b9ab98a7a1e4
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 70b6efe4-8349-4a5f-b2f7-7061c571b0f6
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/70b6efe4-8349-4a5f-b2f7-7061c571b0f6>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: 3988b793-3375-4ea4-acad-6b2373477b67
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    debugLogging: false
+    gridSize: false
+    kiCadBoard: false
+    maxDepthCm: false
+    minDepthCm: false
+    minInliers: false
+    planeThresholdCm: false
+    roiHalfSizePx: false
+    smoothingAlpha: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - kiCadBoard: !<reference.ScriptComponent> 00000000-0000-0000-0000-000000000000
+      gridSize: !<float> 12.000000
+      roiHalfSizePx: !<float> 60.000000
+      planeThresholdCm: 0.800000
+      minInliers: !<float> 30.000000
+      minDepthCm: !<float> 10.000000
+      maxDepthCm: !<float> 200.000000
+      smoothingAlpha: 0.200000
+      debugLogging: true
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @input Component.ScriptComponent kiCadBoard {"hint":"KiCadBoard ScriptComponent to anchor to the depth-recovered plane"}'
+    - '// @input float gridSize = 12 {"hint":"Depth sampling grid resolution (gridSize × gridSize samples per frame)"}'
+    - '// @input float roiHalfSizePx = 60 {"hint":"ROI half-size in depth-frame pixels (samples within ±this of frame center)"}'
+    - '// @input float planeThresholdCm = 0.8 {"hint":"RANSAC plane inlier threshold in cm"}'
+    - '// @input float minInliers = 30 {"hint":"Minimum inliers to accept a plane fit"}'
+    - '// @input float minDepthCm = 10 {"hint":"Minimum depth in cm (samples closer than this are skipped)"}'
+    - '// @input float maxDepthCm = 200 {"hint":"Maximum depth in cm (samples farther than this are skipped)"}'
+    - '// @input float smoothingAlpha = 0.2 {"hint":"Pose smoothing alpha (0=instant, 1=frozen). Applied per UpdateEvent."}'
+    - '// @input bool debugLogging = true {"hint":"Print per-second stats to the LS Logger"}'

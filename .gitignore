@@ -1,0 +1,27 @@
+node_modules/
+.DS_Store
+.claude/
+.vscode/
+
+# Lens Studio generated
+*.js.map
+*.lock
+Library/
+Temp/
+ProjectSettings/
+Cache/
+Support/
+Workspaces/
+PluginsUserPreferences/
+
+# LS auto-generated junk
+CircuitBoards/Assets/PBR *.mat
+CircuitBoards/Assets/PBR *.mat.meta
+CircuitBoards/Assets/Untitled TypeScript*.ts
+CircuitBoards/Assets/Untitled TypeScript*.ts.meta
+CircuitBoards/Assets/BoardMarkerMat*.mat
+CircuitBoards/Assets/BoardMarkerMat*.mat.meta
+
+# Local dev
+__pycache__/
+*.pyc

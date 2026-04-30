@@ -1,0 +1,62 @@
+- !<AssetImportMetadata/628bae91-c736-4a80-a1d0-6104a7c452fa>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 2693f2b1-98a5-4d1c-825e-fe71736542a9
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 2693f2b1-98a5-4d1c-825e-fe71736542a9
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 86116905-03fb-4859-9513-6d12a841474f
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/86116905-03fb-4859-9513-6d12a841474f>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: d114c97b-87c3-4deb-a297-2998288ec3ca
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    animSpeed: false
+    backgroundScale: false
+    boardParent: false
+    boardSpacing: false
+    focusScale: false
+    hitHalfSize: false
+    hitMaterial: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - boardParent: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      boardSpacing: !<float> 40.000000
+      focusScale: 1.300000
+      backgroundScale: 0.750000
+      animSpeed: !<float> 6.000000
+      hitHalfSize: !<float> 20.000000
+      hitMaterial: !<reference.Material> 00000000-0000-0000-0000-000000000000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - "// @input SceneObject boardParent {\"hint\":\"Parent SceneObject whose children are the board SceneObjects. Leave empty to use this object's parent.\"}"
+    - '// @input float boardSpacing = 40 {"hint":"Horizontal spacing between boards in cm"}'
+    - '// @input float focusScale = 1.3 {"hint":"Scale multiplier for focused board"}'
+    - '// @input float backgroundScale = 0.75 {"hint":"Scale multiplier for unfocused boards when one is focused"}'
+    - '// @input float animSpeed = 6 {"hint":"Animation speed (higher = faster snap)"}'
+    - '// @input float hitHalfSize = 20 {"hint":"Hit area half-size in cm (XY plane). Set to match your largest board."}'
+    - '// @input Asset.Material hitMaterial {"hint":"Hit area material — should be invisible on Spectacles (black = transparent)"}'

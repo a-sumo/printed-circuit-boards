@@ -1,0 +1,106 @@
+- !<AssetImportMetadata/38bbeb13-9360-4672-8c9f-e49d2ec39342>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 5381c189-673b-4ddb-8f58-aaa36f786c3b
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 5381c189-673b-4ddb-8f58-aaa36f786c3b
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 238a0087-19d5-4c8e-84e4-392bf618562e
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/238a0087-19d5-4c8e-84e4-392bf618562e>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: dc04a2ab-98a7-42cc-bcc8-603527a64b25
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    _defaultToOn: false
+    _inactive: false
+    _playAudio: false
+    _renderOrder: false
+    _size: false
+    _style: false
+    _toggleable: false
+    addCallbacks: false
+    font: false
+    label: false
+    labelSize: false
+    onFinishedCallbacks: false
+    onValueChangeCallbacks: false
+    triggerDownCallbacks: false
+    triggerUpCallbacks: false
+    tronBorderSize: false
+    tronCornerRadius: false
+    variant: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - _renderOrder: 0
+      _size: !<Vec3> {x: 6.000000, y: 3.000000, z: 3.000000}
+      _inactive: false
+      _playAudio: false
+      _style: ""
+      _toggleable: false
+      _defaultToOn: false
+      addCallbacks: false
+      triggerUpCallbacks:
+        []
+      triggerDownCallbacks:
+        []
+      onValueChangeCallbacks:
+        []
+      onFinishedCallbacks:
+        []
+      label: BUTTON
+      labelSize: !<float> 48.000000
+      font: !<reference.Font> 00000000-0000-0000-0000-000000000000
+      variant: default
+      tronBorderSize: 0.120000
+      tronCornerRadius: !<float> 0.000000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - // @input int _renderOrder
+    - '// @input vec3 _size = {6,3,3} {"hint":"Size of the element in centimeters"}'
+    - '// @input bool _inactive {"hint":"Inactive Mode: set the element to ignore inputs"}'
+    - '// @input bool _playAudio {"label":"Play Audio", "hint":"Play audio on interaction"}'
+    - '// @input string _style {"widget":"combobox", "values":[{"label":"PrimaryNeutral", "value":"PrimaryNeutral"}, {"label":"Primary", "value":"Primary"}, {"label":"Secondary", "value":"Secondary"}, {"label":"Special", "value":"Special"}, {"label":"Ghost", "value":"Ghost"}]}'
+    - // @input bool _toggleable
+    - '// @input bool _defaultToOn {"hint":"The default state of the Toggle", "showIf":"_toggleable"}'
+    - "// @input bool addCallbacks {\"hint\":\"Enable this to add functions from another script to this component's callbacks\"}"
+    - '// @ui {"widget":"group_start", "label":"Callbacks", "showIf":"addCallbacks"}'
+    - /*
+    - "@typedef Callback"
+    - "@property {Component.ScriptComponent} scriptComponent"
+    - "@property {string} functionName"
+    - "*/"
+    - '// @input Callback[] triggerUpCallbacks = {} {"label":"On Trigger Up Callbacks"}'
+    - '// @input Callback[] triggerDownCallbacks = {} {"label":"On Trigger Down Callbacks"}'
+    - '// @input Callback[] onValueChangeCallbacks = {} {"label":"On Value Changed Callbacks", "showIf":"_toggleable"}'
+    - '// @input Callback[] onFinishedCallbacks = {} {"label":"On Finished Callbacks", "showIf":"_toggleable"}'
+    - '// @ui {"widget":"group_end"}'
+    - '// @input string label = "BUTTON" {"hint":"Button label text"}'
+    - '// @input float labelSize = 48 {"hint":"Label font size"}'
+    - '// @input Asset.Font font {"hint":"Font (optional, uses system default)"}'
+    - '// @input string variant = "default" {"hint":"Tron color variant", "widget":"combobox", "values":[{"label":"Default", "value":"default"}, {"label":"Destructive", "value":"destructive"}, {"label":"Ghost", "value":"ghost"}]}'
+    - '// @input float tronBorderSize = 0.12 {"hint":"Border thickness (cm)"}'
+    - '// @input float tronCornerRadius {"hint":"Corner radius (cm, 0 = keep UIKit default)"}'

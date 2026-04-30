@@ -1,0 +1,44 @@
+- !<AssetImportMetadata/234aa955-7d2b-49b2-8e0c-6aa20a043010>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 3c4c4f3c-2093-4e0e-95de-ff5352d0396f
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 3c4c4f3c-2093-4e0e-95de-ff5352d0396f
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 41dc6bf2-0940-4d46-a6d1-1461f671dd1c
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/41dc6bf2-0940-4d46-a6d1-1461f671dd1c>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: dcb5c049-9a5f-48a1-bb23-5608adc8e8ac
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    telemetryText: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - telemetryText: !<reference.Text> 00000000-0000-0000-0000-000000000000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @input Component.Text telemetryText {"hint":"Text component for telemetry display (child of this SceneObject)"}'

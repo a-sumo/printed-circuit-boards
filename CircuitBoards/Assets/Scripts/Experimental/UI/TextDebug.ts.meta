@@ -1,0 +1,50 @@
+- !<AssetImportMetadata/582d41b5-ef8f-49db-8c10-0a4a1f2f61f0>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 93c64b1a-720c-47d7-954b-14ddb28aa828
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 93c64b1a-720c-47d7-954b-14ddb28aa828
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 0b34ef4f-1297-4473-acb9-03df816fe3d2
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/0b34ef4f-1297-4473-acb9-03df816fe3d2>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: cc9f7e2d-2c64-4266-b958-fa274a035f05
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    labelFont: false
+    spacing: false
+    textSize: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - labelFont: !<reference.Font> 00000000-0000-0000-0000-000000000000
+      spacing: !<float> 5.000000
+      textSize: !<float> 8.000000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - // @input Asset.Font labelFont
+    - '// @input float spacing = 5 {"widget":"slider", "min":1, "max":20, "step":1}'
+    - '// @input float textSize = 8 {"widget":"slider", "min":1, "max":50, "step":1}'

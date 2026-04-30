@@ -1,0 +1,77 @@
+- !<AssetImportMetadata/3eeff2ec-e3f5-461a-ba99-bdb76ec1b8d7>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 9a1c06e4-34fc-4aeb-ae96-97ce0aeaae05
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 9a1c06e4-34fc-4aeb-ae96-97ce0aeaae05
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 4f4a4883-86cf-417e-9878-01e93c80aa2b
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/4f4a4883-86cf-417e-9878-01e93c80aa2b>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: 3f225846-c814-40b6-99ee-181cd33bc5aa
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    autoPlay: false
+    boardMaterial: false
+    boardSlug: false
+    flowIntensity: false
+    flowSpeed: false
+    labelFont: false
+    labelSize: false
+    morphSliderObj: false
+    morphT: false
+    scaleFactor: false
+    signalFlow: false
+    traceMaterial: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - boardSlug: arduino-nano
+      traceMaterial: !<reference.Material> 00000000-0000-0000-0000-000000000000
+      boardMaterial: !<reference.Material> 00000000-0000-0000-0000-000000000000
+      labelFont: !<reference.Font> 00000000-0000-0000-0000-000000000000
+      scaleFactor: !<float> 1.000000
+      labelSize: !<float> 100.000000
+      autoPlay: ""
+      signalFlow: false
+      flowSpeed: 1.500000
+      flowIntensity: 0.400000
+      morphT: !<float> 0.000000
+      morphSliderObj: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @input string boardSlug = "arduino-nano" {"hint":"Select board from catalog (boards/ directory)", "widget":"combobox", "values":[{"label":"Arduino Nano", "value":"arduino-nano"}, {"label":"StickHub USB", "value":"stickhub-usb"}, {"label":"RPi CM4 IO", "value":"rpi-cm4io"}, {"label":"ATtiny85 USB", "value":"attiny85-usb"}]}'
+    - '// @input Asset.Material traceMaterial {"hint":"Material with KiCadTraceShader.js for wire rendering"}'
+    - '// @input Asset.Material boardMaterial {"hint":"Material with KiCadBoardShader.js for symbol/background geometry"}'
+    - // @input Asset.Font labelFont
+    - '// @input float scaleFactor = 1 {"hint":"Scale factor: KiCad mm to LS cm. 1.0 = 1mm per cm.", "widget":"slider", "min":0.1, "max":20, "step":0.1}'
+    - '// @input float labelSize = 100 {"hint":"Label text size in LS font units", "widget":"slider", "min":1, "max":100, "step":1}'
+    - "// @input string autoPlay {\"hint\":\"Auto-animate wire growth. 'all' = sequential growth.\"}"
+    - '// @input bool signalFlow {"hint":"Show animated signal flow along wires"}'
+    - '// @input float flowSpeed = 1.5 {"widget":"slider", "min":0.5, "max":5, "step":0.1}'
+    - '// @input float flowIntensity = 0.4 {"widget":"slider", "min":0.1, "max":1, "step":0.1}'
+    - '// @input float morphT {"hint":"Morph progress: 0 = schematic view, 1 = PCB layout", "widget":"slider", "min":0, "max":1, "step":0.01}'
+    - '// @input SceneObject morphSliderObj {"hint":"UIKit Slider SceneObject for runtime morph control (optional)"}'

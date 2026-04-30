@@ -1,0 +1,95 @@
+- !<AssetImportMetadata/9e36f96e-fed9-4fce-943c-1fe19d35e504>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> fa1dc4e1-a06e-43b7-9696-95e3f5d0ddb8
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> fa1dc4e1-a06e-43b7-9696-95e3f5d0ddb8
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> df7a6275-dcd3-43b7-b6be-7690b877062c
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/df7a6275-dcd3-43b7-b6be-7690b877062c>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: 155abdba-ab90-41e2-8f1c-ac693419a1c2
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    bendRadius: false
+    bridgeGrowth: false
+    exitGrowth: false
+    exitRatio: false
+    heightA: false
+    heightB: false
+    laneSpacing: false
+    lengthSegments: false
+    material: false
+    objectA: false
+    objectB: false
+    pairs: false
+    pointsA: false
+    pointsB: false
+    radialSegments: false
+    tubeRadius: false
+    widthA: false
+    widthB: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - material: !<reference.Material> 00000000-0000-0000-0000-000000000000
+      objectA: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      objectB: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      pointsA: "0.2,0.5|0.5,0.5|0.8,0.5"
+      pointsB: "0.2,0.5|0.5,0.5|0.8,0.5"
+      pairs: 0-0|1-1|2-2
+      widthA: !<float> 10.000000
+      heightA: !<float> 10.000000
+      widthB: !<float> 10.000000
+      heightB: !<float> 10.000000
+      tubeRadius: 0.100000
+      bendRadius: !<float> 2.000000
+      laneSpacing: 0.500000
+      exitRatio: !<float> 0.000000
+      exitGrowth: !<float> 1.000000
+      bridgeGrowth: !<float> 1.000000
+      lengthSegments: !<float> 48.000000
+      radialSegments: !<float> 8.000000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @input Asset.Material material {"hint":"Material with CircuitShader.js code node + connTex texture parameter"}'
+    - '// @input SceneObject objectA {"hint":"Left/source panel"}'
+    - '// @input SceneObject objectB {"hint":"Right/target panel"}'
+    - "// @input string pointsA = \"1.0,0.8|1.0,0.5|1.0,0.2\" {\"hint\":\"UV points on mesh A: 'u,v|u,v|...' (0-1). Points on edge auto-detect exit dir.\"}"
+    - "// @input string pointsB = \"0.0,0.8|0.0,0.5|0.0,0.2\" {\"hint\":\"UV points on mesh B: 'u,v|u,v|...'\"}"
+    - "// @input string pairs = \"0-0|1-1|2-2\" {\"hint\":\"Connection pairs: 'a-b|a-b|...' (indices into pointsA and pointsB)\"}"
+    - '// @input float widthA = 10 {"hint":"Width of mesh A in local units (cm)"}'
+    - '// @input float heightA = 10 {"hint":"Height of mesh A in local units (cm)"}'
+    - '// @input float widthB = 10 {"hint":"Width of mesh B in local units (cm)"}'
+    - '// @input float heightB = 10 {"hint":"Height of mesh B in local units (cm)"}'
+    - '// @input float tubeRadius = 0.1 {"hint":"Tube cross-section radius in cm", "widget":"slider", "min":0.01, "max":0.5, "step":0.01}'
+    - '// @input float bendRadius = 2 {"hint":"Corner fillet radius", "widget":"slider", "min":0.1, "max":10, "step":0.1}'
+    - '// @input float laneSpacing = 0.5 {"hint":"Depth spacing between lanes", "widget":"slider", "min":0.1, "max":5, "step":0.1}'
+    - '// @input float exitRatio {"hint":"How far tubes extend before turning (0 = auto, fraction of distance)", "widget":"slider", "min":0, "max":1, "step":0.05}'
+    - '// @input float exitGrowth = 1 {"hint":"Exit stub growth (horizontal arms from each panel)", "widget":"slider", "min":0, "max":1, "step":0.01}'
+    - '// @input float bridgeGrowth = 1 {"hint":"Bridge growth (diagonal/curve connecting the exits)", "widget":"slider", "min":0, "max":1, "step":0.01}'
+    - "// @input float lengthSegments = 48 {\"hint\":\"Segments along each tube's length (rebuild required)\", \"widget\":\"slider\", \"min\":16, \"max\":96, \"step\":4}"
+    - '// @input float radialSegments = 8 {"hint":"Segments around tube circumference (rebuild required)", "widget":"slider", "min":4, "max":16, "step":1}'

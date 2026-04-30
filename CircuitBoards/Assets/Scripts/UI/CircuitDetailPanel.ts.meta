@@ -1,0 +1,59 @@
+- !<AssetImportMetadata/cb518c65-bc59-46d4-8cfa-9cb4bfa88dcd>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 1b810a84-1603-46fb-8ce6-3ae4440257d8
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 1b810a84-1603-46fb-8ce6-3ae4440257d8
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 61f26ba7-c6c9-4e32-bdbd-e5b27676d204
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/61f26ba7-c6c9-4e32-bdbd-e5b27676d204>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: 18085228-1091-4746-9ce2-80e3f3450a18
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    buttonPrefab: false
+    font: false
+    gap: false
+    padding: false
+    panelHeight: false
+    panelWidth: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - font: !<reference.Font> 00000000-0000-0000-0000-000000000000
+      buttonPrefab: !<reference.ObjectPrefab> 00000000-0000-0000-0000-000000000000
+      panelWidth: !<float> 36.000000
+      panelHeight: !<float> 14.000000
+      padding: 1.800000
+      gap: 0.600000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @input Asset.Font font {"hint":"Font for all text"}'
+    - '// @input Asset.ObjectPrefab buttonPrefab {"hint":"Prefab: UIKit RectangleButton with CircuitButton script"}'
+    - '// @input float panelWidth = 36 {"hint":"Panel width (cm)"}'
+    - '// @input float panelHeight = 14 {"hint":"Panel height (cm)"}'
+    - '// @input float padding = 1.8 {"hint":"Inner padding (cm)"}'
+    - '// @input float gap = 0.6 {"hint":"Gap between items (cm)"}'

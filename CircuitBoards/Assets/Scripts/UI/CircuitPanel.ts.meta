@@ -1,0 +1,98 @@
+- !<AssetImportMetadata/347b79e5-ab44-40f9-ab65-89165ce45662>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> a02d2f04-0ce6-4369-b956-ea7f1a37f0f5
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> a02d2f04-0ce6-4369-b956-ea7f1a37f0f5
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> d37fe07c-e2b4-4c74-be1d-8842a40beffc
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/d37fe07c-e2b4-4c74-be1d-8842a40beffc>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: 9fb22982-9c1c-4f3f-85b2-2d2d61be37b4
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    animSpeed: false
+    bgScale: false
+    boardGap: false
+    boardParent: false
+    buttonPrefab: false
+    connectorMaterial: false
+    detailGap: false
+    detailPanelPrefab: false
+    focusScale: false
+    font: false
+    gap: false
+    normalizeWidth: false
+    outlineMaterial: false
+    outlinePadding: false
+    outlineThickness: false
+    padding: false
+    panelHeight: false
+    panelWidth: false
+    slideUpAmount: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - boardParent: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      buttonPrefab: !<reference.ObjectPrefab> 00000000-0000-0000-0000-000000000000
+      font: !<reference.Font> 00000000-0000-0000-0000-000000000000
+      panelWidth: !<float> 44.000000
+      panelHeight: !<float> 22.000000
+      padding: !<float> 2.000000
+      gap: 0.700000
+      boardGap: !<float> 4.000000
+      focusScale: 1.250000
+      bgScale: 0.800000
+      animSpeed: !<float> 5.000000
+      normalizeWidth: !<float> 0.000000
+      outlineMaterial: !<reference.Material> 00000000-0000-0000-0000-000000000000
+      outlinePadding: 1.500000
+      outlineThickness: 0.400000
+      detailPanelPrefab: !<reference.ObjectPrefab> 00000000-0000-0000-0000-000000000000
+      connectorMaterial: !<reference.Material> 00000000-0000-0000-0000-000000000000
+      detailGap: !<float> 3.000000
+      slideUpAmount: !<float> 8.000000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @input SceneObject boardParent {"hint":"Parent SceneObject whose direct children are KiCadBoard SceneObjects"}'
+    - '// @input Asset.ObjectPrefab buttonPrefab {"hint":"Prefab: UIKit RectangleButton with CircuitButton script attached"}'
+    - '// @input Asset.Font font {"hint":"Font for all text"}'
+    - '// @input float panelWidth = 44 {"hint":"Panel width (cm)"}'
+    - '// @input float panelHeight = 22 {"hint":"Panel height (cm)"}'
+    - '// @input float padding = 2 {"hint":"Inner padding (cm)"}'
+    - '// @input float gap = 0.7 {"hint":"Gap between items (cm)"}'
+    - '// @input float boardGap = 4 {"hint":"Vertical gap from panel top to board baseline (cm)"}'
+    - '// @input float focusScale = 1.25 {"hint":"Scale multiplier for focused board"}'
+    - '// @input float bgScale = 0.8 {"hint":"Scale multiplier for unfocused boards when one is focused"}'
+    - '// @input float animSpeed = 5 {"hint":"Lerp speed for scale animation"}'
+    - '// @input float normalizeWidth = 5 {"hint":"Target max XY size (cm) all boards are scaled to fit (longest dimension). 0 = no normalization."}'
+    - '// @input Asset.Material outlineMaterial {"hint":"Material for selection outline rectangle (bright solid color)"}'
+    - '// @input float outlinePadding = 1 {"hint":"Gap between board and selection sphere (cm)"}'
+    - '// @input float outlineThickness = 0.6 {"hint":"Selection sphere radius (cm)"}'
+    - '// @input Asset.ObjectPrefab detailPanelPrefab {"hint":"Prefab for the detail panel (UIKit Frame + CircuitDetailPanel)"}'
+    - '// @input Asset.Material connectorMaterial {"hint":"Material using ConnectorShader.js (ConnectorTube.ss_graph) for the tube between panels"}'
+    - '// @input float detailGap = 3 {"hint":"Gap between main panel bottom and detail panel top (cm)"}'
+    - '// @input float slideUpAmount = 8 {"hint":"How far the main panel slides up when detail opens (cm)"}'

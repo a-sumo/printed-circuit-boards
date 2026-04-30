@@ -1,0 +1,50 @@
+- !<AssetImportMetadata/ac77cec4-bc66-42d2-85a4-5f7b05dbeaca>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> b73beb4a-f914-4a06-af95-cb4c04568d4c
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> b73beb4a-f914-4a06-af95-cb4c04568d4c
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 64935089-95bf-4fe5-baab-808fb201b021
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/64935089-95bf-4fe5-baab-808fb201b021>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: 57ef21d9-b09e-4cea-a989-c075afd655f0
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    content: false
+    markerObject: false
+    simulatedBoard: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - markerObject: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      content: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      simulatedBoard: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @input SceneObject markerObject {"hint":"The SceneObject with MarkerTrackingComponent (e.g. Marker_Cube_PUT_UNDER_MAIN_CAM)"}'
+    - '// @input SceneObject content {"hint":"Content to show when marker is found (e.g. TrackingTestCube)"}'
+    - '// @input SceneObject simulatedBoard {"hint":"SimulatedBoard quad for editor fallback positioning"}'

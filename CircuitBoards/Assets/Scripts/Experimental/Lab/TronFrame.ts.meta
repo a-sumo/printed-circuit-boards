@@ -1,0 +1,71 @@
+- !<AssetImportMetadata/9fe24bf9-3823-4d4e-ad08-9f17c1e9f69a>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> dfb0471b-718b-4a4a-9131-92146d919ca5
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> dfb0471b-718b-4a4a-9131-92146d919ca5
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> bed2c09d-f523-48a6-9017-08dc26bd7056
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/bed2c09d-f523-48a6-9017-08dc26bd7056>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: f80d4c92-b8c5-4a38-929d-d6c11812f731
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    armX: false
+    armY: false
+    armZ: false
+    growth: false
+    lengthSegments: false
+    material: false
+    radialSegments: false
+    surfaceOffset: false
+    target: false
+    tubeRadius: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - material: !<reference.Material> 00000000-0000-0000-0000-000000000000
+      target: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      armX: !<float> 3.000000
+      armY: !<float> 3.000000
+      armZ: !<float> 2.000000
+      tubeRadius: 0.050000
+      surfaceOffset: 0.100000
+      lengthSegments: !<float> 12.000000
+      radialSegments: !<float> 6.000000
+      growth: !<float> 1.000000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @input Asset.Material material {"hint":"Material with TronFrameShader.js code node + frameTex texture parameter"}'
+    - '// @input SceneObject target {"hint":"Target plane/panel SceneObject to wrap corners around"}'
+    - '// @input float armX = 0.2 {"hint":"How far horizontal arms extend (0 = none, 0.5 = half edge, 1 = full edge)", "widget":"slider", "min":0, "max":1, "step":0.05}'
+    - '// @input float armY = 0.2 {"hint":"How far vertical arms extend (0 = none, 0.5 = half edge, 1 = full edge)", "widget":"slider", "min":0, "max":1, "step":0.05}'
+    - '// @input float armZ = 0.15 {"hint":"Depth arm as fraction of average edge length (0 = flat, 1 = cube-like)", "widget":"slider", "min":0, "max":1, "step":0.05}'
+    - '// @input float tubeRadius = 0.05 {"hint":"Tube cross-section radius in cm", "widget":"slider", "min":0.01, "max":0.3, "step":0.01}'
+    - '// @input float surfaceOffset = 0.1 {"hint":"Offset from panel surface along normal (cm). Prevents z-fighting.", "widget":"slider", "min":0, "max":5, "step":0.1}'
+    - "// @input float lengthSegments = 12 {\"hint\":\"Segments along each tube's length\", \"widget\":\"slider\", \"min\":8, \"max\":32, \"step\":4}"
+    - '// @input float radialSegments = 6 {"hint":"Segments around tube circumference", "widget":"slider", "min":3, "max":12, "step":1}'
+    - '// @input float growth = 1 {"hint":"Extrusion growth (0 = hidden, 1 = fully visible). Animate for extrusion effect.", "widget":"slider", "min":0, "max":1, "step":0.01}'

@@ -1,0 +1,53 @@
+- !<AssetImportMetadata/eb1a2a70-ec69-4d16-8fc4-f4db15b1d463>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 01a5a328-e1a8-4642-917a-34a15535ec68
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 01a5a328-e1a8-4642-917a-34a15535ec68
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> b036c144-191b-4e0f-ab5e-4362bae35da5
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/b036c144-191b-4e0f-ab5e-4362bae35da5>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: b0058c21-0c98-48ca-bb3f-e266579296b2
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    dynamicUI: false
+    hintFont: false
+    kiCadBoard: false
+    mode: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - kiCadBoard: !<reference.ScriptComponent> 00000000-0000-0000-0000-000000000000
+      dynamicUI: !<reference.ScriptComponent> 00000000-0000-0000-0000-000000000000
+      mode: !<string> off
+      hintFont: !<reference.Font> 00000000-0000-0000-0000-000000000000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @input Component.ScriptComponent kiCadBoard {"hint":"KiCadBoard ScriptComponent to orchestrate"}'
+    - '// @input Component.ScriptComponent dynamicUI {"hint":"DynamicUI ScriptComponent for panel visibility control"}'
+    - '// @input string mode = "off" {"hint":"Off = disabled, Story = guided first-time flow, Demo = automated 2-min loop", "widget":"combobox", "values":[{"label":"Off", "value":"off"}, {"label":"Story", "value":"story"}, {"label":"Demo", "value":"demo"}]}'
+    - '// @input Asset.Font hintFont {"hint":"Font for hint text overlays"}'

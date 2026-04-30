@@ -1,0 +1,59 @@
+- !<AssetImportMetadata/865fa208-9d5d-44da-8832-f68304761068>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 798f05a1-85dc-4843-839d-7bb1f0c3909f
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 798f05a1-85dc-4843-839d-7bb1f0c3909f
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 0204d5ad-5e9c-4f20-8851-a56b305c5053
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/0204d5ad-5e9c-4f20-8851-a56b305c5053>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: 5c10e7ad-3b38-40fa-9455-3b52f4d52a5a
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    autoAnimate: false
+    boardMaterial: false
+    labelFont: false
+    scale: false
+    sceneData: false
+    wireMaterial: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - sceneData: ""
+      boardMaterial: !<reference.Material> 00000000-0000-0000-0000-000000000000
+      wireMaterial: !<reference.Material> 00000000-0000-0000-0000-000000000000
+      labelFont: !<reference.Font> 00000000-0000-0000-0000-000000000000
+      scale: !<float> 2.000000
+      autoAnimate: true
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @input string sceneData = "{\"components\":[{\"id\":\"header\",\"type\":\"header\",\"pos\":[0,0,0],\"rot\":0,\"config\":{\"label\":\"GPIO Header\",\"pins\":20,\"rows\":2,\"pinLabels\":{\"1-1\":\"3V3\",\"1-6\":\"GND\",\"1-11\":\"GPIO17\",\"1-12\":\"GPIO18\",\"1-14\":\"GND\",\"1-17\":\"3V3\"}}},{\"id\":\"breadboard\",\"type\":\"breadboard\",\"pos\":[0,-25,0],\"rot\":0,\"config\":{\"label\":\"Breadboard\",\"cols\":30,\"rows\":10}},{\"id\":\"R1\",\"type\":\"resistor\",\"pos\":[5,-20,0],\"rot\":90,\"config\":{\"label\":\"R1\",\"value\":220}},{\"id\":\"LED1\",\"type\":\"led\",\"pos\":[5,-30,0],\"rot\":0,\"config\":{\"label\":\"LED1\",\"color\":\"red\",\"blinkRate\":2}},{\"id\":\"R2\",\"type\":\"resistor\",\"pos\":[15,-20,0],\"rot\":90,\"config\":{\"label\":\"R2\",\"value\":330}},{\"id\":\"LED2\",\"type\":\"led\",\"pos\":[15,-30,0],\"rot\":0,\"config\":{\"label\":\"LED2\",\"color\":\"amber\",\"blinkRate\":1}},{\"id\":\"C1\",\"type\":\"capacitor\",\"pos\":[-10,-25,0],\"rot\":0,\"config\":{\"label\":\"C1\",\"value\":\"100nF\"}}],\"wires\":[{\"from\":{\"component\":\"header\",\"pin\":\"GPIO17\"},\"to\":{\"component\":\"R1\",\"pin\":\"1\"},\"color\":\"yellow\"},{\"from\":{\"component\":\"R1\",\"pin\":\"2\"},\"to\":{\"component\":\"LED1\",\"pin\":\"anode\"},\"color\":\"yellow\"},{\"from\":{\"component\":\"LED1\",\"pin\":\"cathode\"},\"to\":{\"component\":\"header\",\"pin\":\"GND\"},\"color\":\"black\"},{\"from\":{\"component\":\"header\",\"pin\":\"GPIO18\"},\"to\":{\"component\":\"R2\",\"pin\":\"1\"},\"color\":\"orange\"},{\"from\":{\"component\":\"R2\",\"pin\":\"2\"},\"to\":{\"component\":\"LED2\",\"pin\":\"anode\"},\"color\":\"orange\"},{\"from\":{\"component\":\"LED2\",\"pin\":\"cathode\"},\"to\":{\"component\":\"header\",\"pin\":\"GND\"},\"color\":\"black\"},{\"from\":{\"component\":\"header\",\"pin\":\"3V3\"},\"to\":{\"component\":\"C1\",\"pin\":\"1\"},\"color\":\"red\"},{\"from\":{\"component\":\"C1\",\"pin\":\"2\"},\"to\":{\"component\":\"header\",\"pin\":\"GND\"},\"color\":\"blue\"}]}" {"hint":"Scene JSON: components[], wires[], config{}"}'
+    - '// @input Asset.Material boardMaterial {"hint":"Material with ElectronicsLabShader.js for component geometry"}'
+    - '// @input Asset.Material wireMaterial {"hint":"Material with KiCadTraceShader.js for wire geometry"}'
+    - '// @input Asset.Font labelFont {"hint":"Font for component labels"}'
+    - '// @input float scale = 2 {"hint":"Global scale (1 = 1mm per cm)", "widget":"slider", "min":0.5, "max":10, "step":0.5}'
+    - '// @input bool autoAnimate = true {"hint":"Auto-animate signal flow on start"}'

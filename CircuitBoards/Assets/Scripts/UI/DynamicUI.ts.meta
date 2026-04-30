@@ -1,0 +1,68 @@
+- !<AssetImportMetadata/db153989-9fa9-4758-a8b0-36bac9ab313c>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 2bb7d9ac-7050-43bc-9bc8-e4fbe3cfef5e
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 2bb7d9ac-7050-43bc-9bc8-e4fbe3cfef5e
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> c8f76554-8a9b-41a0-8251-a397d93d0439
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/c8f76554-8a9b-41a0-8251-a397d93d0439>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: 13aa8bb6-5178-453b-976d-68f7f09b0302
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    boardSelectorContainer: false
+    kiCadBoard: false
+    renderModeContainer: false
+    sliderContainer: false
+    sliderPrefab: false
+    sliderSpacing: false
+    togglePrefab: false
+    toggleSpacing: false
+    viewControlsContainer: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - togglePrefab: !<reference.ObjectPrefab> 00000000-0000-0000-0000-000000000000
+      sliderPrefab: !<reference.ObjectPrefab> 00000000-0000-0000-0000-000000000000
+      boardSelectorContainer: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      renderModeContainer: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      viewControlsContainer: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      sliderContainer: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      kiCadBoard: !<reference.ScriptComponent> 00000000-0000-0000-0000-000000000000
+      toggleSpacing: !<float> 9.000000
+      sliderSpacing: !<float> 14.000000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @input Asset.ObjectPrefab togglePrefab {"hint":"LabelledToggle prefab from UIKit"}'
+    - '// @input Asset.ObjectPrefab sliderPrefab {"hint":"SliderWithLabel prefab"}'
+    - '// @input SceneObject boardSelectorContainer {"hint":"Container for board selector toggles (needs ToggleGroup ScriptComponent)"}'
+    - '// @input SceneObject renderModeContainer {"hint":"Container for render mode toggles (needs ToggleGroup ScriptComponent)"}'
+    - '// @input SceneObject viewControlsContainer {"hint":"Container for view control toggles (needs ToggleGroup ScriptComponent)"}'
+    - '// @input SceneObject sliderContainer {"hint":"Container for sliders"}'
+    - '// @input Component.ScriptComponent kiCadBoard {"hint":"KiCadBoard ScriptComponent to control"}'
+    - '// @input float toggleSpacing = 9 {"hint":"Horizontal spacing between toggles in cm"}'
+    - '// @input float sliderSpacing = 14 {"hint":"Horizontal spacing between sliders in cm"}'

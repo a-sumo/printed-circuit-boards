@@ -1,0 +1,62 @@
+- !<AssetImportMetadata/98582e60-356d-47d4-b4fe-8ae48f922052>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 50e0c795-a356-4f47-b3e6-362058eb7bc0
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 50e0c795-a356-4f47-b3e6-362058eb7bc0
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 49305215-030d-4fe5-8f0a-504f9acaf930
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/49305215-030d-4fe5-8f0a-504f9acaf930>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: 1833a737-c73d-41c7-9bbd-29cbfeed68fc
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    bbCols: false
+    bbRows: false
+    boardMaterial: false
+    includeVSource: false
+    labelFont: false
+    scale: false
+    wireMaterial: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - boardMaterial: !<reference.Material> 00000000-0000-0000-0000-000000000000
+      wireMaterial: !<reference.Material> 00000000-0000-0000-0000-000000000000
+      labelFont: !<reference.Font> 00000000-0000-0000-0000-000000000000
+      scale: !<float> 2.000000
+      bbCols: !<float> 30.000000
+      bbRows: !<float> 10.000000
+      includeVSource: true
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @input Asset.Material boardMaterial {"hint":"Material with ElectronicsLabShader.js (needs simTex + SimTexHeight params)"}'
+    - '// @input Asset.Material wireMaterial {"hint":"Material with KiCadTraceShader.js for auto-wires"}'
+    - '// @input Asset.Font labelFont {"hint":"Font for component labels"}'
+    - '// @input float scale = 2 {"hint":"Global scale (1 = 1mm per cm)", "widget":"slider", "min":0.5, "max":10, "step":0.5}'
+    - '// @input float bbCols = 30 {"hint":"Breadboard columns"}'
+    - '// @input float bbRows = 10 {"hint":"Breadboard rows"}'
+    - '// @input bool includeVSource = true {"hint":"Include 3.3V voltage source template in palette"}'

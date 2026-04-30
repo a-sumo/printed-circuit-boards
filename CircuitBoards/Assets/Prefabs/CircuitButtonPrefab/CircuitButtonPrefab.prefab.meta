@@ -1,0 +1,144 @@
+- !<AssetImportMetadata/ad6b33c8-ccea-488e-9a78-eede5af7d20a>
+  ImportedAssetIds:
+    ObjectPrefab: !<reference> ff244ec1-b2e9-453b-bc6f-4cbbe8ed92cc
+  ImporterName: ObjectPrefabImporter
+  PrimaryAsset: !<reference> ff244ec1-b2e9-453b-bc6f-4cbbe8ed92cc
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    ObjectPrefab: !<own> c319c196-9046-4c74-96f5-927cb4645cf2
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<ScriptComponent/44c7649a-042a-41e8-a3a3-cfab997c0417>
+  PrefabRemaps:
+    []
+  Name: RectangleButton
+  Enabled: true
+  ScriptAsset: !<reference> 173d7099-914c-4f24-ac1c-1b67a66ae138
+  ScriptInputsDefault:
+    _renderOrder: true
+    _size: true
+    _inactive: true
+    _playAudio: true
+    _style: true
+    _defaultToOn: true
+    addCallbacks: true
+    triggerUpCallbacks: true
+    triggerDownCallbacks: true
+    onValueChangeCallbacks: true
+    onFinishedCallbacks: true
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      _renderOrder: 0
+      _size: !<Vec3> {x: 6.000000, y: 3.000000, z: 3.000000}
+      _inactive: false
+      _playAudio: false
+      _style: PrimaryNeutral
+      _toggleable: true
+      _defaultToOn: false
+      addCallbacks: false
+      triggerUpCallbacks:
+        []
+      triggerDownCallbacks:
+        []
+      onValueChangeCallbacks:
+        []
+      onFinishedCallbacks:
+        []
+  ScriptTypes:
+    "":
+      {}
+- !<ScriptComponent/53452408-c953-4f5b-bf44-3f5035ee8f80>
+  PrefabRemaps:
+    []
+  Name: CircuitButton
+  Enabled: true
+  ScriptAsset: !<reference> 5381c189-673b-4ddb-8f58-aaa36f786c3b
+  ScriptInputsDefault:
+    _renderOrder: true
+    _size: true
+    _inactive: true
+    _playAudio: true
+    _defaultToOn: true
+    addCallbacks: true
+    triggerUpCallbacks: true
+    triggerDownCallbacks: true
+    onValueChangeCallbacks: true
+    onFinishedCallbacks: true
+    label: true
+    labelSize: true
+    variant: true
+    tronBorderSize: true
+    tronCornerRadius: true
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      _renderOrder: 0
+      _size: !<Vec3> {x: 6.000000, y: 3.000000, z: 3.000000}
+      _inactive: false
+      _playAudio: false
+      _style: PrimaryNeutral
+      _toggleable: true
+      _defaultToOn: false
+      addCallbacks: false
+      triggerUpCallbacks:
+        []
+      triggerDownCallbacks:
+        []
+      onValueChangeCallbacks:
+        []
+      onFinishedCallbacks:
+        []
+      label: BUTTON
+      labelSize: !<float> 48.000000
+      font: !<reference.Font> aac00019-2470-424f-8b62-c60f1d1fcded
+      variant: default
+      tronBorderSize: 0.120000
+      tronCornerRadius: !<float> 0.000000
+  ScriptTypes:
+    "":
+      {}
+- !<SceneObject/7f3c32f5-947c-40db-b65e-9e046ecf036b>
+  PrefabRemaps:
+    []
+  Name: Content
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.100000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 44c7649a-042a-41e8-a3a3-cfab997c0417
+    - !<own> 53452408-c953-4f5b-bf44-3f5035ee8f80
+- !<SceneObject/a6f4f1cf-82aa-49cf-479e-479b04934366>
+  PrefabRemaps:
+    []
+  Name: CircuitButtonPrefab
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    - !<own> 7f3c32f5-947c-40db-b65e-9e046ecf036b
+  Components:
+    []
+- !<ObjectPrefabAssetData/c319c196-9046-4c74-96f5-927cb4645cf2>
+  Prototype: !<ObjectOwner/ff362a1e-b1fc-4c8d-a5fd-c0d2ca8bca78>
+    PackagePath: ""
+    objects:
+      - !<own> a6f4f1cf-82aa-49cf-479e-479b04934366

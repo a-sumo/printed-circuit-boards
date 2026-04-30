@@ -1,0 +1,71 @@
+- !<AssetImportMetadata/470a1229-26eb-4bb5-8f04-cede06760940>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 05a1e527-6ab2-46b8-a3cb-75534948cdaa
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 05a1e527-6ab2-46b8-a3cb-75534948cdaa
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> ca8afe08-fad5-4031-957e-bf345b80b718
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/ca8afe08-fad5-4031-957e-bf345b80b718>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: a1e5b3a6-639d-43f8-9d23-a94de0463364
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    arrowX: false
+    arrowY: false
+    arrowZ: false
+    boardHeightCm: false
+    boardWidthCm: false
+    cameraTexture: false
+    intervalSec: false
+    mlComponent: false
+    poseTarget: false
+    refTexture: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - mlComponent: !<reference.MLComponent> 00000000-0000-0000-0000-000000000000
+      refTexture: !<reference.Texture> 00000000-0000-0000-0000-000000000000
+      cameraTexture: !<reference.Texture> 00000000-0000-0000-0000-000000000000
+      poseTarget: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      arrowX: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      arrowY: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      arrowZ: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      boardWidthCm: 8.500000
+      boardHeightCm: 5.600000
+      intervalSec: 0.100000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @input Component.MLComponent mlComponent {"hint":"MLComponent with homnet_lite_opset11.onnx bound"}'
+    - '// @input Asset.Texture refTexture {"hint":"Reference board grayscale texture (128x128)"}'
+    - '// @input Asset.Texture cameraTexture {"hint":"Camera texture provider (from Device Camera Texture)"}'
+    - '// @input SceneObject poseTarget {"hint":"SceneObject to position at tracked board pose"}'
+    - '// @input SceneObject arrowX {"hint":"X axis arrow SceneObject (child of poseTarget)"}'
+    - '// @input SceneObject arrowY {"hint":"Y axis arrow SceneObject (child of poseTarget)"}'
+    - '// @input SceneObject arrowZ {"hint":"Z axis arrow SceneObject (child of poseTarget)"}'
+    - '// @input float boardWidthCm = 8.5 {"hint":"Real board width in cm"}'
+    - '// @input float boardHeightCm = 5.6 {"hint":"Real board height in cm"}'
+    - '// @input float intervalSec = 0.1 {"hint":"Seconds between inference runs"}'

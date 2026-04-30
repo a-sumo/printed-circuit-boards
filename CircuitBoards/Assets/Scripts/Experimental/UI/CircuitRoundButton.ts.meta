@@ -1,0 +1,100 @@
+- !<AssetImportMetadata/0fb6fe13-c940-42be-89c8-fb4b57cc270c>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 139453eb-e031-4363-aed0-7dc548f0f7d0
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 139453eb-e031-4363-aed0-7dc548f0f7d0
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 94222be7-3f50-44df-a37a-06c7f4c20222
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/94222be7-3f50-44df-a37a-06c7f4c20222>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: c66ad6da-4f81-4a4e-9254-21072f5f9ce9
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    _defaultToOn: false
+    _inactive: false
+    _playAudio: false
+    _renderOrder: false
+    _style: false
+    _toggleable: false
+    _width: false
+    addCallbacks: false
+    icon: false
+    iconMaterial: false
+    iconScale: false
+    iconToggled: false
+    onFinishedCallbacks: false
+    onValueChangeCallbacks: false
+    triggerDownCallbacks: false
+    triggerUpCallbacks: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - _renderOrder: 0
+      _inactive: false
+      _playAudio: false
+      _style: ""
+      _toggleable: false
+      _defaultToOn: false
+      addCallbacks: false
+      triggerUpCallbacks:
+        []
+      triggerDownCallbacks:
+        []
+      onValueChangeCallbacks:
+        []
+      onFinishedCallbacks:
+        []
+      _width: !<float> 3.000000
+      icon: !<reference.Texture> 00000000-0000-0000-0000-000000000000
+      iconToggled: !<reference.Texture> 00000000-0000-0000-0000-000000000000
+      iconMaterial: !<reference.Material> 00000000-0000-0000-0000-000000000000
+      iconScale: 0.500000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - // @input int _renderOrder
+    - '// @input bool _inactive {"hint":"Inactive Mode: set the element to ignore inputs"}'
+    - '// @input bool _playAudio {"label":"Play Audio", "hint":"Play audio on interaction"}'
+    - '// @input string _style {"widget":"combobox", "values":[{"label":"PrimaryNeutral", "value":"PrimaryNeutral"}, {"label":"Primary", "value":"Primary"}, {"label":"Secondary", "value":"Secondary"}, {"label":"Special", "value":"Special"}, {"label":"Ghost", "value":"Ghost"}]}'
+    - // @input bool _toggleable
+    - '// @input bool _defaultToOn {"hint":"The default state of the Toggle", "showIf":"_toggleable"}'
+    - "// @input bool addCallbacks {\"hint\":\"Enable this to add functions from another script to this component's callbacks\"}"
+    - '// @ui {"widget":"group_start", "label":"Callbacks", "showIf":"addCallbacks"}'
+    - /*
+    - "@typedef Callback"
+    - "@property {Component.ScriptComponent} scriptComponent"
+    - "@property {string} functionName"
+    - "*/"
+    - '// @input Callback[] triggerUpCallbacks = {} {"label":"On Trigger Up Callbacks"}'
+    - '// @input Callback[] triggerDownCallbacks = {} {"label":"On Trigger Down Callbacks"}'
+    - '// @input Callback[] onValueChangeCallbacks = {} {"label":"On Value Changed Callbacks", "showIf":"_toggleable"}'
+    - '// @input Callback[] onFinishedCallbacks = {} {"label":"On Finished Callbacks", "showIf":"_toggleable"}'
+    - '// @ui {"widget":"group_end"}'
+    - // @input float _width = 3
+    - '// @input Asset.Texture icon {"hint":"Icon texture (white on transparent)"}'
+    - '// @input Asset.Texture iconToggled {"hint":"Alternate icon when toggled on (e.g. mic-off)"}'
+    - '// @input Asset.Material iconMaterial {"hint":"Flat/unlit material to clone for icon rendering"}'
+    - '// @input float iconScale = 0.5 {"hint":"Icon scale relative to button width (0-1)", "widget":"slider", "min":0.1, "max":1, "step":0.05}'

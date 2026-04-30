@@ -1,0 +1,77 @@
+- !<AssetImportMetadata/1b8e014d-115a-4ce4-8e22-85bcb09cc42a>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 3a4dcf52-c226-4b06-97de-0ffe99c8a51f
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 3a4dcf52-c226-4b06-97de-0ffe99c8a51f
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> eb8b52cf-421b-4855-84a5-2a3163b29a82
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/eb8b52cf-421b-4855-84a5-2a3163b29a82>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: 912c53f4-dafa-4143-8a20-a7f581940ed8
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    autoShrink: false
+    color: false
+    fillWidth: false
+    fitWidth: false
+    font: false
+    fontSize: false
+    maxWidth: false
+    minFontSize: false
+    monospace: false
+    text: false
+    textAlign: false
+    widthScale: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - text: ""
+      fontSize: !<float> 42.000000
+      maxWidth: !<float> 0.000000
+      fillWidth: false
+      autoShrink: false
+      fitWidth: true
+      minFontSize: !<float> 24.000000
+      monospace: false
+      widthScale: !<float> 1.000000
+      color: !<Vec4> {x: 0.750000, y: 0.720000, z: 0.700000, w: 1.000000}
+      textAlign: center
+      font: !<reference.Font> 00000000-0000-0000-0000-000000000000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @input string text {"hint":"Text content to display"}'
+    - '// @input float fontSize = 42 {"hint":"Font size in points (LS units). [CSS: font-size]"}'
+    - '// @input float maxWidth {"hint":"Max width in cm. 0 = auto from parent (if fillWidth) or no wrap. [CSS: max-width]"}'
+    - '// @input bool fillWidth {"hint":"Auto-fill parent FlexContainer width as maxWidth. Reflows on container resize."}'
+    - '// @input bool autoShrink {"hint":"Auto-shrink font to fit maxWidth. Minimum fontSize = minFontSize."}'
+    - '// @input bool fitWidth = true {"hint":"Text never overflows maxWidth — auto-shrinks if needed. Like HTML text-box behavior."}'
+    - '// @input float minFontSize = 24 {"hint":"Minimum font size when autoShrink or fitWidth is enabled"}'
+    - '// @input bool monospace {"hint":"Monospace font (all chars equal width). Auto-detected from font name if false."}'
+    - '// @input float widthScale = 1 {"hint":"Width estimate multiplier. >1 = wider lines (wraps sooner, prevents bleed). Tune per-font."}'
+    - '// @input vec4 color = {0.75,0.72,0.7,1} {"hint":"Text color RGBA (0-1)"}'
+    - '// @input string textAlign = "center" {"hint":"Horizontal alignment within the text block. [CSS: text-align]", "widget":"combobox", "values":[{"label":"Left", "value":"left"}, {"label":"Center", "value":"center"}, {"label":"Right", "value":"right"}]}'
+    - '// @input Asset.Font font {"hint":"Custom font asset"}'

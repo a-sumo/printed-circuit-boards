@@ -1,0 +1,50 @@
+- !<AssetImportMetadata/d7c6bd50-efe4-4f4e-92be-65cea0632fd4>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 6dfc7bef-7051-48f5-8cda-abfeccb825c5
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 6dfc7bef-7051-48f5-8cda-abfeccb825c5
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> b0ff7600-5b65-4240-8c4d-53334ba574db
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/b0ff7600-5b65-4240-8c4d-53334ba574db>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: 3e1b6bd1-f554-4fe0-bcc1-d946840c8575
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    maxDepth: false
+    updateInterval: false
+    wsUrl: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - wsUrl: "ws://localhost:8200?role=ls"
+      updateInterval: !<float> 15.000000
+      maxDepth: !<float> 20.000000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @input string wsUrl = "ws://localhost:8200?role=ls" {"hint":"Inspector server URL. Change port if you ran: npx scene-inspector --port XXXX"}'
+    - '// @input float updateInterval = 15 {"hint":"How often to send snapshots (frames between updates)"}'
+    - '// @input float maxDepth = 20 {"hint":"Max tree depth to traverse (prevents runaway recursion)"}'

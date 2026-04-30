@@ -1,0 +1,44 @@
+- !<AssetImportMetadata/57ed85bb-3b35-456a-8627-bbf8eac77b04>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> eaa9d374-3632-4213-ba06-87a062cc10ca
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> eaa9d374-3632-4213-ba06-87a062cc10ca
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 61e8c7ba-dad0-4469-b6bb-e76fc3ba3f06
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/61e8c7ba-dad0-4469-b6bb-e76fc3ba3f06>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: 414475fd-9e45-4d1d-80bf-d84ac6e5d532
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    mlComponent: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - mlComponent: !<reference.MLComponent> 00000000-0000-0000-0000-000000000000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @input Component.MLComponent mlComponent {"hint":"MLComponent with homnet_lite_rgb.onnx bound"}'

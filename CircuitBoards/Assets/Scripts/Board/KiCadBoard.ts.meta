@@ -1,0 +1,101 @@
+- !<AssetImportMetadata/8b384c05-13b9-4b07-9ec9-34a5ba39d5ac>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 47629b29-b6e1-4e03-b86a-bd884b2b9a45
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 47629b29-b6e1-4e03-b86a-bd884b2b9a45
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> f0d7a8ab-271b-4596-b31c-e4eec1686007
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/f0d7a8ab-271b-4596-b31c-e4eec1686007>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: 09a212a1-05a0-40a5-bc97-597e55623cdd
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    autoPlay: false
+    boardMaterial: false
+    boardSlug: false
+    colliderPadNormal: false
+    colliderPadPlanar: false
+    explodeAmount: false
+    explodeSpread: false
+    flowIntensity: false
+    flowSpeed: false
+    labelFont: false
+    labelSize: false
+    renderMode: false
+    scaleFactor: false
+    showBoard: false
+    showLabels: false
+    showPads: false
+    showTraces: false
+    showVias: false
+    signalFlowMode: false
+    traceMaterial: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - boardSlug: arduino-nano
+      traceMaterial: !<reference.Material> 00000000-0000-0000-0000-000000000000
+      boardMaterial: !<reference.Material> 00000000-0000-0000-0000-000000000000
+      autoPlay: ""
+      scaleFactor: !<float> 1.000000
+      labelFont: !<reference.Font> 00000000-0000-0000-0000-000000000000
+      labelSize: !<float> 3.000000
+      showBoard: true
+      showTraces: true
+      showVias: true
+      showPads: true
+      showLabels: true
+      explodeAmount: !<float> 0.000000
+      explodeSpread: !<float> 5.000000
+      signalFlowMode: !<string> off
+      flowSpeed: 1.500000
+      flowIntensity: 0.400000
+      renderMode: vivid
+      colliderPadNormal: !<float> 3.000000
+      colliderPadPlanar: !<float> 1.000000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @input string boardSlug = "arduino-nano" {"hint":"Select board from catalog (boards/ directory)", "widget":"combobox", "values":[{"label":"Arduino Nano", "value":"arduino-nano"}, {"label":"StickHub USB", "value":"stickhub-usb"}, {"label":"RPi CM4 IO", "value":"rpi-cm4io"}, {"label":"Raspberry Pi 3B+", "value":"raspi-3"}, {"label":"XIAO Servo", "value":"xiao-servo"}]}'
+    - '// @input Asset.Material traceMaterial {"hint":"Unified trace material (KiCadTraceShader.js) with traceTex texture parameter"}'
+    - '// @input Asset.Material boardMaterial {"hint":"Unified board material (KiCadBoardShader.js)"}'
+    - "// @input string autoPlay {\"hint\":\"Sequence name to auto-play on awake (empty = none). Use 'all' to grow all nets.\"}"
+    - '// @input float scaleFactor = 1 {"hint":"Scale factor: KiCad mm to LS cm. 1.0 = 1mm per cm.", "widget":"slider", "min":0.1, "max":20, "step":0.1}'
+    - '// @input Asset.Font labelFont {"hint":"Font asset for component labels (optional)"}'
+    - '// @input float labelSize = 100 {"hint":"Label text size in LS font units", "widget":"slider", "min":1, "max":100, "step":1}'
+    - '// @input bool showBoard = true {"hint":"Show board substrate"}'
+    - '// @input bool showTraces = true {"hint":"Show copper traces"}'
+    - '// @input bool showVias = true {"hint":"Show vias"}'
+    - '// @input bool showPads = true {"hint":"Show pads"}'
+    - '// @input bool showLabels = true {"hint":"Show component labels"}'
+    - '// @input float explodeAmount {"hint":"0 = flat board, 1 = fully exploded. Drag to explode/collapse.", "widget":"slider", "min":0, "max":1, "step":0.01}'
+    - '// @input float explodeSpread = 10 {"hint":"Vertical spacing between exploded layers (cm)", "widget":"slider", "min":1, "max":50, "step":1}'
+    - '// @input string signalFlowMode = "off" {"hint":"Animated current/signal flow along traces", "widget":"combobox", "values":[{"label":"Off", "value":"off"}, {"label":"On", "value":"on"}]}'
+    - '// @input float flowSpeed = 1.5 {"hint":"Signal flow pulse speed (pulses per second)", "widget":"slider", "min":0.5, "max":5, "step":0.1}'
+    - '// @input float flowIntensity = 0.4 {"hint":"Signal flow pulse brightness", "widget":"slider", "min":0.1, "max":1, "step":0.1}'
+    - '// @input string renderMode = "vivid" {"hint":"Vivid = rainbow traces, Realistic = copper/FR4/solder mask", "widget":"combobox", "values":[{"label":"Vivid", "value":"vivid"}, {"label":"Realistic", "value":"realistic"}]}'
+    - '// @input float colliderPadNormal = 3 {"hint":"Extra collider extent along the board normal (cm per side)"}'
+    - '// @input float colliderPadPlanar = 1 {"hint":"Extra collider extent along the board plane (cm per side)"}'

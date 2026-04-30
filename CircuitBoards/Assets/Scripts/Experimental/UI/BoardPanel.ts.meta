@@ -1,0 +1,65 @@
+- !<AssetImportMetadata/e91bf116-8590-4989-af56-a965e20b3229>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 564beeed-956c-4274-a501-e4e5d5f053fc
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 564beeed-956c-4274-a501-e4e5d5f053fc
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 3662a4c1-6445-4285-ba31-e992793e6946
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/3662a4c1-6445-4285-ba31-e992793e6946>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: b3fbc641-3ffd-4686-9578-33bf89bf0e2f
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    font: false
+    gap: false
+    kiCadBoard: false
+    offsetY: false
+    offsetZ: false
+    padding: false
+    panelHeight: false
+    panelWidth: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - kiCadBoard: !<reference.ScriptComponent> 00000000-0000-0000-0000-000000000000
+      font: !<reference.Font> 00000000-0000-0000-0000-000000000000
+      panelWidth: !<float> 28.000000
+      panelHeight: !<float> 20.000000
+      offsetZ: !<float> 8.000000
+      offsetY: !<float> 12.000000
+      padding: 1.800000
+      gap: 0.600000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @input Component.ScriptComponent kiCadBoard {"hint":"KiCadBoard script component to control"}'
+    - '// @input Asset.Font font {"hint":"Font for all text"}'
+    - '// @input float panelWidth = 28 {"hint":"Panel width (cm)"}'
+    - '// @input float panelHeight = 20 {"hint":"Panel height (cm)"}'
+    - '// @input float offsetZ = 8 {"hint":"Distance in front of the board (cm)"}'
+    - '// @input float offsetY = 12 {"hint":"Vertical offset above board center (cm)"}'
+    - '// @input float padding = 1.8 {"hint":"Inner padding (cm)"}'
+    - '// @input float gap = 0.6 {"hint":"Gap between items (cm)"}'

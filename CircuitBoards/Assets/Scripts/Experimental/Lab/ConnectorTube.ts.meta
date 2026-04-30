@@ -1,0 +1,68 @@
+- !<AssetImportMetadata/dfea12c8-93d4-4830-bea1-5623dddf9b71>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 9b36b9c7-aa1f-4886-9a7f-cc3b4ad40b80
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 9b36b9c7-aa1f-4886-9a7f-cc3b4ad40b80
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 4377c5a8-869e-4940-b699-314cf939a04b
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/4377c5a8-869e-4940-b699-314cf939a04b>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: e8bd4fe9-ace3-4f02-98a1-20a2e4cfe29a
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    bendRadius: false
+    capRings: false
+    clipT: false
+    lengthSegments: false
+    material: false
+    objectA: false
+    objectB: false
+    radialSegments: false
+    tubeRadius: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - material: !<reference.Material> 00000000-0000-0000-0000-000000000000
+      objectA: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      objectB: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      tubeRadius: 0.100000
+      bendRadius: !<float> 2.000000
+      lengthSegments: !<float> 48.000000
+      radialSegments: !<float> 8.000000
+      capRings: !<float> 3.000000
+      clipT: !<float> 1.000000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @input Asset.Material material {"hint":"Material with ConnectorShader.js Code Node"}'
+    - '// @input SceneObject objectA {"hint":"Start object (tube exits from here)"}'
+    - '// @input SceneObject objectB {"hint":"End object (tube enters here)"}'
+    - '// @input float tubeRadius = 0.12 {"hint":"Tube cross-section radius in cm"}'
+    - '// @input float bendRadius = 2.5 {"hint":"Corner fillet radius (smaller = tighter bends)"}'
+    - '// @input float lengthSegments = 48 {"hint":"Segments along tube length (more = smoother arcs)"}'
+    - '// @input float radialSegments = 8 {"hint":"Segments around tube circumference"}'
+    - '// @input float capRings = 3 {"hint":"Hemisphere cap ring count (0 = flat caps)"}'
+    - '// @input float clipT = 1 {"hint":"Parametric clip [0-1]: tube visible up to this t"}'
