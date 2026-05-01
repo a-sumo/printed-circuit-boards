@@ -1949,8 +1949,12 @@ export class KiCadBoard extends BaseScriptComponent {
         var th = this.thickHalf() * s;
         var colliderDepth = th * 2 + this.colliderPadNormal * 2;
 
-        // Board-level collider from outline bounds (for grab/rotate/scale).
-        // Uses intangible=true so it doesn't block raycasts to per-component colliders.
+        // Board-level collider: resize the SceneObject's own ColliderComponent
+        // (authored, or created on first build) so InteractableManipulation
+        // catches grabs on the current board's actual bounds. Without this,
+        // switching from a small board (e.g. Arduino Nano) to a big one
+        // (e.g. RPi CM4 IO) leaves the collider sized for the small board and
+        // grab raycasts miss the rebuilt geometry.
         var outline = this.board.board.outline;
         if (outline && outline.length >= 3) {
             var minX = Infinity, maxX = -Infinity, minY = Infinity, maxY = -Infinity;
@@ -1962,14 +1966,20 @@ export class KiCadBoard extends BaseScriptComponent {
             }
             var boardW = (maxX - minX) * s + this.colliderPadPlanar * 2;
             var boardH = (maxY - minY) * s + this.colliderPadPlanar * 2;
-            var boardObj = global.scene.createSceneObject("__boardCollider");
-            boardObj.setParent(this.sceneObject);
-            var boardCollider = boardObj.createComponent("Physics.ColliderComponent") as ColliderComponent;
+            var boardCollider = this.sceneObject.getComponent(
+                "Physics.ColliderComponent") as ColliderComponent;
+            if (!boardCollider || isNull(boardCollider)) {
+                boardCollider = this.sceneObject.createComponent(
+                    "Physics.ColliderComponent") as ColliderComponent;
+            }
             var boardShape = Shape.createBoxShape();
             boardShape.size = new vec3(boardW, boardH, colliderDepth);
             boardCollider.shape = boardShape;
-            boardCollider.intangible = true;
-            this.fpInteractables.push(boardObj);
+            // Tangible — InteractableManipulation needs this to land grabs.
+            // Per-footprint colliders below are created without intangible too;
+            // SIK resolves overlap by raycast distance, and the per-footprint
+            // colliders sit slightly above the board surface so they win on hover.
+            boardCollider.intangible = false;
         }
 
         // Per-component colliders (for hover/tap selection)
