@@ -28,6 +28,8 @@
   ScriptInputsHidden:
     animSpeed: false
     bgScale: false
+    boardCardHeight: false
+    boardForwardZ: false
     boardGap: false
     boardParent: false
     buttonPrefab: false
@@ -37,6 +39,7 @@
     focusScale: false
     font: false
     gap: false
+    moreRowGap: false
     normalizeWidth: false
     outlineMaterial: false
     outlinePadding: false
@@ -45,6 +48,8 @@
     panelHeight: false
     panelWidth: false
     slideUpAmount: false
+    sphereMaterial: false
+    titleAboveBoards: false
   ScriptTypesHidden:
     {}
   ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
@@ -62,11 +67,16 @@
       padding: !<float> 2.000000
       gap: 0.700000
       boardGap: !<float> 4.000000
+      boardForwardZ: !<float> 5.000000
+      boardCardHeight: 6.500000
+      moreRowGap: 3.500000
+      titleAboveBoards: 1.800000
       focusScale: 1.250000
       bgScale: 0.800000
       animSpeed: !<float> 5.000000
       normalizeWidth: !<float> 0.000000
       outlineMaterial: !<reference.Material> 00000000-0000-0000-0000-000000000000
+      sphereMaterial: !<reference.Material> 00000000-0000-0000-0000-000000000000
       outlinePadding: 1.500000
       outlineThickness: 0.400000
       detailPanelPrefab: !<reference.ObjectPrefab> 00000000-0000-0000-0000-000000000000
@@ -84,15 +94,20 @@
     - '// @input float panelHeight = 22 {"hint":"Panel height (cm)"}'
     - '// @input float padding = 2 {"hint":"Inner padding (cm)"}'
     - '// @input float gap = 0.7 {"hint":"Gap between items (cm)"}'
-    - '// @input float boardGap = 4 {"hint":"Vertical gap from panel top to board baseline (cm)"}'
+    - '// @input float boardGap = 4 {"hint":"Distance below panel top for the board row baseline (cm). Legacy; use boardCardHeight to size the boards row."}'
+    - '// @input float boardForwardZ = 5 {"hint":"Push boards toward camera in panel-local Z (cm). Higher = closer to viewer."}'
+    - '// @input float boardCardHeight = 6.5 {"hint":"Inline-reserved height (cm) for the floating-boards row. Renders as a translucent card so boards have a visual home."}'
+    - "// @input float moreRowGap = 3.5 {\"hint\":\"Vertical padding (cm) above the MORE row's VIVID button. Only takes effect when MORE is expanded.\"}"
+    - '// @input float titleAboveBoards = 1.8 {"hint":"Distance (cm) from board top edge up to the title block center. Smaller = title sits closer to the boards."}'
     - '// @input float focusScale = 1.25 {"hint":"Scale multiplier for focused board"}'
     - '// @input float bgScale = 0.8 {"hint":"Scale multiplier for unfocused boards when one is focused"}'
     - '// @input float animSpeed = 5 {"hint":"Lerp speed for scale animation"}'
     - '// @input float normalizeWidth = 5 {"hint":"Target max XY size (cm) all boards are scaled to fit (longest dimension). 0 = no normalization."}'
     - '// @input Asset.Material outlineMaterial {"hint":"Material for selection outline rectangle (bright solid color)"}'
+    - '// @input Asset.Material sphereMaterial {"hint":"Glass material for the selection sphere (e.g. a basic UIKit/PBR glass). Used as-is — no color tinting."}'
     - '// @input float outlinePadding = 1 {"hint":"Gap between board and selection sphere (cm)"}'
-    - '// @input float outlineThickness = 0.6 {"hint":"Selection sphere radius (cm)"}'
+    - '// @input float outlineThickness = 0.3 {"hint":"Selection sphere radius (cm)"}'
     - '// @input Asset.ObjectPrefab detailPanelPrefab {"hint":"Prefab for the detail panel (UIKit Frame + CircuitDetailPanel)"}'
     - '// @input Asset.Material connectorMaterial {"hint":"Material using ConnectorShader.js (ConnectorTube.ss_graph) for the tube between panels"}'
     - '// @input float detailGap = 3 {"hint":"Gap between main panel bottom and detail panel top (cm)"}'
-    - '// @input float slideUpAmount = 8 {"hint":"How far the main panel slides up when detail opens (cm)"}'
+    - '// @input float slideUpAmount {"hint":"How far the main panel slides up when detail opens (cm). 0 = panel stays put on board select."}'

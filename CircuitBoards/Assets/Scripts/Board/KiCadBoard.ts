@@ -17,6 +17,7 @@
 
 import { Interactable } from "SpectaclesInteractionKit.lspkg/Components/Interaction/Interactable/Interactable";
 import { InteractorEvent } from "SpectaclesInteractionKit.lspkg/Core/Interactor/InteractorEvent";
+import { outExpo } from "../Common/Easing";
 
 // Board data modules (static requires: LS resolves at compile time).
 // This map must stay in THIS file. Add new boards here AND in BoardCatalog.ts.
@@ -24,7 +25,7 @@ var BOARD_MODULES: Record<string, any> = {
     "arduino-nano": require("Scripts/Board/data/arduino-nano.js"),
     "stickhub-usb": require("Scripts/Board/data/stickhub-usb.js"),
     "rpi-cm4io": require("Scripts/Board/data/rpi-cm4io.js"),
-    "raspi-3": require("Scripts/Board/data/raspi-3.js"),
+    "attiny85-usb": require("Scripts/Board/data/attiny85-usb.js"),
     "xiao-servo": require("Scripts/Board/data/xiao-servo.js"),
 };
 
@@ -36,7 +37,7 @@ export class KiCadBoard extends BaseScriptComponent {
         new ComboBoxItem("Arduino Nano", "arduino-nano"),
         new ComboBoxItem("StickHub USB", "stickhub-usb"),
         new ComboBoxItem("RPi CM4 IO", "rpi-cm4io"),
-        new ComboBoxItem("Raspberry Pi 3B+", "raspi-3"),
+        new ComboBoxItem("ATtiny85 USB", "attiny85-usb"),
         new ComboBoxItem("XIAO Servo", "xiao-servo"),
     ]))
     @hint("Select board from catalog (boards/ directory)")
@@ -253,6 +254,15 @@ export class KiCadBoard extends BaseScriptComponent {
     private prevRenderMode: string = "vivid";
     private prevScaleFactor: number = 1.0;
 
+    // Eased explode transition: target = explodeAmount (input slider / panel toggle),
+    // displayed = currently-applied geometry offset. outExpo decelerates fast
+    // and lands smoothly — no overshoot, no bounce.
+    private explodeDisplayed: number = 0;
+    private explodeAnimFrom: number = 0;
+    private explodeAnimTo: number = 0;
+    private explodeAnimT: number = 0;
+    private explodeAnimDuration: number = 0.55;
+
     // Board reveal animation
     private maxRadius: number = 1;
     private boardMatPass: Pass | null = null;
@@ -294,6 +304,12 @@ export class KiCadBoard extends BaseScriptComponent {
     // (tube profile + vtxBuf removed: traces use flat ribbons now)
 
     private traceDelayTimer: number = -1;
+
+    // Activation state — controls whether this board is rendered/ticked.
+    // CircuitPanel calls activate()/deactivate() to swap which board is live;
+    // deactivated boards have their geometry destroyed and onUpdate gated.
+    private boardBuilt: boolean = false;
+    private active: boolean = true;
 
     onAwake(): void {
         // Save source material references before any cloning
@@ -356,6 +372,7 @@ export class KiCadBoard extends BaseScriptComponent {
         }
 
         this.syncPrevTracking();
+        this.boardBuilt = true;
         this.createEvent("UpdateEvent").bind(this.onUpdate.bind(this));
     }
 
@@ -1234,11 +1251,19 @@ export class KiCadBoard extends BaseScriptComponent {
         if (!this.board.drawings || this.board.drawings.length === 0) return;
 
         var th = this.thickHalf();
+        // Z-stack (KiCad mm pre-scale). Different-color line layers need real
+        // Z separation or they z-fight at small scaleFactor. Order from board
+        // surface up: traces (th+0.04) → F.Cu drawings (+0.05, same copper
+        // color so cohabiting is fine) → mask (+0.08) → pads (+0.10/0.12) →
+        // F.Fab drawings (+0.30) → F.SilkS drawings (+0.50) → labels (+0.70).
+        // The big jump between pads and F.Fab is the one that matters: those
+        // are different colors and were previously stacked on top of the mask
+        // at the same Z, which is where the z-fighting was happening.
         var layerZMap: Record<string, number> = {
-            'F.SilkS': th + 0.16, 'B.SilkS': -th - 0.16,
-            'F.Fab': th + 0.08, 'B.Fab': -th - 0.08,
+            'F.SilkS': th + 0.50, 'B.SilkS': -th - 0.50,
+            'F.Fab': th + 0.30, 'B.Fab': -th - 0.30,
             'F.Cu': th + 0.05, 'B.Cu': -th - 0.05,
-            'Dwgs.User': th + 0.12, 'Cmts.User': th + 0.12
+            'Dwgs.User': th + 0.40, 'Cmts.User': th + 0.40
         };
         // Drawing layer colors (vivid/warm palette, no purple/green/cyan)
         var layerColors: Record<string, number[]> = {
@@ -1581,8 +1606,8 @@ export class KiCadBoard extends BaseScriptComponent {
             var drillR = (via.drill * 0.5) * s;
             if (drillR < 0.001) drillR = outerR * 0.4;
 
-            var topZ = (th + 0.06) * s + sp * 1.0;
-            var botZ = (-th - 0.06) * s - sp * 1.0;
+            var topZ = (th + 0.06) * s + sp * 3.0;
+            var botZ = (-th - 0.06) * s - sp * 3.0;
 
             // Continuous via: top pad + barrel + bottom pad (shared edge positions)
             // 1. Top annular ring (outer_r -> drill_r, normal up)
@@ -2113,14 +2138,16 @@ export class KiCadBoard extends BaseScriptComponent {
         if (this.groupPadsTop && !isNull(this.groupPadsTop)) this.groupPadsTop.enabled = this.showPads;
         if (this.groupPadsBot && !isNull(this.groupPadsBot)) this.groupPadsBot.enabled = this.showPads;
         for (const o of this.groupLabels) { if (o && !isNull(o)) o.enabled = this.showLabels; }
-        if (this.groupTopMask && !isNull(this.groupTopMask)) this.groupTopMask.enabled = this.showBoard;
-        if (this.groupBotMask && !isNull(this.groupBotMask)) this.groupBotMask.enabled = this.showBoard;
+        var maskOn = this.showBoard && !this.isExploded();
+        if (this.groupTopMask && !isNull(this.groupTopMask)) this.groupTopMask.enabled = maskOn;
+        if (this.groupBotMask && !isNull(this.groupBotMask)) this.groupBotMask.enabled = maskOn;
     }
 
     private syncVisibility(): void {
         for (const o of this.groupBoard) { if (o && !isNull(o)) o.enabled = this.showBoard; }
-        if (this.groupTopMask && !isNull(this.groupTopMask)) this.groupTopMask.enabled = this.showBoard;
-        if (this.groupBotMask && !isNull(this.groupBotMask)) this.groupBotMask.enabled = this.showBoard;
+        var maskOn = this.showBoard && !this.isExploded();
+        if (this.groupTopMask && !isNull(this.groupTopMask)) this.groupTopMask.enabled = maskOn;
+        if (this.groupBotMask && !isNull(this.groupBotMask)) this.groupBotMask.enabled = maskOn;
         for (const o of this.groupTraces) { if (o && !isNull(o)) o.enabled = this.showTraces; }
         if (this.groupVias && !isNull(this.groupVias)) this.groupVias.enabled = this.showVias;
         if (this.groupPadsTop && !isNull(this.groupPadsTop)) this.groupPadsTop.enabled = this.showPads;
@@ -2197,14 +2224,16 @@ export class KiCadBoard extends BaseScriptComponent {
     }
 
     // Apply layer explosion offsets to group SceneObjects
-    // Physical stack (top to bottom):
-    //   Top Silkscreen (labels)     +3.0 sp
-    //   Top Solder Mask             +2.0 sp
-    //   Top Copper F.Cu (traces)    +1.0 sp
-    //   FR4 Core (board)             0.0
-    //   Bottom Copper B.Cu          -1.0 sp
-    //   Bottom Solder Mask          -2.0 sp
-    //   Bottom Silkscreen (labels)  -3.0 sp
+    // Stack reordered for visual clarity in explode view (copper outermost so
+    // traces are unobstructed; solder mask hidden during explode to avoid
+    // occluding the layers below it):
+    //   Top Copper F.Cu (traces/pads/zones)  +3.0 sp
+    //   Top Solder Mask                       (hidden in explode)
+    //   Top Silkscreen (drawings + labels)   +1.0 sp
+    //   FR4 Core (board)                      0.0
+    //   Bottom Silkscreen                    -1.0 sp
+    //   Bottom Solder Mask                    (hidden in explode)
+    //   Bottom Copper B.Cu                   -3.0 sp
     //   Vias span full height (stretched)
     private applyExplode(progress: number): void {
         const sp = this.explodeSpread * progress;
@@ -2224,31 +2253,34 @@ export class KiCadBoard extends BaseScriptComponent {
             o.getTransform().setLocalPosition(new vec3(0, 0, 0));
         }
 
-        // Solder masks
+        // Solder masks: hide in explode mode so they don't occlude copper/silk;
+        // restore visibility (subject to showBoard) when collapsed.
         if (this.groupTopMask && !isNull(this.groupTopMask)) {
+            this.groupTopMask.enabled = this.showBoard && !exploding;
             this.groupTopMask.getTransform().setLocalPosition(new vec3(0, 0, sp * 2.0));
         }
         if (this.groupBotMask && !isNull(this.groupBotMask)) {
+            this.groupBotMask.enabled = this.showBoard && !exploding;
             this.groupBotMask.getTransform().setLocalPosition(new vec3(0, 0, -sp * 2.0));
         }
 
-        // Copper traces: F.Cu above core, B.Cu below
+        // Copper traces: outermost in explode (×3) so traces are fully visible
         for (const o of this.groupTraces) {
             if (!o || isNull(o)) continue;
             const t = o.getTransform();
             if (o.name.includes('B.Cu')) {
-                t.setLocalPosition(new vec3(0, 0, -sp * 1.0));
+                t.setLocalPosition(new vec3(0, 0, -sp * 3.0));
             } else {
-                t.setLocalPosition(new vec3(0, 0, sp * 1.0));
+                t.setLocalPosition(new vec3(0, 0, sp * 3.0));
             }
         }
 
         // Pads follow their copper layer
         if (this.groupPadsTop && !isNull(this.groupPadsTop)) {
-            this.groupPadsTop.getTransform().setLocalPosition(new vec3(0, 0, sp * 1.0));
+            this.groupPadsTop.getTransform().setLocalPosition(new vec3(0, 0, sp * 3.0));
         }
         if (this.groupPadsBot && !isNull(this.groupPadsBot)) {
-            this.groupPadsBot.getTransform().setLocalPosition(new vec3(0, 0, -sp * 1.0));
+            this.groupPadsBot.getTransform().setLocalPosition(new vec3(0, 0, -sp * 3.0));
         }
 
         // Zones follow their copper layer
@@ -2257,25 +2289,24 @@ export class KiCadBoard extends BaseScriptComponent {
             if (!zo || isNull(zo)) continue;
             var zt = zo.getTransform();
             if (zo.name.includes('B.Cu')) {
-                zt.setLocalPosition(new vec3(0, 0, -sp * 1.0));
+                zt.setLocalPosition(new vec3(0, 0, -sp * 3.0));
             } else {
-                zt.setLocalPosition(new vec3(0, 0, sp * 1.0));
+                zt.setLocalPosition(new vec3(0, 0, sp * 3.0));
             }
         }
 
-        // Drawings split per side: top-side drawings (F.SilkS / F.Fab / F.Cu)
-        // explode upward at the outermost ring, bottom-side drawings symmetric
-        // downward, and center drawings (Edge.Cuts / Margin) stay with the
-        // FR4 substrate so the board outline doesn't fly off the stack.
+        // Silkscreen drawings (F.SilkS / F.Fab) ride innermost (×1) so they
+        // sit behind copper in the explode spread; Edge.Cuts/Margin stay with
+        // the FR4 core so the board outline doesn't fly off.
         for (var dri = 0; dri < this.groupTopDrawings.length; dri++) {
             var dro = this.groupTopDrawings[dri];
             if (!dro || isNull(dro)) continue;
-            dro.getTransform().setLocalPosition(new vec3(0, 0, sp * 3.0));
+            dro.getTransform().setLocalPosition(new vec3(0, 0, sp * 1.0));
         }
         for (var dri2 = 0; dri2 < this.groupBotDrawings.length; dri2++) {
             var dro2 = this.groupBotDrawings[dri2];
             if (!dro2 || isNull(dro2)) continue;
-            dro2.getTransform().setLocalPosition(new vec3(0, 0, -sp * 3.0));
+            dro2.getTransform().setLocalPosition(new vec3(0, 0, -sp * 1.0));
         }
         for (var dri3 = 0; dri3 < this.groupDrawings.length; dri3++) {
             var dro3 = this.groupDrawings[dri3];
@@ -2283,11 +2314,7 @@ export class KiCadBoard extends BaseScriptComponent {
             dro3.getTransform().setLocalPosition(new vec3(0, 0, 0));
         }
 
-        // Footprint reference labels live at ±(th + 0.14) — they're silkscreen
-        // text. They were sitting still during explode while their silkscreen
-        // mesh flew outward, so the labels detached from their layer. Push
-        // each label's Z by ±sp*3 along the side it was built on (sign of its
-        // recorded base Z), preserving the X/Y from buildLabels.
+        // Silkscreen text labels ride with their drawing layer at ±sp*1.0
         for (var li = 0; li < this.groupLabels.length; li++) {
             var lo = this.groupLabels[li];
             if (!lo || isNull(lo)) continue;
@@ -2296,13 +2323,45 @@ export class KiCadBoard extends BaseScriptComponent {
             var side = baseZ >= 0 ? 1 : -1;
             var lpos = lo.getTransform().getLocalPosition();
             lo.getTransform().setLocalPosition(
-                new vec3(lpos.x, lpos.y, baseZ + side * sp * 3.0));
+                new vec3(lpos.x, lpos.y, baseZ + side * sp * 1.0));
         }
 
         // Vias: rebuild cylinder mesh when explode progress changes significantly
         if (this.viaData.length > 0 && Math.abs(progress - this.viaExplodeProgress) > 0.01) {
             this.rebuildViaMesh(progress);
         }
+    }
+
+    // Animate displayedExplode toward explodeAmount. outExpo: fast onset,
+    // smooth elegant landing into the final state. Same curve both directions.
+    private tickExplode(dt: number): void {
+        var target = this.explodeAmount;
+        // New target → start a fresh transition from current displayed value.
+        if (Math.abs(target - this.explodeAnimTo) > 0.001) {
+            this.explodeAnimFrom = this.explodeDisplayed;
+            this.explodeAnimTo = target;
+            this.explodeAnimT = 0;
+        }
+        // Only apply transforms while the animation is actively moving.
+        // Once settled, layer positions are stable and re-applying every frame
+        // is pure waste (dozens of setLocalPosition calls × 4 boards × 60fps).
+        if (Math.abs(this.explodeDisplayed - this.explodeAnimTo) > 0.0005) {
+            this.explodeAnimT = Math.min(this.explodeAnimDuration, this.explodeAnimT + dt);
+            var t = this.explodeAnimT / this.explodeAnimDuration;
+            var eased = outExpo(t);
+            this.explodeDisplayed = this.explodeAnimFrom +
+                (this.explodeAnimTo - this.explodeAnimFrom) * eased;
+            this.applyExplode(this.explodeDisplayed);
+        }
+    }
+
+    // Snap the displayed explode value to the current target without animating.
+    // Use after rebuilds where geometry should appear at its final state instantly.
+    private syncExplodeImmediate(): void {
+        this.explodeDisplayed = this.explodeAmount;
+        this.explodeAnimFrom = this.explodeAmount;
+        this.explodeAnimTo = this.explodeAmount;
+        this.explodeAnimT = this.explodeAnimDuration;
     }
 
     // Fast render mode switch: update realisticMode uniform on unified shaders.
@@ -2367,7 +2426,8 @@ export class KiCadBoard extends BaseScriptComponent {
         this.buildFootprints();
         this.buildLabels();
         this.applyVisibility();
-        this.applyExplode(this.explodeAmount);
+        this.syncExplodeImmediate();
+        this.applyExplode(this.explodeDisplayed);
     }
 
     // ========== INIT HELPERS (shared by onAwake / switchBoard / loadFromJson) ==========
@@ -2458,6 +2518,10 @@ export class KiCadBoard extends BaseScriptComponent {
     // ========== UPDATE LOOP ==========
 
     private onUpdate(): void {
+        // Deactivated boards skip all per-frame work. CircuitPanel toggles
+        // active via activate()/deactivate() so only the focused board ticks.
+        if (!this.active) return;
+
         // ---- Detect input changes that require a full rebuild ----
         // Must run BEFORE buildPhase guard so changes during a build restart it
         if (this.prevBoardSlug !== "" && (
@@ -2519,8 +2583,8 @@ export class KiCadBoard extends BaseScriptComponent {
         }
         */
 
-        // ---- Layer explosion (driven directly by slider) ----
-        this.applyExplode(this.explodeAmount);
+        // ---- Layer explosion (eased transition, snappy) ----
+        this.tickExplode(dt);
 
         /* [ARCHIVED] Effector system — disabled for performance
         if (this.effectorMode !== "off") {
@@ -2838,6 +2902,40 @@ export class KiCadBoard extends BaseScriptComponent {
     private buildGrandTotalVerts: number = 0;
     private buildLoadingLabel: SceneObject | null = null;
 
+    // Public: bring this board online. Enables the SceneObject and rebuilds
+    // geometry if it was previously destroyed by deactivate(). Idempotent and
+    // safe to call mid-build (won't restart an in-flight chunked build).
+    public activate(): void {
+        if (this.active && this.boardBuilt) {
+            this.sceneObject.enabled = true;
+            return;
+        }
+        if (this.active && this.buildPhase >= 0) {
+            // Build already in progress — just keep the SceneObject on and let
+            // the chunked state machine finish.
+            this.sceneObject.enabled = true;
+            return;
+        }
+        this.active = true;
+        this.sceneObject.enabled = true;
+        if (!this.boardBuilt) {
+            this.switchBoard(this.boardSlug, this.isRealistic());
+        }
+    }
+
+    // Public: take this board offline. Destroys geometry to free memory and
+    // disables the SceneObject so onUpdate stops firing. Idempotent.
+    public deactivate(): void {
+        if (!this.active && !this.boardBuilt) {
+            this.sceneObject.enabled = false;
+            return;
+        }
+        this.active = false;
+        this.destroyBoard();
+        this.boardBuilt = false;
+        this.sceneObject.enabled = false;
+    }
+
     // Public: switch to a different board and/or rendering mode at runtime
     public switchBoard(slug: string, useRealistic: boolean): void {
         print("[KiCad] switchBoard: " + slug + " realistic=" + useRealistic);
@@ -2997,11 +3095,13 @@ export class KiCadBoard extends BaseScriptComponent {
             if (this.buildGeneration !== gen) return; // build was cancelled
             this.applyVisibility();
             this.hideLoadingIndicator();
-            this.applyExplode(this.explodeAmount);
+            this.syncExplodeImmediate();
+            this.applyExplode(this.explodeDisplayed);
             this.setAllGrowth(1.0);
             this.flushAllTraceGrowth();
             this.syncPrevTracking();
             this.buildPhase = -1;
+            this.boardBuilt = true;
             print("[KiCad] switchBoard complete: " + this.boardSlug);
         }
     }

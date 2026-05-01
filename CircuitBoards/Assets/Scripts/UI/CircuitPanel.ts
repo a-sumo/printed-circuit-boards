@@ -23,7 +23,7 @@ import { ToggleGroup } from "SpectaclesUIKit.lspkg/Scripts/Components/Toggle/Tog
 import { buildTubeMesh } from '../Common/TubeMeshFactory';
 import { CircuitFrame } from './CircuitFrame';
 import { CircuitDetailPanel } from './CircuitDetailPanel';
-import { getBoardDisplayName } from '../Board/BoardCatalog';
+import { getBoardDisplayName, getBoardButtonLabel } from '../Board/BoardCatalog';
 
 var Z_TEXT = 1.5;
 var Z_BTN  = 1.2;
@@ -76,8 +76,20 @@ export class CircuitPanel extends BaseScriptComponent {
     @input @hint("Gap between items (cm)")
     gap: number = 0.7;
 
-    @input @hint("Vertical gap from panel top to board baseline (cm)")
+    @input @hint("Distance below panel top for the board row baseline (cm). Legacy; use boardCardHeight to size the boards row.")
     boardGap: number = 4.0;
+
+    @input @hint("Push boards toward camera in panel-local Z (cm). Higher = closer to viewer.")
+    boardForwardZ: number = 5.0;
+
+    @input @hint("Inline-reserved height (cm) for the floating-boards row. Renders as a translucent card so boards have a visual home.")
+    boardCardHeight: number = 6.5;
+
+    @input @hint("Vertical padding (cm) above the MORE row's VIVID button. Only takes effect when MORE is expanded.")
+    moreRowGap: number = 3.5;
+
+    @input @hint("Distance (cm) from board top edge up to the title block center. Smaller = title sits closer to the boards.")
+    titleAboveBoards: number = 1.8;
 
     @input @hint("Scale multiplier for focused board")
     focusScale: number = 1.25;
@@ -97,11 +109,15 @@ export class CircuitPanel extends BaseScriptComponent {
     @hint("Material for selection outline rectangle (bright solid color)")
     outlineMaterial: Material;
 
+    @input @allowUndefined
+    @hint("Glass material for the selection sphere (e.g. a basic UIKit/PBR glass). Used as-is — no color tinting.")
+    sphereMaterial: Material;
+
     @input @hint("Gap between board and selection sphere (cm)")
     outlinePadding: number = 1.0;
 
     @input @hint("Selection sphere radius (cm)")
-    outlineThickness: number = 0.6;
+    outlineThickness: number = 0.3;
 
     // ---- Detail panel ----
     @input @allowUndefined
@@ -115,8 +131,8 @@ export class CircuitPanel extends BaseScriptComponent {
     @input @hint("Gap between main panel bottom and detail panel top (cm)")
     detailGap: number = 3.0;
 
-    @input @hint("How far the main panel slides up when detail opens (cm)")
-    slideUpAmount: number = 8.0;
+    @input @hint("How far the main panel slides up when detail opens (cm). 0 = panel stays put on board select.")
+    slideUpAmount: number = 0.0;
 
     // ---- State ----
     private built: boolean = false;
@@ -125,6 +141,16 @@ export class CircuitPanel extends BaseScriptComponent {
     private boards: BoardEntry[] = [];
     private boardBaseScales: vec3[] = [];
     private savedScales: vec3[] = [];
+    // Local-space column slots relative to the panel SceneObject. World targets
+    // are computed on demand by transforming through the panel's world matrix.
+    private boardLocalTargets: vec3[] = [];
+    // Homing animation: when RETURN is pressed, boards animate from their
+    // current world pose to their column slot on the (currently positioned) panel.
+    private homingActive: boolean = false;
+    private homingT: number = 0;
+    private homingDuration: number = 0.45;
+    private homingFromPos: vec3[] = [];
+    private homingFromRot: quat[] = [];
     private focusedIdx: number = -1;
     private time: number = 0;
     private fontCfg: TextMetricsConfig = new TextMetricsConfig();
@@ -151,7 +177,12 @@ export class CircuitPanel extends BaseScriptComponent {
     private moreOpen: boolean = false;
     private moreToggleBtn: SceneObject | null = null;
     private moreRowObj: SceneObject | null = null;
+    private morePadObj: SceneObject | null = null;
     private moreVividBtn: SceneObject | null = null;
+
+    // Boards "card" — a translucent backplate row that reserves inline space
+    // for the floating 3D boards so reflow doesn't pack content behind them.
+    private boardsCardObj: SceneObject | null = null;
     // Settings buttons that require an active focused board to do anything.
     // Held by reference so we can flip their UIKit `_inactive` flag and keep
     // their toggled visuals in sync with the panel's authoritative state.
@@ -241,22 +272,19 @@ export class CircuitPanel extends BaseScriptComponent {
         // theme hues (jade-green, bright-sky, ghost-white) only.
         var dim   = new vec4(0.004, 0.729, 0.937, 0.85); // bright-sky, dim alpha
 
-        // Title lives inside the panel as the first content block — gives the
-        // floating boards a clear "this panel is for X" anchor and keeps the
-        // visual hierarchy: TITLE > board names > settings > search.
-        var titleColor   = new vec4(0.984, 0.984, 1.000, 1.00); // ghost-white
-        var subColor     = new vec4(0.004, 0.729, 0.937, 1.00); // bright-sky
-        var captionColor = new vec4(0.984, 0.984, 1.000, 0.75); // ghost-white dim
-        this.addText(root, "title",    "CIRCUIT BOARDS",                40, titleColor);
-        this.addText(root, "subtitle", "KiCad PCB Explorer",             20, subColor);
-        this.addText(root, "subtitle", "Tap a board. Pinch to grab.",    16, captionColor);
-        this.addDivider(root);
+        // Title lives in a fixed block ABOVE the boards — repositionTitleBlock
+        // places it at boardBaseY + boardSize/2 + 3.5 so it floats just above
+        // the floating PCBs. Decoupling from the reflow stack means it never
+        // overlaps with boards regardless of boardGap.
+        this.addTitleBlock(root);
 
         // Build items (panel-internal stack)
+        this.addBoardsCard(root);   // reserves vertical space + draws backplate
         this.addBoardRow(root);
         this.addDivider(root);
         this.addText(root, "subtitle", "SETTINGS", 22, dim);
         this.addSettingsRow(root);  // EXPLODE | LIFE SIZE | RETURN | MORE
+        this.addMorePad(root);      // extra spacer (hidden with more row)
         this.addMoreRow(root);      // hidden by default; toggled by MORE button
         this.addSpacer(root);
 
@@ -317,8 +345,9 @@ export class CircuitPanel extends BaseScriptComponent {
 
             this.knownBoardObjs.push(child);
 
-            // Reparent to panel so boards follow panel movement
-            child.setParent(root);
+            // Boards stay in boardParent — they do NOT follow the panel when it
+            // slides. RETURN snaps/animates them back to their column slot on
+            // the panel via homeBoardsToColumns().
 
             // Normalize so the longest XY dimension fits normalizeWidth (cm).
             // Falls back to life-size if extents aren't reported yet — the rebuild
@@ -380,7 +409,7 @@ export class CircuitPanel extends BaseScriptComponent {
             if (!kb) continue;
 
             this.knownBoardObjs.push(child);
-            child.setParent(root);
+            // Boards stay in boardParent (do not follow panel). See discoverBoards comment.
 
             var bs = child.getTransform().getLocalScale();
             var bhw2: number = (kb.getBoardHalfWidth) ? kb.getBoardHalfWidth() : 0;
@@ -418,28 +447,8 @@ export class CircuitPanel extends BaseScriptComponent {
         block.setParent(parent);
         this.titleBlockObj = block;
 
-        var cream    = new vec4(0.984, 0.984, 1.000, 1.00); // ghost-white
-        var midDim   = new vec4(0.004, 0.729, 0.937, 1.00); // bright-sky
-        var fadedDim = new vec4(0.984, 0.984, 1.000, 0.75); // ghost-white dim
-
-        // Stacked vertically inside the block. Local Y goes top→bottom.
-        var titleH    = 5.5;
-        var subH      = 2.0;
-        var captionH  = 1.6;
-        var totalH    = titleH + subH + captionH + 0.6;
-        var y         = totalH / 2;
-
-        y -= titleH / 2;
-        this.makeBlockText(block, "CP_title", "CIRCUIT BOARDS", 64, cream, y);
-        y -= titleH / 2 + 0.3;
-
-        y -= subH / 2;
-        this.makeBlockText(block, "CP_subtitle", "KiCad PCB Explorer", 24, midDim, y);
-        y -= subH / 2 + 0.2;
-
-        y -= captionH / 2;
-        this.makeBlockText(block, "CP_caption", "Tap a board to focus. Pinch to grab and rotate.",
-            18, fadedDim, y);
+        var cream = new vec4(0.984, 0.984, 1.000, 1.00); // ghost-white
+        this.makeBlockText(block, "CP_title", "PRINTED CIRCUIT BOARDS", 64, cream, 0);
     }
 
     private makeBlockText(parent: SceneObject, name: string, text: string,
@@ -482,6 +491,18 @@ export class CircuitPanel extends BaseScriptComponent {
             color: divColor, height: 0 });
     }
 
+    // Reserves inline vertical space for the floating 3D boards so reflow
+    // pushes the buttons below the boards instead of behind them. Invisible
+    // (no mesh/material) — purely a layout placeholder.
+    private addBoardsCard(parent: SceneObject): void {
+        var obj = global.scene.createSceneObject("CP_boardsReserve");
+        obj.setParent(parent);
+        this.boardsCardObj = obj;
+
+        this.items.push({ kind: "row", obj, tc: null, text: "", fontSize: 0,
+            color: new vec4(0,0,0,0), height: this.boardCardHeight });
+    }
+
     private addBoardRow(parent: SceneObject): void {
         var rowObj = global.scene.createSceneObject("CP_boardRow");
         rowObj.setParent(parent);
@@ -509,12 +530,12 @@ export class CircuitPanel extends BaseScriptComponent {
         // newly discovered boards.
         var self = this;
         for (var i = 0; i < this.boardButtons.length && i < this.boards.length; i++) {
-            var existingLabel = getBoardDisplayName(this.boards[i].kb.boardSlug || "");
+            var existingLabel = getBoardButtonLabel(this.boards[i].kb.boardSlug || "");
             this.applyButtonLabel(this.boardButtons[i], existingLabel);
         }
 
         for (var i = this.boardButtons.length; i < this.boards.length; i++) {
-            var label = getBoardDisplayName(this.boards[i].kb.boardSlug || "");
+            var label = getBoardButtonLabel(this.boards[i].kb.boardSlug || "");
             var btnObj = this.buttonPrefab.instantiate(rowObj);
             btnObj.enabled = true;
             btnObj.name = "BoardBtn_" + i;
@@ -602,6 +623,18 @@ export class CircuitPanel extends BaseScriptComponent {
         this.refreshFromState();
     }
 
+    // Empty row used purely as vertical padding above the more row. Toggled
+    // visible together with the more row so the gap only appears when more
+    // is expanded — otherwise wasted space at the bottom of the panel.
+    private addMorePad(parent: SceneObject): void {
+        var padObj = global.scene.createSceneObject("CP_morePad");
+        padObj.setParent(parent);
+        padObj.enabled = false;
+        this.morePadObj = padObj;
+        this.items.push({ kind: "row", obj: padObj, tc: null, text: "", fontSize: 0,
+            color: new vec4(0,0,0,0), height: this.moreRowGap });
+    }
+
     // Three extra controls. Hidden by default — reflowAll skips disabled rows.
     private addMoreRow(parent: SceneObject): void {
         var rowObj = global.scene.createSceneObject("CP_moreRow");
@@ -651,6 +684,7 @@ export class CircuitPanel extends BaseScriptComponent {
     private toggleMore(): void {
         this.moreOpen = !this.moreOpen;
         if (this.moreRowObj) this.moreRowObj.enabled = this.moreOpen;
+        if (this.morePadObj) this.morePadObj.enabled = this.moreOpen;
         if (this.moreToggleBtn) {
             this.applyButtonLabel(this.moreToggleBtn, this.moreOpen ? "▴ MORE" : "▾ MORE");
         }
@@ -753,7 +787,13 @@ export class CircuitPanel extends BaseScriptComponent {
 
     private layoutRow(rowObj: SceneObject, contentW: number, centerY: number): void {
         var n = rowObj.getChildrenCount();
-        if (n === 0) return;
+        if (n === 0) {
+            // Empty row containers (e.g. boards-card backplate) still need
+            // to be positioned at centerY so the row's own mesh visual lands
+            // at the correct Y in panel-local space.
+            rowObj.getTransform().setLocalPosition(new vec3(0, centerY, 0.5));
+            return;
+        }
         var colW = contentW / n;
 
         // Look up this row's height from its PanelItem so button size scales
@@ -762,7 +802,10 @@ export class CircuitPanel extends BaseScriptComponent {
         for (var k = 0; k < this.items.length; k++) {
             if (this.items[k].obj === rowObj) { rowH = this.items[k].height; break; }
         }
-        var buttonW = Math.max(2.0, colW * 0.92);
+        // Cap button width to one quarter of the panel so sparse rows
+        // (e.g. a single-button MORE row) don't stretch full-width.
+        var maxButtonW = (contentW / 4) * 0.92;
+        var buttonW = Math.max(2.0, Math.min(colW * 0.92, maxButtonW));
         var buttonH = Math.max(1.6, rowH * 0.78);
 
         for (var i = 0; i < n; i++) {
@@ -814,32 +857,85 @@ export class CircuitPanel extends BaseScriptComponent {
     // scale down (bgScale). No idle motion.
 
     private snapBoardsToColumns(): void {
-        this.boardBaseY = this.panelHeight / 2 + this.boardGap;
+        this.computeBoardLocalTargets();
         if (this.boards.length === 0) {
             this.repositionTitleBlock();
             return;
         }
+        // Instant snap: boards live outside the panel, so we drive their world
+        // pose directly from the panel's world matrix × local column slot.
+        var panelMat = this.sceneObject.getTransform().getWorldTransform();
+        var panelRot = this.sceneObject.getTransform().getWorldRotation();
+        for (var i = 0; i < this.boards.length; i++) {
+            var b = this.boards[i];
+            var worldPos = panelMat.multiplyPoint(this.boardLocalTargets[i]);
+            b.obj.getTransform().setWorldPosition(worldPos);
+            b.obj.getTransform().setWorldRotation(panelRot);
+        }
+        this.repositionTitleBlock();
+    }
 
+    // Snap a single board to its column slot at the panel's current world
+    // transform. Called when a board is freshly activated so it appears next
+    // to the (possibly-slid) panel instead of at a stale world position.
+    private snapBoardToColumn(idx: number): void {
+        if (idx < 0 || idx >= this.boards.length) return;
+        if (this.boardLocalTargets.length !== this.boards.length) {
+            this.computeBoardLocalTargets();
+        }
+        if (idx >= this.boardLocalTargets.length) return;
+        var panelT = this.sceneObject.getTransform();
+        var panelMat = panelT.getWorldTransform();
+        var panelRot = panelT.getWorldRotation();
+        var bt = this.boards[idx].obj.getTransform();
+        bt.setWorldPosition(panelMat.multiplyPoint(this.boardLocalTargets[idx]));
+        bt.setWorldRotation(panelRot);
+    }
+
+    // Recompute the panel-local column slot for each board. Stored as local
+    // positions relative to the panel SceneObject and converted to world on use.
+    private computeBoardLocalTargets(): void {
+        this.boardBaseY = this.panelHeight / 2 - this.padding - this.boardCardHeight / 2;
+        this.boardLocalTargets = [];
+        if (this.boards.length === 0) return;
         var contentW = this.panelWidth - this.padding * 2;
         if (contentW < 1) contentW = 1;
         var n = this.boards.length;
         var colW = contentW / n;
-
         for (var i = 0; i < n; i++) {
-            var b = this.boards[i];
             var x = -contentW / 2 + colW * i + colW / 2;
-            b.obj.getTransform().setLocalPosition(new vec3(x, this.boardBaseY, 0));
-            b.obj.getTransform().setLocalRotation(quat.quatIdentity());
+            this.boardLocalTargets.push(new vec3(x, this.boardBaseY, this.boardForwardZ));
         }
+    }
 
+    // Kick off an animated return to column slots. Each board starts from its
+    // current world pose and lerps to the panel-local target sampled at animation
+    // start (frozen so a sliding panel doesn't drag the targets out from under).
+    private homeBoardsToColumns(): void {
+        this.computeBoardLocalTargets();
+        if (this.boards.length === 0) {
+            this.repositionTitleBlock();
+            return;
+        }
+        this.homingFromPos = [];
+        this.homingFromRot = [];
+        for (var i = 0; i < this.boards.length; i++) {
+            var t = this.boards[i].obj.getTransform();
+            this.homingFromPos.push(t.getWorldPosition());
+            this.homingFromRot.push(t.getWorldRotation());
+        }
+        this.homingT = 0;
+        this.homingActive = true;
         this.repositionTitleBlock();
     }
 
     private repositionTitleBlock(): void {
         if (!this.titleBlockObj) return;
         var boardSize = this.normalizeWidth > 0 ? this.normalizeWidth : 5;
-        var titleY = this.boardBaseY + boardSize * 0.5 + 3.5;
-        this.titleBlockObj.getTransform().setLocalPosition(new vec3(0, titleY, 0));
+        var titleY = this.boardBaseY + boardSize * 0.5 + this.titleAboveBoards;
+        // Push the title forward to match the boards' Z plane so it clears the
+        // panel's back face and doesn't z-fight with the title-block backplate.
+        this.titleBlockObj.getTransform().setLocalPosition(new vec3(0, titleY, this.boardForwardZ));
     }
 
     // ---- Tick ----
@@ -857,6 +953,9 @@ export class CircuitPanel extends BaseScriptComponent {
                     this.rebuildBoardRowButtons();
                     this.reflowAll();
                     this.snapBoardsToColumns();
+                    // Newly-discovered boards default to active+built; deactivate
+                    // any that aren't the current focus so we don't blow memory.
+                    this.deactivateNonFocused();
                     print("[CircuitPanel] Reflow — " + this.boards.length + " boards");
                 }
             }
@@ -877,7 +976,7 @@ export class CircuitPanel extends BaseScriptComponent {
                 cb.outlineObj = null;
                 if (ci < this.boardButtons.length) {
                     this.applyButtonLabel(this.boardButtons[ci],
-                        getBoardDisplayName(curSlug) || curSlug);
+                        getBoardButtonLabel(curSlug) || curSlug);
                 }
                 print("[CircuitPanel] Auto-focused slot " + ci + " on slug change -> " + curSlug);
             }
@@ -916,6 +1015,32 @@ export class CircuitPanel extends BaseScriptComponent {
             this.sceneObject.getTransform().setLocalPosition(
                 new vec3(pos.x, this.panelCurrentLocalY, pos.z)
             );
+        }
+
+        // Boards homing back to their column slots after RETURN.
+        if (this.homingActive) {
+            this.homingT += dt;
+            var ht = Math.min(1, this.homingT / this.homingDuration);
+            // Smoothstep for a snappy-but-graceful land.
+            var eased = ht * ht * (3 - 2 * ht);
+            var panelMat = this.sceneObject.getTransform().getWorldTransform();
+            var panelRot = this.sceneObject.getTransform().getWorldRotation();
+            for (var hi = 0; hi < this.boards.length; hi++) {
+                if (hi >= this.boardLocalTargets.length) continue;
+                var bt = this.boards[hi].obj.getTransform();
+                var fromP = this.homingFromPos[hi];
+                var toP = panelMat.multiplyPoint(this.boardLocalTargets[hi]);
+                bt.setWorldPosition(new vec3(
+                    fromP.x + (toP.x - fromP.x) * eased,
+                    fromP.y + (toP.y - fromP.y) * eased,
+                    fromP.z + (toP.z - fromP.z) * eased,
+                ));
+                var fromR = this.homingFromRot[hi];
+                bt.setWorldRotation(quat.slerp(fromR, panelRot, eased));
+            }
+            if (ht >= 1) {
+                this.homingActive = false;
+            }
         }
 
         // Connector tube animation
@@ -963,13 +1088,59 @@ export class CircuitPanel extends BaseScriptComponent {
     // to push the new state out to every reactive UI element. Called from:
     //   - the ToggleGroup's onToggleSelected (user tap on a board button)
     //   - applyDefaultFocus / dynamic-load auto-focus (programmatic)
+    private deactivateNonFocused(): void {
+        for (var i = 0; i < this.boards.length; i++) {
+            if (i === this.focusedIdx) continue;
+            var kb = this.boards[i].kb as any;
+            if (kb && typeof kb.deactivate === "function") {
+                try { kb.deactivate(); } catch (e) {}
+                this.boards[i].outlineObj = null;
+            }
+        }
+    }
+
     private selectBoard(idx: number): void {
         if (idx < 0 || idx >= this.boards.length) return;
         if (this.focusedIdx === idx) {
+            // Same-board re-click: make sure the board is alive and snapped to
+            // its column slot. Without this the very first click on the
+            // initially-focused button is a silent no-op even when the board
+            // ended up at a stale world position, which surfaces as "click does
+            // nothing — click another board, click back, now it appears".
+            var sameKb = this.boards[idx].kb as any;
+            if (sameKb && typeof sameKb.activate === "function") {
+                try { sameKb.activate(); } catch (e) {}
+            }
+            this.snapBoardToColumn(idx);
             this.refreshFromState();
             return;
         }
         this.focusedIdx = idx;
+
+        // Only the focused board renders and ticks. Others are deactivated
+        // (geometry destroyed, SceneObject disabled) to keep CPU + memory low.
+        // Reactivating triggers a chunked rebuild on demand.
+        for (var bi = 0; bi < this.boards.length; bi++) {
+            var kb = this.boards[bi].kb as any;
+            if (!kb) continue;
+            if (bi === idx) {
+                if (typeof kb.activate === "function") {
+                    try { kb.activate(); } catch (e) {}
+                }
+            } else {
+                if (typeof kb.deactivate === "function") {
+                    try { kb.deactivate(); } catch (e) {}
+                    this.boards[bi].outlineObj = null;
+                }
+            }
+        }
+
+        // Snap the freshly-activated board to its column slot at the panel's
+        // current world transform. Without this the board appears at whatever
+        // world position it last had — which may be off-camera if the panel
+        // slid (e.g. detail panel opened) since the last column snap.
+        this.snapBoardToColumn(idx);
+
         for (var i = 0; i < this.boards.length; i++) {
             if (this.boards[i].outlineObj) this.boards[i].outlineObj.enabled = (i === idx);
         }
@@ -992,6 +1163,11 @@ export class CircuitPanel extends BaseScriptComponent {
     private refreshFromState(): void {
         var hasFocus = this.focusedIdx >= 0;
         var kb = hasFocus ? this.boards[this.focusedIdx].kb : null;
+
+        // Pull explode state from the board itself so the button visual
+        // tracks the actual geometry — fixes case where kb.explodeAmount
+        // is preset in the scene inspector but explodeOn defaulted to false.
+        if (kb) this.explodeOn = (kb.explodeAmount || 0) > 0.5;
 
         // VIVID button — toggled state and label both follow renderMode.
         if (this.moreVividBtn) {
@@ -1233,52 +1409,22 @@ export class CircuitPanel extends BaseScriptComponent {
             var kb = this.boards[i].kb;
             if (kb) kb.explodeAmount = 0.0;
         }
-        // Re-apply the default-focus invariant ("at least one board selected").
-        // applyDefaultFocus → selectBoard → refreshFromState handles all UI.
-        this.focusedIdx = -1;
-        this.applyDefaultFocus();
-        this.snapBoardsToColumns();
+        // Keep the current focus — RETURN moves the focused board back to the
+        // frame, it does not switch boards. Refresh state in case any flags
+        // changed (explode, lifeSize) so dependent UI mirrors the reset.
+        this.refreshFromState();
+        // Animated home: boards lerp from wherever the user dragged them back
+        // to the column slot on the panel's current world transform.
+        this.homeBoardsToColumns();
         this.hideDetailPanel();
     }
 
     // ---- Selection indicator (sphere below board) ----
 
+    // Selection sphere removed. Kept the stub so callers and BoardEntry's
+    // `outlineObj` field stay valid without any geometry being created.
     private buildOutlineRect(boardObj: SceneObject, kb: any): SceneObject | null {
-        var bhh: number = (kb && kb.getBoardHalfHeight) ? kb.getBoardHalfHeight() : 0;
-
-        // Indicator lives in board-local space; the board is uniformly scaled by parent
-        // SceneObject. Compensate so outlinePadding/Thickness are interpreted as world cm.
-        var parentScale: number = boardObj.getTransform().getLocalScale().x;
-        var inv: number = (parentScale > 0.0001) ? 1.0 / parentScale : 1.0;
-        var radius: number = this.outlineThickness * inv;
-        var gap: number = this.outlinePadding * inv;
-        // Fall back to a fixed offset if the board hasn't reported its extents yet
-        var dropY: number = (bhh > 0.1 ? bhh : 2.0 * inv) + gap + radius;
-
-        var obj = global.scene.createSceneObject("__outline_" + boardObj.name);
-        obj.setParent(boardObj);
-        obj.getTransform().setLocalPosition(new vec3(0, -dropY, 0));
-
-        var mb = new MeshBuilder([
-            { name: "position",  components: 3 },
-            { name: "normal",    components: 3 },
-            { name: "texture0",  components: 2 },
-        ]);
-        mb.topology = MeshTopology.Triangles;
-        mb.indexType = MeshIndexType.UInt16;
-
-        this.appendUvSphere(mb, radius, 16, 12);
-        mb.updateMesh();
-
-        var rmv = obj.createComponent("Component.RenderMeshVisual") as RenderMeshVisual;
-        rmv.mesh = mb.getMesh();
-        // Jade-green to match the toggled (selected) board button border.
-        var mat = this.themedMaterial(new vec4(0.125, 0.749, 0.333, 1.0));
-        if (mat) rmv.mainMaterial = mat;
-        else if (this.outlineMaterial) rmv.mainMaterial = this.outlineMaterial;
-
-        obj.enabled = false;
-        return obj;
+        return null;
     }
 
     private appendUvSphere(mb: MeshBuilder, radius: number, lon: number, lat: number): void {

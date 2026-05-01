@@ -1,0 +1,158 @@
+{
+  "name": "GPIO Blink - Raspberry Pi LED Circuit",
+  "description": "Basic LED blink circuit: GPIO pin -> resistor -> LED -> GND",
+  "components": [
+    {
+      "id": "header",
+      "type": "header",
+      "pos": [0, 0, 0],
+      "rot": 0,
+      "config": {
+        "label": "GPIO Header",
+        "pins": 20,
+        "rows": 2,
+        "pinLabels": {
+          "1-1": "3V3",
+          "1-2": "5V",
+          "1-3": "GPIO2",
+          "1-4": "5V",
+          "1-5": "GPIO3",
+          "1-6": "GND",
+          "1-7": "GPIO4",
+          "1-8": "GPIO14",
+          "1-9": "GND",
+          "1-10": "GPIO15",
+          "1-11": "GPIO17",
+          "1-12": "GPIO18",
+          "1-13": "GPIO27",
+          "1-14": "GND",
+          "1-15": "GPIO22",
+          "1-16": "GPIO23",
+          "1-17": "3V3",
+          "1-18": "GPIO24",
+          "1-19": "GPIO10",
+          "1-20": "GND",
+          "2-1": "5V",
+          "2-2": "5V",
+          "2-3": "GPIO2",
+          "2-4": "GND",
+          "2-5": "GPIO3",
+          "2-6": "GPIO17",
+          "2-7": "GPIO4",
+          "2-8": "GPIO14",
+          "2-9": "GND",
+          "2-10": "GPIO15"
+        }
+      }
+    },
+    {
+      "id": "breadboard",
+      "type": "breadboard",
+      "pos": [0, -25, 0],
+      "rot": 0,
+      "config": {
+        "label": "Breadboard",
+        "cols": 30,
+        "rows": 10
+      }
+    },
+    {
+      "id": "R1",
+      "type": "resistor",
+      "pos": [5, -20, 0],
+      "rot": 90,
+      "config": {
+        "label": "R1",
+        "value": 220
+      }
+    },
+    {
+      "id": "LED1",
+      "type": "led",
+      "pos": [5, -30, 0],
+      "rot": 0,
+      "config": {
+        "label": "LED1",
+        "color": "red",
+        "blinkRate": 2
+      }
+    },
+    {
+      "id": "R2",
+      "type": "resistor",
+      "pos": [15, -20, 0],
+      "rot": 90,
+      "config": {
+        "label": "R2",
+        "value": 330
+      }
+    },
+    {
+      "id": "LED2",
+      "type": "led",
+      "pos": [15, -30, 0],
+      "rot": 0,
+      "config": {
+        "label": "LED2",
+        "color": "amber",
+        "blinkRate": 1
+      }
+    },
+    {
+      "id": "C1",
+      "type": "capacitor",
+      "pos": [-10, -25, 0],
+      "rot": 0,
+      "config": {
+        "label": "C1",
+        "value": "100nF"
+      }
+    }
+  ],
+  "wires": [
+    {
+      "from": { "component": "header", "pin": "GPIO17" },
+      "to": { "component": "R1", "pin": "1" },
+      "color": "yellow"
+    },
+    {
+      "from": { "component": "R1", "pin": "2" },
+      "to": { "component": "LED1", "pin": "anode" },
+      "color": "yellow"
+    },
+    {
+      "from": { "component": "LED1", "pin": "cathode" },
+      "to": { "component": "header", "pin": "GND" },
+      "color": "black"
+    },
+    {
+      "from": { "component": "header", "pin": "GPIO18" },
+      "to": { "component": "R2", "pin": "1" },
+      "color": "orange"
+    },
+    {
+      "from": { "component": "R2", "pin": "2" },
+      "to": { "component": "LED2", "pin": "anode" },
+      "color": "orange"
+    },
+    {
+      "from": { "component": "LED2", "pin": "cathode" },
+      "to": { "component": "header", "pin": "GND" },
+      "color": "black"
+    },
+    {
+      "from": { "component": "header", "pin": "3V3" },
+      "to": { "component": "C1", "pin": "1" },
+      "color": "red"
+    },
+    {
+      "from": { "component": "C1", "pin": "2" },
+      "to": { "component": "header", "pin": "GND" },
+      "color": "blue"
+    }
+  ],
+  "config": {
+    "title": "LED Blink Tutorial",
+    "description": "Connect GPIO17 and GPIO18 to LEDs through 220R and 330R resistors. The LEDs blink at different rates."
+  }
+}

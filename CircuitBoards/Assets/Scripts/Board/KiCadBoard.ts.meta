@@ -79,7 +79,7 @@
     -
       {}
   InputLines:
-    - '// @input string boardSlug = "arduino-nano" {"hint":"Select board from catalog (boards/ directory)", "widget":"combobox", "values":[{"label":"Arduino Nano", "value":"arduino-nano"}, {"label":"StickHub USB", "value":"stickhub-usb"}, {"label":"RPi CM4 IO", "value":"rpi-cm4io"}, {"label":"Raspberry Pi 3B+", "value":"raspi-3"}, {"label":"XIAO Servo", "value":"xiao-servo"}]}'
+    - '// @input string boardSlug = "arduino-nano" {"hint":"Select board from catalog (boards/ directory)", "widget":"combobox", "values":[{"label":"Arduino Nano", "value":"arduino-nano"}, {"label":"StickHub USB", "value":"stickhub-usb"}, {"label":"RPi CM4 IO", "value":"rpi-cm4io"}, {"label":"ATtiny85 USB", "value":"attiny85-usb"}, {"label":"XIAO Servo", "value":"xiao-servo"}]}'
     - '// @input Asset.Material traceMaterial {"hint":"Unified trace material (KiCadTraceShader.js) with traceTex texture parameter"}'
     - '// @input Asset.Material boardMaterial {"hint":"Unified board material (KiCadBoardShader.js)"}'
     - "// @input string autoPlay {\"hint\":\"Sequence name to auto-play on awake (empty = none). Use 'all' to grow all nets.\"}"

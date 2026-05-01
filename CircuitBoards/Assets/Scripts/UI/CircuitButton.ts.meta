@@ -99,7 +99,7 @@
     - '// @input Callback[] onFinishedCallbacks = {} {"label":"On Finished Callbacks", "showIf":"_toggleable"}'
     - '// @ui {"widget":"group_end"}'
     - '// @input string label = "BUTTON" {"hint":"Button label text"}'
-    - '// @input float labelSize = 48 {"hint":"Label font size"}'
+    - '// @input float labelSize = 36 {"hint":"Label font size"}'
     - '// @input Asset.Font font {"hint":"Font (optional, uses system default)"}'
     - '// @input string variant = "default" {"hint":"Tron color variant", "widget":"combobox", "values":[{"label":"Default", "value":"default"}, {"label":"Destructive", "value":"destructive"}, {"label":"Ghost", "value":"ghost"}]}'
     - '// @input float tronBorderSize = 0.12 {"hint":"Border thickness (cm)"}'

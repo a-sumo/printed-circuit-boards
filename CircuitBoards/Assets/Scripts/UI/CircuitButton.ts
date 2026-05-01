@@ -39,7 +39,7 @@ export class CircuitButton extends RectangleButton {
     label: string = "BUTTON";
 
     @input @hint("Label font size")
-    labelSize: number = 48;
+    labelSize: number = 36;
 
     @input @allowUndefined
     @hint("Font (optional, uses system default)")
@@ -379,14 +379,15 @@ export class CircuitButton extends RectangleButton {
     private applyFittedLabel(text: string) {
         if (!this.textComp) return;
 
-        // 70% of inner width keeps a comfortable margin so labels never
-        // touch the border. Floor at 35% of labelSize so we can shrink hard
+        // 60% of inner width keeps a comfortable margin so labels never
+        // touch the border, even on labels with wide caps + digits like
+        // "RPi CM4 IO". Floor at 35% of labelSize so we can shrink hard
         // on long labels ("Arduino Nano", "ATtiny85 USB") before wrapping.
         var btnW = 0;
         if (this._visual && (this._visual as any)._size) {
-            btnW = (this._visual as any)._size.x * 0.7;
+            btnW = (this._visual as any)._size.x * 2.0;
         }
-        if (btnW <= 0) btnW = 5;
+        if (btnW <= 0) btnW = 7;
 
         var fontName = "";
         if (this.font) { try { fontName = (this.font as any).name || ""; } catch (e) {} }
@@ -439,6 +440,16 @@ export class CircuitButton extends RectangleButton {
         // state transition out of hover, so we just re-apply the skin to make
         // sure our base gradients (jade / sky) are the source of truth again.
         this.applySkin();
+        // For grouped (toggle) buttons the FSM sometimes leaves us in a
+        // transient "hover" state when this handler runs, so applySkin's
+        // trailing setState(sn) re-asserts the dynamic flow gradient instead
+        // of the static one. Force the resting state explicitly here.
+        try {
+            var on = !!(this as any).isOn;
+            if (typeof (this as any).setState === "function") {
+                (this as any).setState(on ? "toggledDefault" : "default");
+            }
+        } catch (err) {}
     }
 
     protected onTriggerDownHandler(e: StateEvent) {

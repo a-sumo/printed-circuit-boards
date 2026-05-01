@@ -1,0 +1,6585 @@
+{
+  "__type": "root",
+  "__count": 9,
+  "MetaData": "",
+  "Nodes": {
+    "__type": "container",
+    "__count": 43,
+    "ChildNodes": {
+      "__type": "container",
+      "__count": 77,
+      "Node0": {
+        "__type": "container",
+        "__count": 43,
+        "CommentSizeX": 100,
+        "CommentSizeY": 40,
+        "DependencyIndex": 0,
+        "EnablePreview": true,
+        "IsSubGraph0": false,
+        "IsSubGraph1": false,
+        "IsSubGraph2": false,
+        "IsSubGraph3": false,
+        "LevelID": 2,
+        "MetaData": "",
+        "NodeCount": 0,
+        "NodeType": 1,
+        "Ports": {
+          "__type": "container",
+          "__count": 13,
+          "Channels": {
+            "__type": "container",
+            "__count": 9,
+            "ClassType1": "COMBO",
+            "ClassType2": "",
+            "ConnectionCount": 0,
+            "ID": "Channels",
+            "IOType": 0,
+            "MetaData": "",
+            "Property": {
+              "__type": "container",
+              "__count": 1,
+              "Variables": {
+                "__type": "container",
+                "__count": 4,
+                "ItemCount": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "06000000",
+                    "size": 4
+                  },
+                  "Size": 4,
+                  "Type": 2
+                },
+                "ItemIndex": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "02000000",
+                    "size": 4
+                  },
+                  "Size": 4,
+                  "Type": 2
+                },
+                "ItemList": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": "xyzw : rgba : xyz : rgb : xy : x",
+                  "Size": 32,
+                  "Type": 3
+                },
+                "ItemName": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": "xyz",
+                  "Size": 3,
+                  "Type": 3
+                }
+              }
+            },
+            "SubPropertyCount": 0,
+            "Wireless": false
+          },
+          "Default": {
+            "__type": "container",
+            "__count": 9,
+            "ClassType1": "FLOAT",
+            "ClassType2": "",
+            "ConnectionCount": 0,
+            "ID": "Default",
+            "IOType": 0,
+            "MetaData": "",
+            "Property": {
+              "__type": "container",
+              "__count": 1,
+              "Variables": {
+                "__type": "container",
+                "__count": 4,
+                "VariableW": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "000000000000f03f",
+                    "size": 8
+                  },
+                  "Size": 8,
+                  "Type": 0
+                },
+                "VariableX": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "000000000000f03f",
+                    "size": 8
+                  },
+                  "Size": 8,
+                  "Type": 0
+                },
+                "VariableY": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "000000000000f03f",
+                    "size": 8
+                  },
+                  "Size": 8,
+                  "Type": 0
+                },
+                "VariableZ": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "000000000000f03f",
+                    "size": 8
+                  },
+                  "Size": 8,
+                  "Type": 0
+                }
+              }
+            },
+            "SubPropertyCount": 0,
+            "Wireless": false
+          },
+          "EnableMax": {
+            "__type": "container",
+            "__count": 9,
+            "ClassType1": "BOOL",
+            "ClassType2": "",
+            "ConnectionCount": 0,
+            "ID": "EnableMax",
+            "IOType": 0,
+            "MetaData": "",
+            "Property": {
+              "__type": "container",
+              "__count": 1,
+              "Variables": {
+                "__type": "container",
+                "__count": 1,
+                "VariableX": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "00",
+                    "size": 1
+                  },
+                  "Size": 1,
+                  "Type": 1
+                }
+              }
+            },
+            "SubPropertyCount": 0,
+            "Wireless": false
+          },
+          "EnableMin": {
+            "__type": "container",
+            "__count": 9,
+            "ClassType1": "BOOL",
+            "ClassType2": "",
+            "ConnectionCount": 0,
+            "ID": "EnableMin",
+            "IOType": 0,
+            "MetaData": "",
+            "Property": {
+              "__type": "container",
+              "__count": 1,
+              "Variables": {
+                "__type": "container",
+                "__count": 1,
+                "VariableX": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "00",
+                    "size": 1
+                  },
+                  "Size": 1,
+                  "Type": 1
+                }
+              }
+            },
+            "SubPropertyCount": 0,
+            "Wireless": false
+          },
+          "Group": {
+            "__type": "container",
+            "__count": 9,
+            "ClassType1": "STRING",
+            "ClassType2": "",
+            "ConnectionCount": 0,
+            "ID": "Group",
+            "IOType": 0,
+            "MetaData": "",
+            "Property": {
+              "__type": "container",
+              "__count": 1,
+              "Variables": {
+                "__type": "container",
+                "__count": 1,
+                "String": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "",
+                    "size": 0
+                  },
+                  "Size": 0,
+                  "Type": 3
+                }
+              }
+            },
+            "SubPropertyCount": 0,
+            "Wireless": false
+          },
+          "Max": {
+            "__type": "container",
+            "__count": 9,
+            "ClassType1": "FLOAT",
+            "ClassType2": "",
+            "ConnectionCount": 0,
+            "ID": "Max",
+            "IOType": 0,
+            "MetaData": "",
+            "Property": {
+              "__type": "container",
+              "__count": 1,
+              "Variables": {
+                "__type": "container",
+                "__count": 1,
+                "VariableX": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "000000000000f03f",
+                    "size": 8
+                  },
+                  "Size": 8,
+                  "Type": 0
+                }
+              }
+            },
+            "SubPropertyCount": 0,
+            "Wireless": false
+          },
+          "Min": {
+            "__type": "container",
+            "__count": 9,
+            "ClassType1": "FLOAT",
+            "ClassType2": "",
+            "ConnectionCount": 0,
+            "ID": "Min",
+            "IOType": 0,
+            "MetaData": "",
+            "Property": {
+              "__type": "container",
+              "__count": 1,
+              "Variables": {
+                "__type": "container",
+                "__count": 1,
+                "VariableX": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "0000000000000000",
+                    "size": 8
+                  },
+                  "Size": 8,
+                  "Type": 0
+                }
+              }
+            },
+            "SubPropertyCount": 0,
+            "Wireless": false
+          },
+          "Output": {
+            "__type": "container",
+            "__count": 8,
+            "ClassType1": "FLOAT",
+            "ClassType2": "",
+            "ID": "Output",
+            "IOType": 1,
+            "MetaData": "",
+            "Property": {
+              "__type": "container",
+              "__count": 1,
+              "Variables": {
+                "__type": "container",
+                "__count": 4,
+                "VariableW": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "0000000000000000",
+                    "size": 8
+                  },
+                  "Size": 8,
+                  "Type": 0
+                },
+                "VariableX": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "0000000000000000",
+                    "size": 8
+                  },
+                  "Size": 8,
+                  "Type": 0
+                },
+                "VariableY": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "0000000000000000",
+                    "size": 8
+                  },
+                  "Size": 8,
+                  "Type": 0
+                },
+                "VariableZ": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "0000000000000000",
+                    "size": 8
+                  },
+                  "Size": 8,
+                  "Type": 0
+                }
+              }
+            },
+            "SubPropertyCount": 0,
+            "Wireless": false
+          },
+          "ScriptName": {
+            "__type": "container",
+            "__count": 9,
+            "ClassType1": "STRING",
+            "ClassType2": "",
+            "ConnectionCount": 0,
+            "ID": "ScriptName",
+            "IOType": 0,
+            "MetaData": "",
+            "Property": {
+              "__type": "container",
+              "__count": 1,
+              "Variables": {
+                "__type": "container",
+                "__count": 1,
+                "String": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": "PointA",
+                  "Size": 6,
+                  "Type": 3
+                }
+              }
+            },
+            "SubPropertyCount": 0,
+            "Wireless": false
+          },
+          "SortIndex": {
+            "__type": "container",
+            "__count": 9,
+            "ClassType1": "INT",
+            "ClassType2": "",
+            "ConnectionCount": 0,
+            "ID": "SortIndex",
+            "IOType": 0,
+            "MetaData": "",
+            "Property": {
+              "__type": "container",
+              "__count": 1,
+              "Variables": {
+                "__type": "container",
+                "__count": 1,
+                "VariableX": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "00000000",
+                    "size": 4
+                  },
+                  "Size": 4,
+                  "Type": 2
+                }
+              }
+            },
+            "SubPropertyCount": 0,
+            "Wireless": false
+          },
+          "Step": {
+            "__type": "container",
+            "__count": 9,
+            "ClassType1": "FLOAT",
+            "ClassType2": "",
+            "ConnectionCount": 0,
+            "ID": "Step",
+            "IOType": 0,
+            "MetaData": "",
+            "Property": {
+              "__type": "container",
+              "__count": 1,
+              "Variables": {
+                "__type": "container",
+                "__count": 1,
+                "VariableX": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "00000040e17a843f",
+                    "size": 8
+                  },
+                  "Size": 8,
+                  "Type": 0
+                }
+              }
+            },
+            "SubPropertyCount": 0,
+            "Wireless": false
+          },
+          "Title": {
+            "__type": "container",
+            "__count": 9,
+            "ClassType1": "STRING",
+            "ClassType2": "",
+            "ConnectionCount": 0,
+            "ID": "Title",
+            "IOType": 0,
+            "MetaData": "",
+            "Property": {
+              "__type": "container",
+              "__count": 1,
+              "Variables": {
+                "__type": "container",
+                "__count": 1,
+                "String": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": "PointA",
+                  "Size": 6,
+                  "Type": 3
+                }
+              }
+            },
+            "SubPropertyCount": 0,
+            "Wireless": false
+          },
+          "Tooltip": {
+            "__type": "container",
+            "__count": 9,
+            "ClassType1": "STRING",
+            "ClassType2": "",
+            "ConnectionCount": 0,
+            "ID": "Tooltip",
+            "IOType": 0,
+            "MetaData": "",
+            "Property": {
+              "__type": "container",
+              "__count": 1,
+              "Variables": {
+                "__type": "container",
+                "__count": 1,
+                "String": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "",
+                    "size": 0
+                  },
+                  "Size": 0,
+                  "Type": 3
+                }
+              }
+            },
+            "SubPropertyCount": 0,
+            "Wireless": false
+          }
+        },
+        "PositionX": -227,
+        "PositionY": 16,
+        "Preview2SizeX": 128,
+        "Preview2SizeY": 128,
+        "RedirectClassTypeA1": "",
+        "RedirectClassTypeA2": "",
+        "RedirectClassTypeB1": "",
+        "RedirectClassTypeB2": "",
+        "Selected": false,
+        "ShowPreview": false,
+        "TemplateID": "nodes_inputs_parameters_float",
+        "TemplatePreviousIDs": "",
+        "TemplateSubGraph": "",
+        "TemplateVersionMajor": 1,
+        "TemplateVersionMinor": 0,
+        "Title1": "Float Parameter",
+        "Title2": "PointA",
+        "ViewMode": 4,
+        "ViewOffsetX0": 0,
+        "ViewOffsetX1": 0,
+        "ViewOffsetX2": 0,
+        "ViewOffsetX3": 0,
+        "ViewOffsetY0": 0,
+        "ViewOffsetY1": 0,
+        "ViewOffsetY2": 0,
+        "ViewOffsetY3": 0,
+        "ViewScale0": {
+          "__type": "float",
+          "value": 1
+        },
+        "ViewScale1": {
+          "__type": "float",
+          "value": 1
+        },
+        "ViewScale2": {
+          "__type": "float",
+          "value": 1
+        },
+        "ViewScale3": {
+          "__type": "float",
+          "value": 1
+        }
+      },
+      "Node0CheckEnabled": false,
+      "Node0CheckExists": false,
+      "Node0CheckValue": true,
+      "Node0LockForPublic": false,
+      "Node0PreviewUseAlpha": false,
+      "Node0VirtualID": "",
+      "Node1": {
+        "__type": "container",
+        "__count": 43,
+        "CommentSizeX": 100,
+        "CommentSizeY": 40,
+        "DependencyIndex": 1,
+        "EnablePreview": true,
+        "IsSubGraph0": false,
+        "IsSubGraph1": false,
+        "IsSubGraph2": false,
+        "IsSubGraph3": false,
+        "LevelID": 3,
+        "MetaData": "",
+        "NodeCount": 0,
+        "NodeType": 1,
+        "Ports": {
+          "__type": "container",
+          "__count": 13,
+          "Channels": {
+            "__type": "container",
+            "__count": 9,
+            "ClassType1": "COMBO",
+            "ClassType2": "",
+            "ConnectionCount": 0,
+            "ID": "Channels",
+            "IOType": 0,
+            "MetaData": "",
+            "Property": {
+              "__type": "container",
+              "__count": 1,
+              "Variables": {
+                "__type": "container",
+                "__count": 4,
+                "ItemCount": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "06000000",
+                    "size": 4
+                  },
+                  "Size": 4,
+                  "Type": 2
+                },
+                "ItemIndex": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "02000000",
+                    "size": 4
+                  },
+                  "Size": 4,
+                  "Type": 2
+                },
+                "ItemList": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": "xyzw : rgba : xyz : rgb : xy : x",
+                  "Size": 32,
+                  "Type": 3
+                },
+                "ItemName": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": "xyz",
+                  "Size": 3,
+                  "Type": 3
+                }
+              }
+            },
+            "SubPropertyCount": 0,
+            "Wireless": false
+          },
+          "Default": {
+            "__type": "container",
+            "__count": 9,
+            "ClassType1": "FLOAT",
+            "ClassType2": "",
+            "ConnectionCount": 0,
+            "ID": "Default",
+            "IOType": 0,
+            "MetaData": "",
+            "Property": {
+              "__type": "container",
+              "__count": 1,
+              "Variables": {
+                "__type": "container",
+                "__count": 4,
+                "VariableW": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "000000000000f03f",
+                    "size": 8
+                  },
+                  "Size": 8,
+                  "Type": 0
+                },
+                "VariableX": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "000000000000f03f",
+                    "size": 8
+                  },
+                  "Size": 8,
+                  "Type": 0
+                },
+                "VariableY": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "000000000000f03f",
+                    "size": 8
+                  },
+                  "Size": 8,
+                  "Type": 0
+                },
+                "VariableZ": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "000000000000f03f",
+                    "size": 8
+                  },
+                  "Size": 8,
+                  "Type": 0
+                }
+              }
+            },
+            "SubPropertyCount": 0,
+            "Wireless": false
+          },
+          "EnableMax": {
+            "__type": "container",
+            "__count": 9,
+            "ClassType1": "BOOL",
+            "ClassType2": "",
+            "ConnectionCount": 0,
+            "ID": "EnableMax",
+            "IOType": 0,
+            "MetaData": "",
+            "Property": {
+              "__type": "container",
+              "__count": 1,
+              "Variables": {
+                "__type": "container",
+                "__count": 1,
+                "VariableX": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "00",
+                    "size": 1
+                  },
+                  "Size": 1,
+                  "Type": 1
+                }
+              }
+            },
+            "SubPropertyCount": 0,
+            "Wireless": false
+          },
+          "EnableMin": {
+            "__type": "container",
+            "__count": 9,
+            "ClassType1": "BOOL",
+            "ClassType2": "",
+            "ConnectionCount": 0,
+            "ID": "EnableMin",
+            "IOType": 0,
+            "MetaData": "",
+            "Property": {
+              "__type": "container",
+              "__count": 1,
+              "Variables": {
+                "__type": "container",
+                "__count": 1,
+                "VariableX": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "00",
+                    "size": 1
+                  },
+                  "Size": 1,
+                  "Type": 1
+                }
+              }
+            },
+            "SubPropertyCount": 0,
+            "Wireless": false
+          },
+          "Group": {
+            "__type": "container",
+            "__count": 9,
+            "ClassType1": "STRING",
+            "ClassType2": "",
+            "ConnectionCount": 0,
+            "ID": "Group",
+            "IOType": 0,
+            "MetaData": "",
+            "Property": {
+              "__type": "container",
+              "__count": 1,
+              "Variables": {
+                "__type": "container",
+                "__count": 1,
+                "String": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "",
+                    "size": 0
+                  },
+                  "Size": 0,
+                  "Type": 3
+                }
+              }
+            },
+            "SubPropertyCount": 0,
+            "Wireless": false
+          },
+          "Max": {
+            "__type": "container",
+            "__count": 9,
+            "ClassType1": "FLOAT",
+            "ClassType2": "",
+            "ConnectionCount": 0,
+            "ID": "Max",
+            "IOType": 0,
+            "MetaData": "",
+            "Property": {
+              "__type": "container",
+              "__count": 1,
+              "Variables": {
+                "__type": "container",
+                "__count": 1,
+                "VariableX": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "000000000000f03f",
+                    "size": 8
+                  },
+                  "Size": 8,
+                  "Type": 0
+                }
+              }
+            },
+            "SubPropertyCount": 0,
+            "Wireless": false
+          },
+          "Min": {
+            "__type": "container",
+            "__count": 9,
+            "ClassType1": "FLOAT",
+            "ClassType2": "",
+            "ConnectionCount": 0,
+            "ID": "Min",
+            "IOType": 0,
+            "MetaData": "",
+            "Property": {
+              "__type": "container",
+              "__count": 1,
+              "Variables": {
+                "__type": "container",
+                "__count": 1,
+                "VariableX": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "0000000000000000",
+                    "size": 8
+                  },
+                  "Size": 8,
+                  "Type": 0
+                }
+              }
+            },
+            "SubPropertyCount": 0,
+            "Wireless": false
+          },
+          "Output": {
+            "__type": "container",
+            "__count": 8,
+            "ClassType1": "FLOAT",
+            "ClassType2": "",
+            "ID": "Output",
+            "IOType": 1,
+            "MetaData": "",
+            "Property": {
+              "__type": "container",
+              "__count": 1,
+              "Variables": {
+                "__type": "container",
+                "__count": 4,
+                "VariableW": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "0000000000000000",
+                    "size": 8
+                  },
+                  "Size": 8,
+                  "Type": 0
+                },
+                "VariableX": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "0000000000000000",
+                    "size": 8
+                  },
+                  "Size": 8,
+                  "Type": 0
+                },
+                "VariableY": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "0000000000000000",
+                    "size": 8
+                  },
+                  "Size": 8,
+                  "Type": 0
+                },
+                "VariableZ": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "0000000000000000",
+                    "size": 8
+                  },
+                  "Size": 8,
+                  "Type": 0
+                }
+              }
+            },
+            "SubPropertyCount": 0,
+            "Wireless": false
+          },
+          "ScriptName": {
+            "__type": "container",
+            "__count": 9,
+            "ClassType1": "STRING",
+            "ClassType2": "",
+            "ConnectionCount": 0,
+            "ID": "ScriptName",
+            "IOType": 0,
+            "MetaData": "",
+            "Property": {
+              "__type": "container",
+              "__count": 1,
+              "Variables": {
+                "__type": "container",
+                "__count": 1,
+                "String": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": "PointB",
+                  "Size": 6,
+                  "Type": 3
+                }
+              }
+            },
+            "SubPropertyCount": 0,
+            "Wireless": false
+          },
+          "SortIndex": {
+            "__type": "container",
+            "__count": 9,
+            "ClassType1": "INT",
+            "ClassType2": "",
+            "ConnectionCount": 0,
+            "ID": "SortIndex",
+            "IOType": 0,
+            "MetaData": "",
+            "Property": {
+              "__type": "container",
+              "__count": 1,
+              "Variables": {
+                "__type": "container",
+                "__count": 1,
+                "VariableX": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "00000000",
+                    "size": 4
+                  },
+                  "Size": 4,
+                  "Type": 2
+                }
+              }
+            },
+            "SubPropertyCount": 0,
+            "Wireless": false
+          },
+          "Step": {
+            "__type": "container",
+            "__count": 9,
+            "ClassType1": "FLOAT",
+            "ClassType2": "",
+            "ConnectionCount": 0,
+            "ID": "Step",
+            "IOType": 0,
+            "MetaData": "",
+            "Property": {
+              "__type": "container",
+              "__count": 1,
+              "Variables": {
+                "__type": "container",
+                "__count": 1,
+                "VariableX": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "00000040e17a843f",
+                    "size": 8
+                  },
+                  "Size": 8,
+                  "Type": 0
+                }
+              }
+            },
+            "SubPropertyCount": 0,
+            "Wireless": false
+          },
+          "Title": {
+            "__type": "container",
+            "__count": 9,
+            "ClassType1": "STRING",
+            "ClassType2": "",
+            "ConnectionCount": 0,
+            "ID": "Title",
+            "IOType": 0,
+            "MetaData": "",
+            "Property": {
+              "__type": "container",
+              "__count": 1,
+              "Variables": {
+                "__type": "container",
+                "__count": 1,
+                "String": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": "PointB",
+                  "Size": 6,
+                  "Type": 3
+                }
+              }
+            },
+            "SubPropertyCount": 0,
+            "Wireless": false
+          },
+          "Tooltip": {
+            "__type": "container",
+            "__count": 9,
+            "ClassType1": "STRING",
+            "ClassType2": "",
+            "ConnectionCount": 0,
+            "ID": "Tooltip",
+            "IOType": 0,
+            "MetaData": "",
+            "Property": {
+              "__type": "container",
+              "__count": 1,
+              "Variables": {
+                "__type": "container",
+                "__count": 1,
+                "String": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "",
+                    "size": 0
+                  },
+                  "Size": 0,
+                  "Type": 3
+                }
+              }
+            },
+            "SubPropertyCount": 0,
+            "Wireless": false
+          }
+        },
+        "PositionX": -222,
+        "PositionY": 108,
+        "Preview2SizeX": 128,
+        "Preview2SizeY": 128,
+        "RedirectClassTypeA1": "",
+        "RedirectClassTypeA2": "",
+        "RedirectClassTypeB1": "",
+        "RedirectClassTypeB2": "",
+        "Selected": false,
+        "ShowPreview": false,
+        "TemplateID": "nodes_inputs_parameters_float",
+        "TemplatePreviousIDs": "",
+        "TemplateSubGraph": "",
+        "TemplateVersionMajor": 1,
+        "TemplateVersionMinor": 0,
+        "Title1": "Float Parameter",
+        "Title2": "PointB",
+        "ViewMode": 4,
+        "ViewOffsetX0": 0,
+        "ViewOffsetX1": 0,
+        "ViewOffsetX2": 0,
+        "ViewOffsetX3": 0,
+        "ViewOffsetY0": 0,
+        "ViewOffsetY1": 0,
+        "ViewOffsetY2": 0,
+        "ViewOffsetY3": 0,
+        "ViewScale0": {
+          "__type": "float",
+          "value": 1
+        },
+        "ViewScale1": {
+          "__type": "float",
+          "value": 1
+        },
+        "ViewScale2": {
+          "__type": "float",
+          "value": 1
+        },
+        "ViewScale3": {
+          "__type": "float",
+          "value": 1
+        }
+      },
+      "Node10": {
+        "__type": "container",
+        "__count": 43,
+        "CommentSizeX": 100,
+        "CommentSizeY": 40,
+        "DependencyIndex": 10,
+        "EnablePreview": true,
+        "IsSubGraph0": false,
+        "IsSubGraph1": false,
+        "IsSubGraph2": false,
+        "IsSubGraph3": false,
+        "LevelID": 9,
+        "MetaData": "",
+        "NodeCount": 0,
+        "NodeType": 1,
+        "Ports": {
+          "__type": "container",
+          "__count": 13,
+          "Channels": {
+            "__type": "container",
+            "__count": 9,
+            "ClassType1": "COMBO",
+            "ClassType2": "",
+            "ConnectionCount": 0,
+            "ID": "Channels",
+            "IOType": 0,
+            "MetaData": "",
+            "Property": {
+              "__type": "container",
+              "__count": 1,
+              "Variables": {
+                "__type": "container",
+                "__count": 4,
+                "ItemCount": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "06000000",
+                    "size": 4
+                  },
+                  "Size": 4,
+                  "Type": 2
+                },
+                "ItemIndex": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "05000000",
+                    "size": 4
+                  },
+                  "Size": 4,
+                  "Type": 2
+                },
+                "ItemList": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": "xyzw : rgba : xyz : rgb : xy : x",
+                  "Size": 32,
+                  "Type": 3
+                },
+                "ItemName": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": "x",
+                  "Size": 1,
+                  "Type": 3
+                }
+              }
+            },
+            "SubPropertyCount": 0,
+            "Wireless": false
+          },
+          "Default": {
+            "__type": "container",
+            "__count": 9,
+            "ClassType1": "FLOAT",
+            "ClassType2": "",
+            "ConnectionCount": 0,
+            "ID": "Default",
+            "IOType": 0,
+            "MetaData": "",
+            "Property": {
+              "__type": "container",
+              "__count": 1,
+              "Variables": {
+                "__type": "container",
+                "__count": 4,
+                "VariableW": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "000000000000f03f",
+                    "size": 8
+                  },
+                  "Size": 8,
+                  "Type": 0
+                },
+                "VariableX": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "000000000000f03f",
+                    "size": 8
+                  },
+                  "Size": 8,
+                  "Type": 0
+                },
+                "VariableY": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "000000000000f03f",
+                    "size": 8
+                  },
+                  "Size": 8,
+                  "Type": 0
+                },
+                "VariableZ": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "000000000000f03f",
+                    "size": 8
+                  },
+                  "Size": 8,
+                  "Type": 0
+                }
+              }
+            },
+            "SubPropertyCount": 0,
+            "Wireless": false
+          },
+          "EnableMax": {
+            "__type": "container",
+            "__count": 9,
+            "ClassType1": "BOOL",
+            "ClassType2": "",
+            "ConnectionCount": 0,
+            "ID": "EnableMax",
+            "IOType": 0,
+            "MetaData": "",
+            "Property": {
+              "__type": "container",
+              "__count": 1,
+              "Variables": {
+                "__type": "container",
+                "__count": 1,
+                "VariableX": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "00",
+                    "size": 1
+                  },
+                  "Size": 1,
+                  "Type": 1
+                }
+              }
+            },
+            "SubPropertyCount": 0,
+            "Wireless": false
+          },
+          "EnableMin": {
+            "__type": "container",
+            "__count": 9,
+            "ClassType1": "BOOL",
+            "ClassType2": "",
+            "ConnectionCount": 0,
+            "ID": "EnableMin",
+            "IOType": 0,
+            "MetaData": "",
+            "Property": {
+              "__type": "container",
+              "__count": 1,
+              "Variables": {
+                "__type": "container",
+                "__count": 1,
+                "VariableX": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "00",
+                    "size": 1
+                  },
+                  "Size": 1,
+                  "Type": 1
+                }
+              }
+            },
+            "SubPropertyCount": 0,
+            "Wireless": false
+          },
+          "Group": {
+            "__type": "container",
+            "__count": 9,
+            "ClassType1": "STRING",
+            "ClassType2": "",
+            "ConnectionCount": 0,
+            "ID": "Group",
+            "IOType": 0,
+            "MetaData": "",
+            "Property": {
+              "__type": "container",
+              "__count": 1,
+              "Variables": {
+                "__type": "container",
+                "__count": 1,
+                "String": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "",
+                    "size": 0
+                  },
+                  "Size": 0,
+                  "Type": 3
+                }
+              }
+            },
+            "SubPropertyCount": 0,
+            "Wireless": false
+          },
+          "Max": {
+            "__type": "container",
+            "__count": 9,
+            "ClassType1": "FLOAT",
+            "ClassType2": "",
+            "ConnectionCount": 0,
+            "ID": "Max",
+            "IOType": 0,
+            "MetaData": "",
+            "Property": {
+              "__type": "container",
+              "__count": 1,
+              "Variables": {
+                "__type": "container",
+                "__count": 1,
+                "VariableX": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "000000000000f03f",
+                    "size": 8
+                  },
+                  "Size": 8,
+                  "Type": 0
+                }
+              }
+            },
+            "SubPropertyCount": 0,
+            "Wireless": false
+          },
+          "Min": {
+            "__type": "container",
+            "__count": 9,
+            "ClassType1": "FLOAT",
+            "ClassType2": "",
+            "ConnectionCount": 0,
+            "ID": "Min",
+            "IOType": 0,
+            "MetaData": "",
+            "Property": {
+              "__type": "container",
+              "__count": 1,
+              "Variables": {
+                "__type": "container",
+                "__count": 1,
+                "VariableX": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "0000000000000000",
+                    "size": 8
+                  },
+                  "Size": 8,
+                  "Type": 0
+                }
+              }
+            },
+            "SubPropertyCount": 0,
+            "Wireless": false
+          },
+          "Output": {
+            "__type": "container",
+            "__count": 8,
+            "ClassType1": "FLOAT",
+            "ClassType2": "",
+            "ID": "Output",
+            "IOType": 1,
+            "MetaData": "",
+            "Property": {
+              "__type": "container",
+              "__count": 1,
+              "Variables": {
+                "__type": "container",
+                "__count": 4,
+                "VariableW": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "0000000000000000",
+                    "size": 8
+                  },
+                  "Size": 8,
+                  "Type": 0
+                },
+                "VariableX": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "0000000000000000",
+                    "size": 8
+                  },
+                  "Size": 8,
+                  "Type": 0
+                },
+                "VariableY": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "0000000000000000",
+                    "size": 8
+                  },
+                  "Size": 8,
+                  "Type": 0
+                },
+                "VariableZ": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "0000000000000000",
+                    "size": 8
+                  },
+                  "Size": 8,
+                  "Type": 0
+                }
+              }
+            },
+            "SubPropertyCount": 0,
+            "Wireless": false
+          },
+          "ScriptName": {
+            "__type": "container",
+            "__count": 9,
+            "ClassType1": "STRING",
+            "ClassType2": "",
+            "ConnectionCount": 0,
+            "ID": "ScriptName",
+            "IOType": 0,
+            "MetaData": "",
+            "Property": {
+              "__type": "container",
+              "__count": 1,
+              "Variables": {
+                "__type": "container",
+                "__count": 1,
+                "String": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": "DiagonalFactor",
+                  "Size": 14,
+                  "Type": 3
+                }
+              }
+            },
+            "SubPropertyCount": 0,
+            "Wireless": false
+          },
+          "SortIndex": {
+            "__type": "container",
+            "__count": 9,
+            "ClassType1": "INT",
+            "ClassType2": "",
+            "ConnectionCount": 0,
+            "ID": "SortIndex",
+            "IOType": 0,
+            "MetaData": "",
+            "Property": {
+              "__type": "container",
+              "__count": 1,
+              "Variables": {
+                "__type": "container",
+                "__count": 1,
+                "VariableX": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "00000000",
+                    "size": 4
+                  },
+                  "Size": 4,
+                  "Type": 2
+                }
+              }
+            },
+            "SubPropertyCount": 0,
+            "Wireless": false
+          },
+          "Step": {
+            "__type": "container",
+            "__count": 9,
+            "ClassType1": "FLOAT",
+            "ClassType2": "",
+            "ConnectionCount": 0,
+            "ID": "Step",
+            "IOType": 0,
+            "MetaData": "",
+            "Property": {
+              "__type": "container",
+              "__count": 1,
+              "Variables": {
+                "__type": "container",
+                "__count": 1,
+                "VariableX": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "00000040e17a843f",
+                    "size": 8
+                  },
+                  "Size": 8,
+                  "Type": 0
+                }
+              }
+            },
+            "SubPropertyCount": 0,
+            "Wireless": false
+          },
+          "Title": {
+            "__type": "container",
+            "__count": 9,
+            "ClassType1": "STRING",
+            "ClassType2": "",
+            "ConnectionCount": 0,
+            "ID": "Title",
+            "IOType": 0,
+            "MetaData": "",
+            "Property": {
+              "__type": "container",
+              "__count": 1,
+              "Variables": {
+                "__type": "container",
+                "__count": 1,
+                "String": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": "DiagonalFactor",
+                  "Size": 14,
+                  "Type": 3
+                }
+              }
+            },
+            "SubPropertyCount": 0,
+            "Wireless": false
+          },
+          "Tooltip": {
+            "__type": "container",
+            "__count": 9,
+            "ClassType1": "STRING",
+            "ClassType2": "",
+            "ConnectionCount": 0,
+            "ID": "Tooltip",
+            "IOType": 0,
+            "MetaData": "",
+            "Property": {
+              "__type": "container",
+              "__count": 1,
+              "Variables": {
+                "__type": "container",
+                "__count": 1,
+                "String": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "",
+                    "size": 0
+                  },
+                  "Size": 0,
+                  "Type": 3
+                }
+              }
+            },
+            "SubPropertyCount": 0,
+            "Wireless": false
+          }
+        },
+        "PositionX": -371,
+        "PositionY": 286,
+        "Preview2SizeX": 128,
+        "Preview2SizeY": 128,
+        "RedirectClassTypeA1": "",
+        "RedirectClassTypeA2": "",
+        "RedirectClassTypeB1": "",
+        "RedirectClassTypeB2": "",
+        "Selected": false,
+        "ShowPreview": false,
+        "TemplateID": "nodes_inputs_parameters_float",
+        "TemplatePreviousIDs": "",
+        "TemplateSubGraph": "",
+        "TemplateVersionMajor": 1,
+        "TemplateVersionMinor": 0,
+        "Title1": "Float Parameter",
+        "Title2": "DiagonalFactor",
+        "ViewMode": 4,
+        "ViewOffsetX0": 0,
+        "ViewOffsetX1": 0,
+        "ViewOffsetX2": 0,
+        "ViewOffsetX3": 0,
+        "ViewOffsetY0": 0,
+        "ViewOffsetY1": 0,
+        "ViewOffsetY2": 0,
+        "ViewOffsetY3": 0,
+        "ViewScale0": {
+          "__type": "float",
+          "value": 1
+        },
+        "ViewScale1": {
+          "__type": "float",
+          "value": 1
+        },
+        "ViewScale2": {
+          "__type": "float",
+          "value": 1
+        },
+        "ViewScale3": {
+          "__type": "float",
+          "value": 1
+        }
+      },
+      "Node10CheckEnabled": false,
+      "Node10CheckExists": false,
+      "Node10CheckValue": true,
+      "Node10LockForPublic": false,
+      "Node10PreviewUseAlpha": false,
+      "Node10VirtualID": "",
+      "Node1CheckEnabled": false,
+      "Node1CheckExists": false,
+      "Node1CheckValue": true,
+      "Node1LockForPublic": false,
+      "Node1PreviewUseAlpha": false,
+      "Node1VirtualID": "",
+      "Node2": {
+        "__type": "container",
+        "__count": 43,
+        "CommentSizeX": 100,
+        "CommentSizeY": 40,
+        "DependencyIndex": 2,
+        "EnablePreview": true,
+        "IsSubGraph0": false,
+        "IsSubGraph1": false,
+        "IsSubGraph2": false,
+        "IsSubGraph3": false,
+        "LevelID": 7,
+        "MetaData": "",
+        "NodeCount": 0,
+        "NodeType": 1,
+        "Ports": {
+          "__type": "container",
+          "__count": 10,
+          "DepthMap": {
+            "__type": "container",
+            "__count": 9,
+            "ClassType1": "BOOL",
+            "ClassType2": "",
+            "ConnectionCount": 0,
+            "ID": "DepthMap",
+            "IOType": 0,
+            "MetaData": "",
+            "Property": {
+              "__type": "container",
+              "__count": 1,
+              "Variables": {
+                "__type": "container",
+                "__count": 1,
+                "VariableX": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "00",
+                    "size": 1
+                  },
+                  "Size": 1,
+                  "Type": 1
+                }
+              }
+            },
+            "SubPropertyCount": 0,
+            "Wireless": false
+          },
+          "ExtraOutputs": {
+            "__type": "container",
+            "__count": 9,
+            "ClassType1": "BOOL",
+            "ClassType2": "",
+            "ConnectionCount": 0,
+            "ID": "ExtraOutputs",
+            "IOType": 0,
+            "MetaData": "",
+            "Property": {
+              "__type": "container",
+              "__count": 1,
+              "Variables": {
+                "__type": "container",
+                "__count": 1,
+                "VariableX": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "00",
+                    "size": 1
+                  },
+                  "Size": 1,
+                  "Type": 1
+                }
+              }
+            },
+            "SubPropertyCount": 0,
+            "Wireless": false
+          },
+          "Group": {
+            "__type": "container",
+            "__count": 9,
+            "ClassType1": "STRING",
+            "ClassType2": "",
+            "ConnectionCount": 0,
+            "ID": "Group",
+            "IOType": 0,
+            "MetaData": "",
+            "Property": {
+              "__type": "container",
+              "__count": 1,
+              "Variables": {
+                "__type": "container",
+                "__count": 1,
+                "String": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "",
+                    "size": 0
+                  },
+                  "Size": 0,
+                  "Type": 3
+                }
+              }
+            },
+            "SubPropertyCount": 0,
+            "Wireless": false
+          },
+          "PixelSize": {
+            "__type": "container",
+            "__count": 8,
+            "ClassType1": "FLOAT",
+            "ClassType2": "",
+            "ID": "PixelSize",
+            "IOType": 1,
+            "MetaData": "",
+            "Property": {
+              "__type": "container",
+              "__count": 1,
+              "Variables": {
+                "__type": "container",
+                "__count": 2,
+                "VariableX": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "0000000000000000",
+                    "size": 8
+                  },
+                  "Size": 8,
+                  "Type": 0
+                },
+                "VariableY": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "0000000000000000",
+                    "size": 8
+                  },
+                  "Size": 8,
+                  "Type": 0
+                }
+              }
+            },
+            "SubPropertyCount": 0,
+            "Wireless": false
+          },
+          "ScriptName": {
+            "__type": "container",
+            "__count": 9,
+            "ClassType1": "STRING",
+            "ClassType2": "",
+            "ConnectionCount": 0,
+            "ID": "ScriptName",
+            "IOType": 0,
+            "MetaData": "",
+            "Property": {
+              "__type": "container",
+              "__count": 1,
+              "Variables": {
+                "__type": "container",
+                "__count": 1,
+                "String": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": "connTex",
+                  "Size": 7,
+                  "Type": 3
+                }
+              }
+            },
+            "SubPropertyCount": 0,
+            "Wireless": false
+          },
+          "SortIndex": {
+            "__type": "container",
+            "__count": 9,
+            "ClassType1": "INT",
+            "ClassType2": "",
+            "ConnectionCount": 0,
+            "ID": "SortIndex",
+            "IOType": 0,
+            "MetaData": "",
+            "Property": {
+              "__type": "container",
+              "__count": 1,
+              "Variables": {
+                "__type": "container",
+                "__count": 1,
+                "VariableX": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "00000000",
+                    "size": 4
+                  },
+                  "Size": 4,
+                  "Type": 2
+                }
+              }
+            },
+            "SubPropertyCount": 0,
+            "Wireless": false
+          },
+          "Texture": {
+            "__type": "container",
+            "__count": 7,
+            "ClassType1": "LINK",
+            "ClassType2": "TEXTURE_OBJECT_2D",
+            "ID": "Texture",
+            "IOType": 1,
+            "MetaData": "",
+            "SubPropertyCount": 0,
+            "Wireless": false
+          },
+          "TextureSize": {
+            "__type": "container",
+            "__count": 8,
+            "ClassType1": "FLOAT",
+            "ClassType2": "",
+            "ID": "TextureSize",
+            "IOType": 1,
+            "MetaData": "",
+            "Property": {
+              "__type": "container",
+              "__count": 1,
+              "Variables": {
+                "__type": "container",
+                "__count": 2,
+                "VariableX": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "0000000000000000",
+                    "size": 8
+                  },
+                  "Size": 8,
+                  "Type": 0
+                },
+                "VariableY": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "0000000000000000",
+                    "size": 8
+                  },
+                  "Size": 8,
+                  "Type": 0
+                }
+              }
+            },
+            "SubPropertyCount": 0,
+            "Wireless": false
+          },
+          "Title": {
+            "__type": "container",
+            "__count": 9,
+            "ClassType1": "STRING",
+            "ClassType2": "",
+            "ConnectionCount": 0,
+            "ID": "Title",
+            "IOType": 0,
+            "MetaData": "",
+            "Property": {
+              "__type": "container",
+              "__count": 1,
+              "Variables": {
+                "__type": "container",
+                "__count": 1,
+                "String": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": "connTex",
+                  "Size": 7,
+                  "Type": 3
+                }
+              }
+            },
+            "SubPropertyCount": 0,
+            "Wireless": false
+          },
+          "Tooltip": {
+            "__type": "container",
+            "__count": 9,
+            "ClassType1": "STRING",
+            "ClassType2": "",
+            "ConnectionCount": 0,
+            "ID": "Tooltip",
+            "IOType": 0,
+            "MetaData": "",
+            "Property": {
+              "__type": "container",
+              "__count": 1,
+              "Variables": {
+                "__type": "container",
+                "__count": 1,
+                "String": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "",
+                    "size": 0
+                  },
+                  "Size": 0,
+                  "Type": 3
+                }
+              }
+            },
+            "SubPropertyCount": 0,
+            "Wireless": false
+          }
+        },
+        "PositionX": -238,
+        "PositionY": -89,
+        "Preview2SizeX": 128,
+        "Preview2SizeY": 128,
+        "RedirectClassTypeA1": "",
+        "RedirectClassTypeA2": "",
+        "RedirectClassTypeB1": "",
+        "RedirectClassTypeB2": "",
+        "Selected": false,
+        "ShowPreview": false,
+        "TemplateID": "nodes_inputs_parameters_texture2d_object",
+        "TemplatePreviousIDs": "",
+        "TemplateSubGraph": "",
+        "TemplateVersionMajor": 1,
+        "TemplateVersionMinor": 1,
+        "Title1": "Texture 2D Object Parameter",
+        "Title2": "connTex",
+        "ViewMode": 4,
+        "ViewOffsetX0": 0,
+        "ViewOffsetX1": 0,
+        "ViewOffsetX2": 0,
+        "ViewOffsetX3": 0,
+        "ViewOffsetY0": 0,
+        "ViewOffsetY1": 0,
+        "ViewOffsetY2": 0,
+        "ViewOffsetY3": 0,
+        "ViewScale0": {
+          "__type": "float",
+          "value": 1
+        },
+        "ViewScale1": {
+          "__type": "float",
+          "value": 1
+        },
+        "ViewScale2": {
+          "__type": "float",
+          "value": 1
+        },
+        "ViewScale3": {
+          "__type": "float",
+          "value": 1
+        }
+      },
+      "Node2CheckEnabled": false,
+      "Node2CheckExists": false,
+      "Node2CheckValue": true,
+      "Node2LockForPublic": false,
+      "Node2PreviewUseAlpha": false,
+      "Node2VirtualID": "",
+      "Node3": {
+        "__type": "container",
+        "__count": 43,
+        "CommentSizeX": 100,
+        "CommentSizeY": 40,
+        "DependencyIndex": 3,
+        "EnablePreview": true,
+        "IsSubGraph0": false,
+        "IsSubGraph1": false,
+        "IsSubGraph2": false,
+        "IsSubGraph3": false,
+        "LevelID": 5,
+        "MetaData": "",
+        "NodeCount": 0,
+        "NodeType": 1,
+        "Ports": {
+          "__type": "container",
+          "__count": 13,
+          "Channels": {
+            "__type": "container",
+            "__count": 9,
+            "ClassType1": "COMBO",
+            "ClassType2": "",
+            "ConnectionCount": 0,
+            "ID": "Channels",
+            "IOType": 0,
+            "MetaData": "",
+            "Property": {
+              "__type": "container",
+              "__count": 1,
+              "Variables": {
+                "__type": "container",
+                "__count": 4,
+                "ItemCount": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "06000000",
+                    "size": 4
+                  },
+                  "Size": 4,
+                  "Type": 2
+                },
+                "ItemIndex": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "05000000",
+                    "size": 4
+                  },
+                  "Size": 4,
+                  "Type": 2
+                },
+                "ItemList": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": "xyzw : rgba : xyz : rgb : xy : x",
+                  "Size": 32,
+                  "Type": 3
+                },
+                "ItemName": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": "x",
+                  "Size": 1,
+                  "Type": 3
+                }
+              }
+            },
+            "SubPropertyCount": 0,
+            "Wireless": false
+          },
+          "Default": {
+            "__type": "container",
+            "__count": 9,
+            "ClassType1": "FLOAT",
+            "ClassType2": "",
+            "ConnectionCount": 0,
+            "ID": "Default",
+            "IOType": 0,
+            "MetaData": "",
+            "Property": {
+              "__type": "container",
+              "__count": 1,
+              "Variables": {
+                "__type": "container",
+                "__count": 4,
+                "VariableW": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "000000000000f03f",
+                    "size": 8
+                  },
+                  "Size": 8,
+                  "Type": 0
+                },
+                "VariableX": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "000000000000f03f",
+                    "size": 8
+                  },
+                  "Size": 8,
+                  "Type": 0
+                },
+                "VariableY": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "000000000000f03f",
+                    "size": 8
+                  },
+                  "Size": 8,
+                  "Type": 0
+                },
+                "VariableZ": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "000000000000f03f",
+                    "size": 8
+                  },
+                  "Size": 8,
+                  "Type": 0
+                }
+              }
+            },
+            "SubPropertyCount": 0,
+            "Wireless": false
+          },
+          "EnableMax": {
+            "__type": "container",
+            "__count": 9,
+            "ClassType1": "BOOL",
+            "ClassType2": "",
+            "ConnectionCount": 0,
+            "ID": "EnableMax",
+            "IOType": 0,
+            "MetaData": "",
+            "Property": {
+              "__type": "container",
+              "__count": 1,
+              "Variables": {
+                "__type": "container",
+                "__count": 1,
+                "VariableX": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "00",
+                    "size": 1
+                  },
+                  "Size": 1,
+                  "Type": 1
+                }
+              }
+            },
+            "SubPropertyCount": 0,
+            "Wireless": false
+          },
+          "EnableMin": {
+            "__type": "container",
+            "__count": 9,
+            "ClassType1": "BOOL",
+            "ClassType2": "",
+            "ConnectionCount": 0,
+            "ID": "EnableMin",
+            "IOType": 0,
+            "MetaData": "",
+            "Property": {
+              "__type": "container",
+              "__count": 1,
+              "Variables": {
+                "__type": "container",
+                "__count": 1,
+                "VariableX": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "00",
+                    "size": 1
+                  },
+                  "Size": 1,
+                  "Type": 1
+                }
+              }
+            },
+            "SubPropertyCount": 0,
+            "Wireless": false
+          },
+          "Group": {
+            "__type": "container",
+            "__count": 9,
+            "ClassType1": "STRING",
+            "ClassType2": "",
+            "ConnectionCount": 0,
+            "ID": "Group",
+            "IOType": 0,
+            "MetaData": "",
+            "Property": {
+              "__type": "container",
+              "__count": 1,
+              "Variables": {
+                "__type": "container",
+                "__count": 1,
+                "String": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "",
+                    "size": 0
+                  },
+                  "Size": 0,
+                  "Type": 3
+                }
+              }
+            },
+            "SubPropertyCount": 0,
+            "Wireless": false
+          },
+          "Max": {
+            "__type": "container",
+            "__count": 9,
+            "ClassType1": "FLOAT",
+            "ClassType2": "",
+            "ConnectionCount": 0,
+            "ID": "Max",
+            "IOType": 0,
+            "MetaData": "",
+            "Property": {
+              "__type": "container",
+              "__count": 1,
+              "Variables": {
+                "__type": "container",
+                "__count": 1,
+                "VariableX": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "000000000000f03f",
+                    "size": 8
+                  },
+                  "Size": 8,
+                  "Type": 0
+                }
+              }
+            },
+            "SubPropertyCount": 0,
+            "Wireless": false
+          },
+          "Min": {
+            "__type": "container",
+            "__count": 9,
+            "ClassType1": "FLOAT",
+            "ClassType2": "",
+            "ConnectionCount": 0,
+            "ID": "Min",
+            "IOType": 0,
+            "MetaData": "",
+            "Property": {
+              "__type": "container",
+              "__count": 1,
+              "Variables": {
+                "__type": "container",
+                "__count": 1,
+                "VariableX": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "0000000000000000",
+                    "size": 8
+                  },
+                  "Size": 8,
+                  "Type": 0
+                }
+              }
+            },
+            "SubPropertyCount": 0,
+            "Wireless": false
+          },
+          "Output": {
+            "__type": "container",
+            "__count": 8,
+            "ClassType1": "FLOAT",
+            "ClassType2": "",
+            "ID": "Output",
+            "IOType": 1,
+            "MetaData": "",
+            "Property": {
+              "__type": "container",
+              "__count": 1,
+              "Variables": {
+                "__type": "container",
+                "__count": 4,
+                "VariableW": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "0000000000000000",
+                    "size": 8
+                  },
+                  "Size": 8,
+                  "Type": 0
+                },
+                "VariableX": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "0000000000000000",
+                    "size": 8
+                  },
+                  "Size": 8,
+                  "Type": 0
+                },
+                "VariableY": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "0000000000000000",
+                    "size": 8
+                  },
+                  "Size": 8,
+                  "Type": 0
+                },
+                "VariableZ": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "0000000000000000",
+                    "size": 8
+                  },
+                  "Size": 8,
+                  "Type": 0
+                }
+              }
+            },
+            "SubPropertyCount": 0,
+            "Wireless": false
+          },
+          "ScriptName": {
+            "__type": "container",
+            "__count": 9,
+            "ClassType1": "STRING",
+            "ClassType2": "",
+            "ConnectionCount": 0,
+            "ID": "ScriptName",
+            "IOType": 0,
+            "MetaData": "",
+            "Property": {
+              "__type": "container",
+              "__count": 1,
+              "Variables": {
+                "__type": "container",
+                "__count": 1,
+                "String": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": "TubeRadius",
+                  "Size": 10,
+                  "Type": 3
+                }
+              }
+            },
+            "SubPropertyCount": 0,
+            "Wireless": false
+          },
+          "SortIndex": {
+            "__type": "container",
+            "__count": 9,
+            "ClassType1": "INT",
+            "ClassType2": "",
+            "ConnectionCount": 0,
+            "ID": "SortIndex",
+            "IOType": 0,
+            "MetaData": "",
+            "Property": {
+              "__type": "container",
+              "__count": 1,
+              "Variables": {
+                "__type": "container",
+                "__count": 1,
+                "VariableX": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "00000000",
+                    "size": 4
+                  },
+                  "Size": 4,
+                  "Type": 2
+                }
+              }
+            },
+            "SubPropertyCount": 0,
+            "Wireless": false
+          },
+          "Step": {
+            "__type": "container",
+            "__count": 9,
+            "ClassType1": "FLOAT",
+            "ClassType2": "",
+            "ConnectionCount": 0,
+            "ID": "Step",
+            "IOType": 0,
+            "MetaData": "",
+            "Property": {
+              "__type": "container",
+              "__count": 1,
+              "Variables": {
+                "__type": "container",
+                "__count": 1,
+                "VariableX": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "00000040e17a843f",
+                    "size": 8
+                  },
+                  "Size": 8,
+                  "Type": 0
+                }
+              }
+            },
+            "SubPropertyCount": 0,
+            "Wireless": false
+          },
+          "Title": {
+            "__type": "container",
+            "__count": 9,
+            "ClassType1": "STRING",
+            "ClassType2": "",
+            "ConnectionCount": 0,
+            "ID": "Title",
+            "IOType": 0,
+            "MetaData": "",
+            "Property": {
+              "__type": "container",
+              "__count": 1,
+              "Variables": {
+                "__type": "container",
+                "__count": 1,
+                "String": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": "TubeRadius",
+                  "Size": 10,
+                  "Type": 3
+                }
+              }
+            },
+            "SubPropertyCount": 0,
+            "Wireless": false
+          },
+          "Tooltip": {
+            "__type": "container",
+            "__count": 9,
+            "ClassType1": "STRING",
+            "ClassType2": "",
+            "ConnectionCount": 0,
+            "ID": "Tooltip",
+            "IOType": 0,
+            "MetaData": "",
+            "Property": {
+              "__type": "container",
+              "__count": 1,
+              "Variables": {
+                "__type": "container",
+                "__count": 1,
+                "String": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "",
+                    "size": 0
+                  },
+                  "Size": 0,
+                  "Type": 3
+                }
+              }
+            },
+            "SubPropertyCount": 0,
+            "Wireless": false
+          }
+        },
+        "PositionX": -227,
+        "PositionY": 195,
+        "Preview2SizeX": 128,
+        "Preview2SizeY": 128,
+        "RedirectClassTypeA1": "",
+        "RedirectClassTypeA2": "",
+        "RedirectClassTypeB1": "",
+        "RedirectClassTypeB2": "",
+        "Selected": false,
+        "ShowPreview": false,
+        "TemplateID": "nodes_inputs_parameters_float",
+        "TemplatePreviousIDs": "",
+        "TemplateSubGraph": "",
+        "TemplateVersionMajor": 1,
+        "TemplateVersionMinor": 0,
+        "Title1": "Float Parameter",
+        "Title2": "TubeRadius",
+        "ViewMode": 4,
+        "ViewOffsetX0": 0,
+        "ViewOffsetX1": 0,
+        "ViewOffsetX2": 0,
+        "ViewOffsetX3": 0,
+        "ViewOffsetY0": 0,
+        "ViewOffsetY1": 0,
+        "ViewOffsetY2": 0,
+        "ViewOffsetY3": 0,
+        "ViewScale0": {
+          "__type": "float",
+          "value": 1
+        },
+        "ViewScale1": {
+          "__type": "float",
+          "value": 1
+        },
+        "ViewScale2": {
+          "__type": "float",
+          "value": 1
+        },
+        "ViewScale3": {
+          "__type": "float",
+          "value": 1
+        }
+      },
+      "Node3CheckEnabled": false,
+      "Node3CheckExists": false,
+      "Node3CheckValue": true,
+      "Node3LockForPublic": false,
+      "Node3PreviewUseAlpha": false,
+      "Node3VirtualID": "",
+      "Node4": {
+        "__type": "container",
+        "__count": 43,
+        "CommentSizeX": 100,
+        "CommentSizeY": 40,
+        "DependencyIndex": 4,
+        "EnablePreview": true,
+        "IsSubGraph0": false,
+        "IsSubGraph1": false,
+        "IsSubGraph2": false,
+        "IsSubGraph3": false,
+        "LevelID": 6,
+        "MetaData": "",
+        "NodeCount": 0,
+        "NodeType": 1,
+        "Ports": {
+          "__type": "container",
+          "__count": 13,
+          "Channels": {
+            "__type": "container",
+            "__count": 9,
+            "ClassType1": "COMBO",
+            "ClassType2": "",
+            "ConnectionCount": 0,
+            "ID": "Channels",
+            "IOType": 0,
+            "MetaData": "",
+            "Property": {
+              "__type": "container",
+              "__count": 1,
+              "Variables": {
+                "__type": "container",
+                "__count": 4,
+                "ItemCount": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "06000000",
+                    "size": 4
+                  },
+                  "Size": 4,
+                  "Type": 2
+                },
+                "ItemIndex": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "05000000",
+                    "size": 4
+                  },
+                  "Size": 4,
+                  "Type": 2
+                },
+                "ItemList": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": "xyzw : rgba : xyz : rgb : xy : x",
+                  "Size": 32,
+                  "Type": 3
+                },
+                "ItemName": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": "x",
+                  "Size": 1,
+                  "Type": 3
+                }
+              }
+            },
+            "SubPropertyCount": 0,
+            "Wireless": false
+          },
+          "Default": {
+            "__type": "container",
+            "__count": 9,
+            "ClassType1": "FLOAT",
+            "ClassType2": "",
+            "ConnectionCount": 0,
+            "ID": "Default",
+            "IOType": 0,
+            "MetaData": "",
+            "Property": {
+              "__type": "container",
+              "__count": 1,
+              "Variables": {
+                "__type": "container",
+                "__count": 4,
+                "VariableW": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "000000000000f03f",
+                    "size": 8
+                  },
+                  "Size": 8,
+                  "Type": 0
+                },
+                "VariableX": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "000000000000f03f",
+                    "size": 8
+                  },
+                  "Size": 8,
+                  "Type": 0
+                },
+                "VariableY": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "000000000000f03f",
+                    "size": 8
+                  },
+                  "Size": 8,
+                  "Type": 0
+                },
+                "VariableZ": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "000000000000f03f",
+                    "size": 8
+                  },
+                  "Size": 8,
+                  "Type": 0
+                }
+              }
+            },
+            "SubPropertyCount": 0,
+            "Wireless": false
+          },
+          "EnableMax": {
+            "__type": "container",
+            "__count": 9,
+            "ClassType1": "BOOL",
+            "ClassType2": "",
+            "ConnectionCount": 0,
+            "ID": "EnableMax",
+            "IOType": 0,
+            "MetaData": "",
+            "Property": {
+              "__type": "container",
+              "__count": 1,
+              "Variables": {
+                "__type": "container",
+                "__count": 1,
+                "VariableX": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "00",
+                    "size": 1
+                  },
+                  "Size": 1,
+                  "Type": 1
+                }
+              }
+            },
+            "SubPropertyCount": 0,
+            "Wireless": false
+          },
+          "EnableMin": {
+            "__type": "container",
+            "__count": 9,
+            "ClassType1": "BOOL",
+            "ClassType2": "",
+            "ConnectionCount": 0,
+            "ID": "EnableMin",
+            "IOType": 0,
+            "MetaData": "",
+            "Property": {
+              "__type": "container",
+              "__count": 1,
+              "Variables": {
+                "__type": "container",
+                "__count": 1,
+                "VariableX": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "00",
+                    "size": 1
+                  },
+                  "Size": 1,
+                  "Type": 1
+                }
+              }
+            },
+            "SubPropertyCount": 0,
+            "Wireless": false
+          },
+          "Group": {
+            "__type": "container",
+            "__count": 9,
+            "ClassType1": "STRING",
+            "ClassType2": "",
+            "ConnectionCount": 0,
+            "ID": "Group",
+            "IOType": 0,
+            "MetaData": "",
+            "Property": {
+              "__type": "container",
+              "__count": 1,
+              "Variables": {
+                "__type": "container",
+                "__count": 1,
+                "String": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "",
+                    "size": 0
+                  },
+                  "Size": 0,
+                  "Type": 3
+                }
+              }
+            },
+            "SubPropertyCount": 0,
+            "Wireless": false
+          },
+          "Max": {
+            "__type": "container",
+            "__count": 9,
+            "ClassType1": "FLOAT",
+            "ClassType2": "",
+            "ConnectionCount": 0,
+            "ID": "Max",
+            "IOType": 0,
+            "MetaData": "",
+            "Property": {
+              "__type": "container",
+              "__count": 1,
+              "Variables": {
+                "__type": "container",
+                "__count": 1,
+                "VariableX": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "000000000000f03f",
+                    "size": 8
+                  },
+                  "Size": 8,
+                  "Type": 0
+                }
+              }
+            },
+            "SubPropertyCount": 0,
+            "Wireless": false
+          },
+          "Min": {
+            "__type": "container",
+            "__count": 9,
+            "ClassType1": "FLOAT",
+            "ClassType2": "",
+            "ConnectionCount": 0,
+            "ID": "Min",
+            "IOType": 0,
+            "MetaData": "",
+            "Property": {
+              "__type": "container",
+              "__count": 1,
+              "Variables": {
+                "__type": "container",
+                "__count": 1,
+                "VariableX": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "0000000000000000",
+                    "size": 8
+                  },
+                  "Size": 8,
+                  "Type": 0
+                }
+              }
+            },
+            "SubPropertyCount": 0,
+            "Wireless": false
+          },
+          "Output": {
+            "__type": "container",
+            "__count": 8,
+            "ClassType1": "FLOAT",
+            "ClassType2": "",
+            "ID": "Output",
+            "IOType": 1,
+            "MetaData": "",
+            "Property": {
+              "__type": "container",
+              "__count": 1,
+              "Variables": {
+                "__type": "container",
+                "__count": 4,
+                "VariableW": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "0000000000000000",
+                    "size": 8
+                  },
+                  "Size": 8,
+                  "Type": 0
+                },
+                "VariableX": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "0000000000000000",
+                    "size": 8
+                  },
+                  "Size": 8,
+                  "Type": 0
+                },
+                "VariableY": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "0000000000000000",
+                    "size": 8
+                  },
+                  "Size": 8,
+                  "Type": 0
+                },
+                "VariableZ": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "0000000000000000",
+                    "size": 8
+                  },
+                  "Size": 8,
+                  "Type": 0
+                }
+              }
+            },
+            "SubPropertyCount": 0,
+            "Wireless": false
+          },
+          "ScriptName": {
+            "__type": "container",
+            "__count": 9,
+            "ClassType1": "STRING",
+            "ClassType2": "",
+            "ConnectionCount": 0,
+            "ID": "ScriptName",
+            "IOType": 0,
+            "MetaData": "",
+            "Property": {
+              "__type": "container",
+              "__count": 1,
+              "Variables": {
+                "__type": "container",
+                "__count": 1,
+                "String": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": "BendRadius",
+                  "Size": 10,
+                  "Type": 3
+                }
+              }
+            },
+            "SubPropertyCount": 0,
+            "Wireless": false
+          },
+          "SortIndex": {
+            "__type": "container",
+            "__count": 9,
+            "ClassType1": "INT",
+            "ClassType2": "",
+            "ConnectionCount": 0,
+            "ID": "SortIndex",
+            "IOType": 0,
+            "MetaData": "",
+            "Property": {
+              "__type": "container",
+              "__count": 1,
+              "Variables": {
+                "__type": "container",
+                "__count": 1,
+                "VariableX": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "00000000",
+                    "size": 4
+                  },
+                  "Size": 4,
+                  "Type": 2
+                }
+              }
+            },
+            "SubPropertyCount": 0,
+            "Wireless": false
+          },
+          "Step": {
+            "__type": "container",
+            "__count": 9,
+            "ClassType1": "FLOAT",
+            "ClassType2": "",
+            "ConnectionCount": 0,
+            "ID": "Step",
+            "IOType": 0,
+            "MetaData": "",
+            "Property": {
+              "__type": "container",
+              "__count": 1,
+              "Variables": {
+                "__type": "container",
+                "__count": 1,
+                "VariableX": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "00000040e17a843f",
+                    "size": 8
+                  },
+                  "Size": 8,
+                  "Type": 0
+                }
+              }
+            },
+            "SubPropertyCount": 0,
+            "Wireless": false
+          },
+          "Title": {
+            "__type": "container",
+            "__count": 9,
+            "ClassType1": "STRING",
+            "ClassType2": "",
+            "ConnectionCount": 0,
+            "ID": "Title",
+            "IOType": 0,
+            "MetaData": "",
+            "Property": {
+              "__type": "container",
+              "__count": 1,
+              "Variables": {
+                "__type": "container",
+                "__count": 1,
+                "String": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": "BendRadius",
+                  "Size": 10,
+                  "Type": 3
+                }
+              }
+            },
+            "SubPropertyCount": 0,
+            "Wireless": false
+          },
+          "Tooltip": {
+            "__type": "container",
+            "__count": 9,
+            "ClassType1": "STRING",
+            "ClassType2": "",
+            "ConnectionCount": 0,
+            "ID": "Tooltip",
+            "IOType": 0,
+            "MetaData": "",
+            "Property": {
+              "__type": "container",
+              "__count": 1,
+              "Variables": {
+                "__type": "container",
+                "__count": 1,
+                "String": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "",
+                    "size": 0
+                  },
+                  "Size": 0,
+                  "Type": 3
+                }
+              }
+            },
+            "SubPropertyCount": 0,
+            "Wireless": false
+          }
+        },
+        "PositionX": -231,
+        "PositionY": 278,
+        "Preview2SizeX": 128,
+        "Preview2SizeY": 128,
+        "RedirectClassTypeA1": "",
+        "RedirectClassTypeA2": "",
+        "RedirectClassTypeB1": "",
+        "RedirectClassTypeB2": "",
+        "Selected": false,
+        "ShowPreview": false,
+        "TemplateID": "nodes_inputs_parameters_float",
+        "TemplatePreviousIDs": "",
+        "TemplateSubGraph": "",
+        "TemplateVersionMajor": 1,
+        "TemplateVersionMinor": 0,
+        "Title1": "Float Parameter",
+        "Title2": "BendRadius",
+        "ViewMode": 4,
+        "ViewOffsetX0": 0,
+        "ViewOffsetX1": 0,
+        "ViewOffsetX2": 0,
+        "ViewOffsetX3": 0,
+        "ViewOffsetY0": 0,
+        "ViewOffsetY1": 0,
+        "ViewOffsetY2": 0,
+        "ViewOffsetY3": 0,
+        "ViewScale0": {
+          "__type": "float",
+          "value": 1
+        },
+        "ViewScale1": {
+          "__type": "float",
+          "value": 1
+        },
+        "ViewScale2": {
+          "__type": "float",
+          "value": 1
+        },
+        "ViewScale3": {
+          "__type": "float",
+          "value": 1
+        }
+      },
+      "Node4CheckEnabled": false,
+      "Node4CheckExists": false,
+      "Node4CheckValue": true,
+      "Node4LockForPublic": false,
+      "Node4PreviewUseAlpha": false,
+      "Node4VirtualID": "",
+      "Node5": {
+        "__type": "container",
+        "__count": 43,
+        "CommentSizeX": 100,
+        "CommentSizeY": 40,
+        "DependencyIndex": 5,
+        "EnablePreview": true,
+        "IsSubGraph0": false,
+        "IsSubGraph1": false,
+        "IsSubGraph2": false,
+        "IsSubGraph3": false,
+        "LevelID": 8,
+        "MetaData": "",
+        "NodeCount": 0,
+        "NodeType": 1,
+        "Ports": {
+          "__type": "container",
+          "__count": 13,
+          "Channels": {
+            "__type": "container",
+            "__count": 9,
+            "ClassType1": "COMBO",
+            "ClassType2": "",
+            "ConnectionCount": 0,
+            "ID": "Channels",
+            "IOType": 0,
+            "MetaData": "",
+            "Property": {
+              "__type": "container",
+              "__count": 1,
+              "Variables": {
+                "__type": "container",
+                "__count": 4,
+                "ItemCount": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "06000000",
+                    "size": 4
+                  },
+                  "Size": 4,
+                  "Type": 2
+                },
+                "ItemIndex": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "05000000",
+                    "size": 4
+                  },
+                  "Size": 4,
+                  "Type": 2
+                },
+                "ItemList": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": "xyzw : rgba : xyz : rgb : xy : x",
+                  "Size": 32,
+                  "Type": 3
+                },
+                "ItemName": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": "x",
+                  "Size": 1,
+                  "Type": 3
+                }
+              }
+            },
+            "SubPropertyCount": 0,
+            "Wireless": false
+          },
+          "Default": {
+            "__type": "container",
+            "__count": 9,
+            "ClassType1": "FLOAT",
+            "ClassType2": "",
+            "ConnectionCount": 0,
+            "ID": "Default",
+            "IOType": 0,
+            "MetaData": "",
+            "Property": {
+              "__type": "container",
+              "__count": 1,
+              "Variables": {
+                "__type": "container",
+                "__count": 4,
+                "VariableW": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "000000000000f03f",
+                    "size": 8
+                  },
+                  "Size": 8,
+                  "Type": 0
+                },
+                "VariableX": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "000000000000f03f",
+                    "size": 8
+                  },
+                  "Size": 8,
+                  "Type": 0
+                },
+                "VariableY": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "000000000000f03f",
+                    "size": 8
+                  },
+                  "Size": 8,
+                  "Type": 0
+                },
+                "VariableZ": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "000000000000f03f",
+                    "size": 8
+                  },
+                  "Size": 8,
+                  "Type": 0
+                }
+              }
+            },
+            "SubPropertyCount": 0,
+            "Wireless": false
+          },
+          "EnableMax": {
+            "__type": "container",
+            "__count": 9,
+            "ClassType1": "BOOL",
+            "ClassType2": "",
+            "ConnectionCount": 0,
+            "ID": "EnableMax",
+            "IOType": 0,
+            "MetaData": "",
+            "Property": {
+              "__type": "container",
+              "__count": 1,
+              "Variables": {
+                "__type": "container",
+                "__count": 1,
+                "VariableX": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "00",
+                    "size": 1
+                  },
+                  "Size": 1,
+                  "Type": 1
+                }
+              }
+            },
+            "SubPropertyCount": 0,
+            "Wireless": false
+          },
+          "EnableMin": {
+            "__type": "container",
+            "__count": 9,
+            "ClassType1": "BOOL",
+            "ClassType2": "",
+            "ConnectionCount": 0,
+            "ID": "EnableMin",
+            "IOType": 0,
+            "MetaData": "",
+            "Property": {
+              "__type": "container",
+              "__count": 1,
+              "Variables": {
+                "__type": "container",
+                "__count": 1,
+                "VariableX": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "00",
+                    "size": 1
+                  },
+                  "Size": 1,
+                  "Type": 1
+                }
+              }
+            },
+            "SubPropertyCount": 0,
+            "Wireless": false
+          },
+          "Group": {
+            "__type": "container",
+            "__count": 9,
+            "ClassType1": "STRING",
+            "ClassType2": "",
+            "ConnectionCount": 0,
+            "ID": "Group",
+            "IOType": 0,
+            "MetaData": "",
+            "Property": {
+              "__type": "container",
+              "__count": 1,
+              "Variables": {
+                "__type": "container",
+                "__count": 1,
+                "String": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "",
+                    "size": 0
+                  },
+                  "Size": 0,
+                  "Type": 3
+                }
+              }
+            },
+            "SubPropertyCount": 0,
+            "Wireless": false
+          },
+          "Max": {
+            "__type": "container",
+            "__count": 9,
+            "ClassType1": "FLOAT",
+            "ClassType2": "",
+            "ConnectionCount": 0,
+            "ID": "Max",
+            "IOType": 0,
+            "MetaData": "",
+            "Property": {
+              "__type": "container",
+              "__count": 1,
+              "Variables": {
+                "__type": "container",
+                "__count": 1,
+                "VariableX": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "000000000000f03f",
+                    "size": 8
+                  },
+                  "Size": 8,
+                  "Type": 0
+                }
+              }
+            },
+            "SubPropertyCount": 0,
+            "Wireless": false
+          },
+          "Min": {
+            "__type": "container",
+            "__count": 9,
+            "ClassType1": "FLOAT",
+            "ClassType2": "",
+            "ConnectionCount": 0,
+            "ID": "Min",
+            "IOType": 0,
+            "MetaData": "",
+            "Property": {
+              "__type": "container",
+              "__count": 1,
+              "Variables": {
+                "__type": "container",
+                "__count": 1,
+                "VariableX": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "0000000000000000",
+                    "size": 8
+                  },
+                  "Size": 8,
+                  "Type": 0
+                }
+              }
+            },
+            "SubPropertyCount": 0,
+            "Wireless": false
+          },
+          "Output": {
+            "__type": "container",
+            "__count": 8,
+            "ClassType1": "FLOAT",
+            "ClassType2": "",
+            "ID": "Output",
+            "IOType": 1,
+            "MetaData": "",
+            "Property": {
+              "__type": "container",
+              "__count": 1,
+              "Variables": {
+                "__type": "container",
+                "__count": 4,
+                "VariableW": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "0000000000000000",
+                    "size": 8
+                  },
+                  "Size": 8,
+                  "Type": 0
+                },
+                "VariableX": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "0000000000000000",
+                    "size": 8
+                  },
+                  "Size": 8,
+                  "Type": 0
+                },
+                "VariableY": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "0000000000000000",
+                    "size": 8
+                  },
+                  "Size": 8,
+                  "Type": 0
+                },
+                "VariableZ": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "0000000000000000",
+                    "size": 8
+                  },
+                  "Size": 8,
+                  "Type": 0
+                }
+              }
+            },
+            "SubPropertyCount": 0,
+            "Wireless": false
+          },
+          "ScriptName": {
+            "__type": "container",
+            "__count": 9,
+            "ClassType1": "STRING",
+            "ClassType2": "",
+            "ConnectionCount": 0,
+            "ID": "ScriptName",
+            "IOType": 0,
+            "MetaData": "",
+            "Property": {
+              "__type": "container",
+              "__count": 1,
+              "Variables": {
+                "__type": "container",
+                "__count": 1,
+                "String": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": "NumConnections",
+                  "Size": 14,
+                  "Type": 3
+                }
+              }
+            },
+            "SubPropertyCount": 0,
+            "Wireless": false
+          },
+          "SortIndex": {
+            "__type": "container",
+            "__count": 9,
+            "ClassType1": "INT",
+            "ClassType2": "",
+            "ConnectionCount": 0,
+            "ID": "SortIndex",
+            "IOType": 0,
+            "MetaData": "",
+            "Property": {
+              "__type": "container",
+              "__count": 1,
+              "Variables": {
+                "__type": "container",
+                "__count": 1,
+                "VariableX": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "00000000",
+                    "size": 4
+                  },
+                  "Size": 4,
+                  "Type": 2
+                }
+              }
+            },
+            "SubPropertyCount": 0,
+            "Wireless": false
+          },
+          "Step": {
+            "__type": "container",
+            "__count": 9,
+            "ClassType1": "FLOAT",
+            "ClassType2": "",
+            "ConnectionCount": 0,
+            "ID": "Step",
+            "IOType": 0,
+            "MetaData": "",
+            "Property": {
+              "__type": "container",
+              "__count": 1,
+              "Variables": {
+                "__type": "container",
+                "__count": 1,
+                "VariableX": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "00000040e17a843f",
+                    "size": 8
+                  },
+                  "Size": 8,
+                  "Type": 0
+                }
+              }
+            },
+            "SubPropertyCount": 0,
+            "Wireless": false
+          },
+          "Title": {
+            "__type": "container",
+            "__count": 9,
+            "ClassType1": "STRING",
+            "ClassType2": "",
+            "ConnectionCount": 0,
+            "ID": "Title",
+            "IOType": 0,
+            "MetaData": "",
+            "Property": {
+              "__type": "container",
+              "__count": 1,
+              "Variables": {
+                "__type": "container",
+                "__count": 1,
+                "String": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": "NumConnections",
+                  "Size": 14,
+                  "Type": 3
+                }
+              }
+            },
+            "SubPropertyCount": 0,
+            "Wireless": false
+          },
+          "Tooltip": {
+            "__type": "container",
+            "__count": 9,
+            "ClassType1": "STRING",
+            "ClassType2": "",
+            "ConnectionCount": 0,
+            "ID": "Tooltip",
+            "IOType": 0,
+            "MetaData": "",
+            "Property": {
+              "__type": "container",
+              "__count": 1,
+              "Variables": {
+                "__type": "container",
+                "__count": 1,
+                "String": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "",
+                    "size": 0
+                  },
+                  "Size": 0,
+                  "Type": 3
+                }
+              }
+            },
+            "SubPropertyCount": 0,
+            "Wireless": false
+          }
+        },
+        "PositionX": -213,
+        "PositionY": 361,
+        "Preview2SizeX": 128,
+        "Preview2SizeY": 128,
+        "RedirectClassTypeA1": "",
+        "RedirectClassTypeA2": "",
+        "RedirectClassTypeB1": "",
+        "RedirectClassTypeB2": "",
+        "Selected": false,
+        "ShowPreview": false,
+        "TemplateID": "nodes_inputs_parameters_float",
+        "TemplatePreviousIDs": "",
+        "TemplateSubGraph": "",
+        "TemplateVersionMajor": 1,
+        "TemplateVersionMinor": 0,
+        "Title1": "Float Parameter",
+        "Title2": "NumConnections",
+        "ViewMode": 4,
+        "ViewOffsetX0": 0,
+        "ViewOffsetX1": 0,
+        "ViewOffsetX2": 0,
+        "ViewOffsetX3": 0,
+        "ViewOffsetY0": 0,
+        "ViewOffsetY1": 0,
+        "ViewOffsetY2": 0,
+        "ViewOffsetY3": 0,
+        "ViewScale0": {
+          "__type": "float",
+          "value": 1
+        },
+        "ViewScale1": {
+          "__type": "float",
+          "value": 1
+        },
+        "ViewScale2": {
+          "__type": "float",
+          "value": 1
+        },
+        "ViewScale3": {
+          "__type": "float",
+          "value": 1
+        }
+      },
+      "Node5CheckEnabled": false,
+      "Node5CheckExists": false,
+      "Node5CheckValue": true,
+      "Node5LockForPublic": false,
+      "Node5PreviewUseAlpha": false,
+      "Node5VirtualID": "",
+      "Node6": {
+        "__type": "container",
+        "__count": 43,
+        "CommentSizeX": 100,
+        "CommentSizeY": 40,
+        "DependencyIndex": 6,
+        "EnablePreview": true,
+        "IsSubGraph0": false,
+        "IsSubGraph1": false,
+        "IsSubGraph2": false,
+        "IsSubGraph3": false,
+        "LevelID": 10,
+        "MetaData": "",
+        "NodeCount": 0,
+        "NodeType": 1,
+        "Ports": {
+          "__type": "container",
+          "__count": 13,
+          "Channels": {
+            "__type": "container",
+            "__count": 9,
+            "ClassType1": "COMBO",
+            "ClassType2": "",
+            "ConnectionCount": 0,
+            "ID": "Channels",
+            "IOType": 0,
+            "MetaData": "",
+            "Property": {
+              "__type": "container",
+              "__count": 1,
+              "Variables": {
+                "__type": "container",
+                "__count": 4,
+                "ItemCount": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "06000000",
+                    "size": 4
+                  },
+                  "Size": 4,
+                  "Type": 2
+                },
+                "ItemIndex": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "05000000",
+                    "size": 4
+                  },
+                  "Size": 4,
+                  "Type": 2
+                },
+                "ItemList": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": "xyzw : rgba : xyz : rgb : xy : x",
+                  "Size": 32,
+                  "Type": 3
+                },
+                "ItemName": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": "x",
+                  "Size": 1,
+                  "Type": 3
+                }
+              }
+            },
+            "SubPropertyCount": 0,
+            "Wireless": false
+          },
+          "Default": {
+            "__type": "container",
+            "__count": 9,
+            "ClassType1": "FLOAT",
+            "ClassType2": "",
+            "ConnectionCount": 0,
+            "ID": "Default",
+            "IOType": 0,
+            "MetaData": "",
+            "Property": {
+              "__type": "container",
+              "__count": 1,
+              "Variables": {
+                "__type": "container",
+                "__count": 4,
+                "VariableW": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "000000000000f03f",
+                    "size": 8
+                  },
+                  "Size": 8,
+                  "Type": 0
+                },
+                "VariableX": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "000000000000f03f",
+                    "size": 8
+                  },
+                  "Size": 8,
+                  "Type": 0
+                },
+                "VariableY": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "000000000000f03f",
+                    "size": 8
+                  },
+                  "Size": 8,
+                  "Type": 0
+                },
+                "VariableZ": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "000000000000f03f",
+                    "size": 8
+                  },
+                  "Size": 8,
+                  "Type": 0
+                }
+              }
+            },
+            "SubPropertyCount": 0,
+            "Wireless": false
+          },
+          "EnableMax": {
+            "__type": "container",
+            "__count": 9,
+            "ClassType1": "BOOL",
+            "ClassType2": "",
+            "ConnectionCount": 0,
+            "ID": "EnableMax",
+            "IOType": 0,
+            "MetaData": "",
+            "Property": {
+              "__type": "container",
+              "__count": 1,
+              "Variables": {
+                "__type": "container",
+                "__count": 1,
+                "VariableX": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "00",
+                    "size": 1
+                  },
+                  "Size": 1,
+                  "Type": 1
+                }
+              }
+            },
+            "SubPropertyCount": 0,
+            "Wireless": false
+          },
+          "EnableMin": {
+            "__type": "container",
+            "__count": 9,
+            "ClassType1": "BOOL",
+            "ClassType2": "",
+            "ConnectionCount": 0,
+            "ID": "EnableMin",
+            "IOType": 0,
+            "MetaData": "",
+            "Property": {
+              "__type": "container",
+              "__count": 1,
+              "Variables": {
+                "__type": "container",
+                "__count": 1,
+                "VariableX": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "00",
+                    "size": 1
+                  },
+                  "Size": 1,
+                  "Type": 1
+                }
+              }
+            },
+            "SubPropertyCount": 0,
+            "Wireless": false
+          },
+          "Group": {
+            "__type": "container",
+            "__count": 9,
+            "ClassType1": "STRING",
+            "ClassType2": "",
+            "ConnectionCount": 0,
+            "ID": "Group",
+            "IOType": 0,
+            "MetaData": "",
+            "Property": {
+              "__type": "container",
+              "__count": 1,
+              "Variables": {
+                "__type": "container",
+                "__count": 1,
+                "String": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "",
+                    "size": 0
+                  },
+                  "Size": 0,
+                  "Type": 3
+                }
+              }
+            },
+            "SubPropertyCount": 0,
+            "Wireless": false
+          },
+          "Max": {
+            "__type": "container",
+            "__count": 9,
+            "ClassType1": "FLOAT",
+            "ClassType2": "",
+            "ConnectionCount": 0,
+            "ID": "Max",
+            "IOType": 0,
+            "MetaData": "",
+            "Property": {
+              "__type": "container",
+              "__count": 1,
+              "Variables": {
+                "__type": "container",
+                "__count": 1,
+                "VariableX": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "000000000000f03f",
+                    "size": 8
+                  },
+                  "Size": 8,
+                  "Type": 0
+                }
+              }
+            },
+            "SubPropertyCount": 0,
+            "Wireless": false
+          },
+          "Min": {
+            "__type": "container",
+            "__count": 9,
+            "ClassType1": "FLOAT",
+            "ClassType2": "",
+            "ConnectionCount": 0,
+            "ID": "Min",
+            "IOType": 0,
+            "MetaData": "",
+            "Property": {
+              "__type": "container",
+              "__count": 1,
+              "Variables": {
+                "__type": "container",
+                "__count": 1,
+                "VariableX": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "0000000000000000",
+                    "size": 8
+                  },
+                  "Size": 8,
+                  "Type": 0
+                }
+              }
+            },
+            "SubPropertyCount": 0,
+            "Wireless": false
+          },
+          "Output": {
+            "__type": "container",
+            "__count": 8,
+            "ClassType1": "FLOAT",
+            "ClassType2": "",
+            "ID": "Output",
+            "IOType": 1,
+            "MetaData": "",
+            "Property": {
+              "__type": "container",
+              "__count": 1,
+              "Variables": {
+                "__type": "container",
+                "__count": 4,
+                "VariableW": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "0000000000000000",
+                    "size": 8
+                  },
+                  "Size": 8,
+                  "Type": 0
+                },
+                "VariableX": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "0000000000000000",
+                    "size": 8
+                  },
+                  "Size": 8,
+                  "Type": 0
+                },
+                "VariableY": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "0000000000000000",
+                    "size": 8
+                  },
+                  "Size": 8,
+                  "Type": 0
+                },
+                "VariableZ": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "0000000000000000",
+                    "size": 8
+                  },
+                  "Size": 8,
+                  "Type": 0
+                }
+              }
+            },
+            "SubPropertyCount": 0,
+            "Wireless": false
+          },
+          "ScriptName": {
+            "__type": "container",
+            "__count": 9,
+            "ClassType1": "STRING",
+            "ClassType2": "",
+            "ConnectionCount": 0,
+            "ID": "ScriptName",
+            "IOType": 0,
+            "MetaData": "",
+            "Property": {
+              "__type": "container",
+              "__count": 1,
+              "Variables": {
+                "__type": "container",
+                "__count": 1,
+                "String": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": "Growth",
+                  "Size": 6,
+                  "Type": 3
+                }
+              }
+            },
+            "SubPropertyCount": 0,
+            "Wireless": false
+          },
+          "SortIndex": {
+            "__type": "container",
+            "__count": 9,
+            "ClassType1": "INT",
+            "ClassType2": "",
+            "ConnectionCount": 0,
+            "ID": "SortIndex",
+            "IOType": 0,
+            "MetaData": "",
+            "Property": {
+              "__type": "container",
+              "__count": 1,
+              "Variables": {
+                "__type": "container",
+                "__count": 1,
+                "VariableX": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "00000000",
+                    "size": 4
+                  },
+                  "Size": 4,
+                  "Type": 2
+                }
+              }
+            },
+            "SubPropertyCount": 0,
+            "Wireless": false
+          },
+          "Step": {
+            "__type": "container",
+            "__count": 9,
+            "ClassType1": "FLOAT",
+            "ClassType2": "",
+            "ConnectionCount": 0,
+            "ID": "Step",
+            "IOType": 0,
+            "MetaData": "",
+            "Property": {
+              "__type": "container",
+              "__count": 1,
+              "Variables": {
+                "__type": "container",
+                "__count": 1,
+                "VariableX": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "00000040e17a843f",
+                    "size": 8
+                  },
+                  "Size": 8,
+                  "Type": 0
+                }
+              }
+            },
+            "SubPropertyCount": 0,
+            "Wireless": false
+          },
+          "Title": {
+            "__type": "container",
+            "__count": 9,
+            "ClassType1": "STRING",
+            "ClassType2": "",
+            "ConnectionCount": 0,
+            "ID": "Title",
+            "IOType": 0,
+            "MetaData": "",
+            "Property": {
+              "__type": "container",
+              "__count": 1,
+              "Variables": {
+                "__type": "container",
+                "__count": 1,
+                "String": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": "Growth",
+                  "Size": 6,
+                  "Type": 3
+                }
+              }
+            },
+            "SubPropertyCount": 0,
+            "Wireless": false
+          },
+          "Tooltip": {
+            "__type": "container",
+            "__count": 9,
+            "ClassType1": "STRING",
+            "ClassType2": "",
+            "ConnectionCount": 0,
+            "ID": "Tooltip",
+            "IOType": 0,
+            "MetaData": "",
+            "Property": {
+              "__type": "container",
+              "__count": 1,
+              "Variables": {
+                "__type": "container",
+                "__count": 1,
+                "String": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "",
+                    "size": 0
+                  },
+                  "Size": 0,
+                  "Type": 3
+                }
+              }
+            },
+            "SubPropertyCount": 0,
+            "Wireless": false
+          }
+        },
+        "PositionX": -238,
+        "PositionY": 450,
+        "Preview2SizeX": 128,
+        "Preview2SizeY": 128,
+        "RedirectClassTypeA1": "",
+        "RedirectClassTypeA2": "",
+        "RedirectClassTypeB1": "",
+        "RedirectClassTypeB2": "",
+        "Selected": false,
+        "ShowPreview": false,
+        "TemplateID": "nodes_inputs_parameters_float",
+        "TemplatePreviousIDs": "",
+        "TemplateSubGraph": "",
+        "TemplateVersionMajor": 1,
+        "TemplateVersionMinor": 0,
+        "Title1": "Float Parameter",
+        "Title2": "Growth",
+        "ViewMode": 4,
+        "ViewOffsetX0": 0,
+        "ViewOffsetX1": 0,
+        "ViewOffsetX2": 0,
+        "ViewOffsetX3": 0,
+        "ViewOffsetY0": 0,
+        "ViewOffsetY1": 0,
+        "ViewOffsetY2": 0,
+        "ViewOffsetY3": 0,
+        "ViewScale0": {
+          "__type": "float",
+          "value": 1
+        },
+        "ViewScale1": {
+          "__type": "float",
+          "value": 1
+        },
+        "ViewScale2": {
+          "__type": "float",
+          "value": 1
+        },
+        "ViewScale3": {
+          "__type": "float",
+          "value": 1
+        }
+      },
+      "Node6CheckEnabled": false,
+      "Node6CheckExists": false,
+      "Node6CheckValue": true,
+      "Node6LockForPublic": false,
+      "Node6PreviewUseAlpha": false,
+      "Node6VirtualID": "",
+      "Node7": {
+        "__type": "container",
+        "__count": 43,
+        "CommentSizeX": 100,
+        "CommentSizeY": 40,
+        "DependencyIndex": 7,
+        "EnablePreview": true,
+        "IsSubGraph0": false,
+        "IsSubGraph1": false,
+        "IsSubGraph2": false,
+        "IsSubGraph3": false,
+        "LevelID": 0,
+        "MetaData": "",
+        "NodeCount": 0,
+        "NodeType": 1,
+        "Ports": {
+          "__type": "container",
+          "__count": 18,
+          "BendRadius": {
+            "__type": "container",
+            "__count": 10,
+            "ClassType1": "FLOAT",
+            "ClassType2": "",
+            "Connection0": {
+              "__type": "container",
+              "__count": 2,
+              "NodeLevelID": 6,
+              "PortID": "Output"
+            },
+            "ConnectionCount": 1,
+            "ID": "BendRadius",
+            "IOType": 0,
+            "MetaData": "",
+            "Property": {
+              "__type": "container",
+              "__count": 1,
+              "Variables": {
+                "__type": "container",
+                "__count": 1,
+                "VariableX": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "0000000000000000",
+                    "size": 8
+                  },
+                  "Size": 8,
+                  "Type": 0
+                }
+              }
+            },
+            "SubPropertyCount": 0,
+            "Wireless": false
+          },
+          "Code": {
+            "__type": "container",
+            "__count": 9,
+            "ClassType1": "TEXT",
+            "ClassType2": "",
+            "ConnectionCount": 0,
+            "ID": "Code",
+            "IOType": 0,
+            "MetaData": "",
+            "Property": {
+              "__type": "container",
+              "__count": 1,
+              "Variables": {
+                "__type": "container",
+                "__count": 1,
+                "String": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "size": 8899,
+                    "hex": "2f2f20436972637569745368616465722e6a730a2f2f2047656e6572616c2d70..."
+                  },
+                  "Size": 8899,
+                  "Type": 3
+                }
+              }
+            },
+            "SubPropertyCount": 0,
+            "Wireless": false
+          },
+          "Description": {
+            "__type": "container",
+            "__count": 9,
+            "ClassType1": "TEXT",
+            "ClassType2": "",
+            "ConnectionCount": 0,
+            "ID": "Description",
+            "IOType": 0,
+            "MetaData": "",
+            "Property": {
+              "__type": "container",
+              "__count": 1,
+              "Variables": {
+                "__type": "container",
+                "__count": 1,
+                "String": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "",
+                    "size": 0
+                  },
+                  "Size": 0,
+                  "Type": 3
+                }
+              }
+            },
+            "SubPropertyCount": 0,
+            "Wireless": false
+          },
+          "Examples": {
+            "__type": "container",
+            "__count": 9,
+            "ClassType1": "COMBO",
+            "ClassType2": "",
+            "ConnectionCount": 0,
+            "ID": "Examples",
+            "IOType": 0,
+            "MetaData": "",
+            "Property": {
+              "__type": "container",
+              "__count": 1,
+              "Variables": {
+                "__type": "container",
+                "__count": 4,
+                "ItemCount": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "06000000",
+                    "size": 4
+                  },
+                  "Size": 4,
+                  "Type": 2
+                },
+                "ItemIndex": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "00000000",
+                    "size": 4
+                  },
+                  "Size": 4,
+                  "Type": 2
+                },
+                "ItemList": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": "Custom : Input/Output/Global Types : Extra Functions : Procedural Execution : Lighting Loop : System Built-In Values/Functions",
+                  "Size": 126,
+                  "Type": 3
+                },
+                "ItemName": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": "Custom",
+                  "Size": 6,
+                  "Type": 3
+                }
+              }
+            },
+            "SubPropertyCount": 0,
+            "Wireless": false
+          },
+          "Growth": {
+            "__type": "container",
+            "__count": 10,
+            "ClassType1": "FLOAT",
+            "ClassType2": "",
+            "Connection0": {
+              "__type": "container",
+              "__count": 2,
+              "NodeLevelID": 10,
+              "PortID": "Output"
+            },
+            "ConnectionCount": 1,
+            "ID": "Growth",
+            "IOType": 0,
+            "MetaData": "",
+            "Property": {
+              "__type": "container",
+              "__count": 1,
+              "Variables": {
+                "__type": "container",
+                "__count": 1,
+                "VariableX": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "0000000000000000",
+                    "size": 8
+                  },
+                  "Size": 8,
+                  "Type": 0
+                }
+              }
+            },
+            "SubPropertyCount": 0,
+            "Wireless": false
+          },
+          "ID": {
+            "__type": "container",
+            "__count": 9,
+            "ClassType1": "INT",
+            "ClassType2": "",
+            "ConnectionCount": 0,
+            "ID": "ID",
+            "IOType": 0,
+            "MetaData": "",
+            "Property": {
+              "__type": "container",
+              "__count": 1,
+              "Variables": {
+                "__type": "container",
+                "__count": 1,
+                "VariableX": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "00000000",
+                    "size": 4
+                  },
+                  "Size": 4,
+                  "Type": 2
+                }
+              }
+            },
+            "SubPropertyCount": 0,
+            "Wireless": false
+          },
+          "LastChached3": {
+            "__type": "container",
+            "__count": 9,
+            "ClassType1": "STRING",
+            "ClassType2": "",
+            "ConnectionCount": 0,
+            "ID": "LastChached3",
+            "IOType": 0,
+            "MetaData": "",
+            "Property": {
+              "__type": "container",
+              "__count": 1,
+              "Variables": {
+                "__type": "container",
+                "__count": 1,
+                "String": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "size": 9607,
+                    "hex": "2376657273696f6e203331302065730a707265636973696f6e20686967687020..."
+                  },
+                  "Size": 9607,
+                  "Type": 3
+                }
+              }
+            },
+            "SubPropertyCount": 0,
+            "Wireless": false
+          },
+          "LastCodeFormatted3": {
+            "__type": "container",
+            "__count": 9,
+            "ClassType1": "STRING",
+            "ClassType2": "",
+            "ConnectionCount": 0,
+            "ID": "LastCodeFormatted3",
+            "IOType": 0,
+            "MetaData": "",
+            "Property": {
+              "__type": "container",
+              "__count": 1,
+              "Variables": {
+                "__type": "container",
+                "__count": 1,
+                "String": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "size": 9783,
+                    "hex": "2376657273696f6e203331302065730a707265636973696f6e20686967687020..."
+                  },
+                  "Size": 9783,
+                  "Type": 3
+                }
+              }
+            },
+            "SubPropertyCount": 0,
+            "Wireless": false
+          },
+          "Locked": {
+            "__type": "container",
+            "__count": 9,
+            "ClassType1": "BOOL",
+            "ClassType2": "",
+            "ConnectionCount": 0,
+            "ID": "Locked",
+            "IOType": 0,
+            "MetaData": "",
+            "Property": {
+              "__type": "container",
+              "__count": 1,
+              "Variables": {
+                "__type": "container",
+                "__count": 1,
+                "VariableX": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "00",
+                    "size": 1
+                  },
+                  "Size": 1,
+                  "Type": 1
+                }
+              }
+            },
+            "SubPropertyCount": 0,
+            "Wireless": false
+          },
+          "NumConnections": {
+            "__type": "container",
+            "__count": 10,
+            "ClassType1": "FLOAT",
+            "ClassType2": "",
+            "Connection0": {
+              "__type": "container",
+              "__count": 2,
+              "NodeLevelID": 8,
+              "PortID": "Output"
+            },
+            "ConnectionCount": 1,
+            "ID": "NumConnections",
+            "IOType": 0,
+            "MetaData": "",
+            "Property": {
+              "__type": "container",
+              "__count": 1,
+              "Variables": {
+                "__type": "container",
+                "__count": 1,
+                "VariableX": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "0000000000000000",
+                    "size": 8
+                  },
+                  "Size": 8,
+                  "Type": 0
+                }
+              }
+            },
+            "SubPropertyCount": 0,
+            "Wireless": false
+          },
+          "Stage": {
+            "__type": "container",
+            "__count": 9,
+            "ClassType1": "COMBO",
+            "ClassType2": "",
+            "ConnectionCount": 0,
+            "ID": "Stage",
+            "IOType": 0,
+            "MetaData": "",
+            "Property": {
+              "__type": "container",
+              "__count": 1,
+              "Variables": {
+                "__type": "container",
+                "__count": 4,
+                "ItemCount": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "02000000",
+                    "size": 4
+                  },
+                  "Size": 4,
+                  "Type": 2
+                },
+                "ItemIndex": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "01000000",
+                    "size": 4
+                  },
+                  "Size": 4,
+                  "Type": 2
+                },
+                "ItemList": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": "Vertex : Pixel",
+                  "Size": 14,
+                  "Type": 3
+                },
+                "ItemName": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": "Pixel",
+                  "Size": 5,
+                  "Type": 3
+                }
+              }
+            },
+            "SubPropertyCount": 0,
+            "Wireless": false
+          },
+          "Title": {
+            "__type": "container",
+            "__count": 9,
+            "ClassType1": "STRING",
+            "ClassType2": "",
+            "ConnectionCount": 0,
+            "ID": "Title",
+            "IOType": 0,
+            "MetaData": "",
+            "Property": {
+              "__type": "container",
+              "__count": 1,
+              "Variables": {
+                "__type": "container",
+                "__count": 1,
+                "String": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": "CircuitShader",
+                  "Size": 13,
+                  "Type": 3
+                }
+              }
+            },
+            "SubPropertyCount": 0,
+            "Wireless": false
+          },
+          "TubeRadius": {
+            "__type": "container",
+            "__count": 10,
+            "ClassType1": "FLOAT",
+            "ClassType2": "",
+            "Connection0": {
+              "__type": "container",
+              "__count": 2,
+              "NodeLevelID": 5,
+              "PortID": "Output"
+            },
+            "ConnectionCount": 1,
+            "ID": "TubeRadius",
+            "IOType": 0,
+            "MetaData": "",
+            "Property": {
+              "__type": "container",
+              "__count": 1,
+              "Variables": {
+                "__type": "container",
+                "__count": 1,
+                "VariableX": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "0000000000000000",
+                    "size": 8
+                  },
+                  "Size": 8,
+                  "Type": 0
+                }
+              }
+            },
+            "SubPropertyCount": 0,
+            "Wireless": false
+          },
+          "connTex": {
+            "__type": "container",
+            "__count": 9,
+            "ClassType1": "LINK",
+            "ClassType2": "TEXTURE_OBJECT_2D",
+            "Connection0": {
+              "__type": "container",
+              "__count": 2,
+              "NodeLevelID": 7,
+              "PortID": "Texture"
+            },
+            "ConnectionCount": 1,
+            "ID": "connTex",
+            "IOType": 0,
+            "MetaData": "",
+            "SubPropertyCount": 0,
+            "Wireless": false
+          },
+          "ngs_Height": {
+            "__type": "container",
+            "__count": 9,
+            "ClassType1": "INT",
+            "ClassType2": "",
+            "ConnectionCount": 0,
+            "ID": "ngs_Height",
+            "IOType": 0,
+            "MetaData": "",
+            "Property": {
+              "__type": "container",
+              "__count": 1,
+              "Variables": {
+                "__type": "container",
+                "__count": 1,
+                "VariableX": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "90010000",
+                    "size": 4
+                  },
+                  "Size": 4,
+                  "Type": 2
+                }
+              }
+            },
+            "SubPropertyCount": 0,
+            "Wireless": false
+          },
+          "ngs_Version": {
+            "__type": "container",
+            "__count": 9,
+            "ClassType1": "STRING",
+            "ClassType2": "",
+            "ConnectionCount": 0,
+            "ID": "ngs_Version",
+            "IOType": 0,
+            "MetaData": "",
+            "Property": {
+              "__type": "container",
+              "__count": 1,
+              "Variables": {
+                "__type": "container",
+                "__count": 1,
+                "String": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": "0.1.0",
+                  "Size": 5,
+                  "Type": 3
+                }
+              }
+            },
+            "SubPropertyCount": 0,
+            "Wireless": false
+          },
+          "transformedPosition": {
+            "__type": "container",
+            "__count": 8,
+            "ClassType1": "FLOAT",
+            "ClassType2": "",
+            "ID": "transformedPosition",
+            "IOType": 1,
+            "MetaData": "",
+            "Property": {
+              "__type": "container",
+              "__count": 1,
+              "Variables": {
+                "__type": "container",
+                "__count": 3,
+                "VariableX": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "0000000000000000",
+                    "size": 8
+                  },
+                  "Size": 8,
+                  "Type": 0
+                },
+                "VariableY": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "0000000000000000",
+                    "size": 8
+                  },
+                  "Size": 8,
+                  "Type": 0
+                },
+                "VariableZ": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "0000000000000000",
+                    "size": 8
+                  },
+                  "Size": 8,
+                  "Type": 0
+                }
+              }
+            },
+            "SubPropertyCount": 0,
+            "Wireless": false
+          },
+          "vertexColor": {
+            "__type": "container",
+            "__count": 8,
+            "ClassType1": "FLOAT",
+            "ClassType2": "",
+            "ID": "vertexColor",
+            "IOType": 1,
+            "MetaData": "",
+            "Property": {
+              "__type": "container",
+              "__count": 1,
+              "Variables": {
+                "__type": "container",
+                "__count": 4,
+                "VariableW": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "0000000000000000",
+                    "size": 8
+                  },
+                  "Size": 8,
+                  "Type": 0
+                },
+                "VariableX": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "0000000000000000",
+                    "size": 8
+                  },
+                  "Size": 8,
+                  "Type": 0
+                },
+                "VariableY": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "0000000000000000",
+                    "size": 8
+                  },
+                  "Size": 8,
+                  "Type": 0
+                },
+                "VariableZ": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "0000000000000000",
+                    "size": 8
+                  },
+                  "Size": 8,
+                  "Type": 0
+                }
+              }
+            },
+            "SubPropertyCount": 0,
+            "Wireless": false
+          }
+        },
+        "PositionX": 9,
+        "PositionY": 104,
+        "Preview2SizeX": 128,
+        "Preview2SizeY": 128,
+        "RedirectClassTypeA1": "",
+        "RedirectClassTypeA2": "",
+        "RedirectClassTypeB1": "",
+        "RedirectClassTypeB2": "",
+        "Selected": false,
+        "ShowPreview": false,
+        "TemplateID": "node_util_custom",
+        "TemplatePreviousIDs": "",
+        "TemplateSubGraph": "",
+        "TemplateVersionMajor": 1,
+        "TemplateVersionMinor": 2,
+        "Title1": "CircuitShader",
+        "Title2": "",
+        "ViewMode": 4,
+        "ViewOffsetX0": 0,
+        "ViewOffsetX1": 0,
+        "ViewOffsetX2": 0,
+        "ViewOffsetX3": 0,
+        "ViewOffsetY0": 0,
+        "ViewOffsetY1": 0,
+        "ViewOffsetY2": 0,
+        "ViewOffsetY3": 0,
+        "ViewScale0": {
+          "__type": "float",
+          "value": 1
+        },
+        "ViewScale1": {
+          "__type": "float",
+          "value": 1
+        },
+        "ViewScale2": {
+          "__type": "float",
+          "value": 1
+        },
+        "ViewScale3": {
+          "__type": "float",
+          "value": 1
+        }
+      },
+      "Node7CheckEnabled": false,
+      "Node7CheckExists": false,
+      "Node7CheckValue": true,
+      "Node7LockForPublic": false,
+      "Node7PreviewUseAlpha": false,
+      "Node7VirtualID": "",
+      "Node8": {
+        "__type": "container",
+        "__count": 43,
+        "CommentSizeX": 100,
+        "CommentSizeY": 40,
+        "DependencyIndex": 8,
+        "EnablePreview": true,
+        "IsSubGraph0": false,
+        "IsSubGraph1": false,
+        "IsSubGraph2": false,
+        "IsSubGraph3": false,
+        "LevelID": 1,
+        "MetaData": "",
+        "NodeCount": 0,
+        "NodeType": 1,
+        "Ports": {
+          "__type": "container",
+          "__count": 6,
+          "ApplyRotation": {
+            "__type": "container",
+            "__count": 9,
+            "ClassType1": "BOOL",
+            "ClassType2": "",
+            "ConnectionCount": 0,
+            "ID": "ApplyRotation",
+            "IOType": 0,
+            "MetaData": "",
+            "Property": {
+              "__type": "container",
+              "__count": 1,
+              "Variables": {
+                "__type": "container",
+                "__count": 1,
+                "VariableX": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "01",
+                    "size": 1
+                  },
+                  "Size": 1,
+                  "Type": 1
+                }
+              }
+            },
+            "SubPropertyCount": 0,
+            "Wireless": false
+          },
+          "ApplyTranslation": {
+            "__type": "container",
+            "__count": 9,
+            "ClassType1": "BOOL",
+            "ClassType2": "",
+            "ConnectionCount": 0,
+            "ID": "ApplyTranslation",
+            "IOType": 0,
+            "MetaData": "",
+            "Property": {
+              "__type": "container",
+              "__count": 1,
+              "Variables": {
+                "__type": "container",
+                "__count": 1,
+                "VariableX": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "01",
+                    "size": 1
+                  },
+                  "Size": 1,
+                  "Type": 1
+                }
+              }
+            },
+            "SubPropertyCount": 0,
+            "Wireless": false
+          },
+          "From": {
+            "__type": "container",
+            "__count": 9,
+            "ClassType1": "COMBO",
+            "ClassType2": "",
+            "ConnectionCount": 0,
+            "ID": "From",
+            "IOType": 0,
+            "MetaData": "",
+            "Property": {
+              "__type": "container",
+              "__count": 1,
+              "Variables": {
+                "__type": "container",
+                "__count": 4,
+                "ItemCount": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "05000000",
+                    "size": 4
+                  },
+                  "Size": 4,
+                  "Type": 2
+                },
+                "ItemIndex": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "01000000",
+                    "size": 4
+                  },
+                  "Size": 4,
+                  "Type": 2
+                },
+                "ItemList": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": "Tangent Space : Object Space : World Space : Camera Space : Screen Space ( NDC )",
+                  "Size": 80,
+                  "Type": 3
+                },
+                "ItemName": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": "Object Space",
+                  "Size": 12,
+                  "Type": 3
+                }
+              }
+            },
+            "SubPropertyCount": 0,
+            "Wireless": false
+          },
+          "To": {
+            "__type": "container",
+            "__count": 9,
+            "ClassType1": "COMBO",
+            "ClassType2": "",
+            "ConnectionCount": 0,
+            "ID": "To",
+            "IOType": 0,
+            "MetaData": "",
+            "Property": {
+              "__type": "container",
+              "__count": 1,
+              "Variables": {
+                "__type": "container",
+                "__count": 4,
+                "ItemCount": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "04000000",
+                    "size": 4
+                  },
+                  "Size": 4,
+                  "Type": 2
+                },
+                "ItemIndex": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "01000000",
+                    "size": 4
+                  },
+                  "Size": 4,
+                  "Type": 2
+                },
+                "ItemList": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": "Object Space : World Space : Camera Space : Screen Space ( NDC )",
+                  "Size": 64,
+                  "Type": 3
+                },
+                "ItemName": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": "World Space",
+                  "Size": 11,
+                  "Type": 3
+                }
+              }
+            },
+            "SubPropertyCount": 0,
+            "Wireless": false
+          },
+          "VectorIn": {
+            "__type": "container",
+            "__count": 10,
+            "ClassType1": "FLOAT",
+            "ClassType2": "",
+            "Connection0": {
+              "__type": "container",
+              "__count": 2,
+              "NodeLevelID": 0,
+              "PortID": "transformedPosition"
+            },
+            "ConnectionCount": 1,
+            "ID": "VectorIn",
+            "IOType": 0,
+            "MetaData": "",
+            "Property": {
+              "__type": "container",
+              "__count": 1,
+              "Variables": {
+                "__type": "container",
+                "__count": 3,
+                "VariableX": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "0000000000000000",
+                    "size": 8
+                  },
+                  "Size": 8,
+                  "Type": 0
+                },
+                "VariableY": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "0000000000000000",
+                    "size": 8
+                  },
+                  "Size": 8,
+                  "Type": 0
+                },
+                "VariableZ": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "0000000000000000",
+                    "size": 8
+                  },
+                  "Size": 8,
+                  "Type": 0
+                }
+              }
+            },
+            "SubPropertyCount": 0,
+            "Wireless": false
+          },
+          "VectorOut": {
+            "__type": "container",
+            "__count": 8,
+            "ClassType1": "FLOAT",
+            "ClassType2": "",
+            "ID": "VectorOut",
+            "IOType": 1,
+            "MetaData": "",
+            "Property": {
+              "__type": "container",
+              "__count": 1,
+              "Variables": {
+                "__type": "container",
+                "__count": 3,
+                "VariableX": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "0000000000000000",
+                    "size": 8
+                  },
+                  "Size": 8,
+                  "Type": 0
+                },
+                "VariableY": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "0000000000000000",
+                    "size": 8
+                  },
+                  "Size": 8,
+                  "Type": 0
+                },
+                "VariableZ": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "0000000000000000",
+                    "size": 8
+                  },
+                  "Size": 8,
+                  "Type": 0
+                }
+              }
+            },
+            "SubPropertyCount": 0,
+            "Wireless": false
+          }
+        },
+        "PositionX": 231,
+        "PositionY": 126,
+        "Preview2SizeX": 128,
+        "Preview2SizeY": 128,
+        "RedirectClassTypeA1": "",
+        "RedirectClassTypeA2": "",
+        "RedirectClassTypeB1": "",
+        "RedirectClassTypeB2": "",
+        "Selected": false,
+        "ShowPreview": false,
+        "TemplateID": "node_math_transform",
+        "TemplatePreviousIDs": "",
+        "TemplateSubGraph": "",
+        "TemplateVersionMajor": 1,
+        "TemplateVersionMinor": 1,
+        "Title1": "Transform Vector",
+        "Title2": "Object to World",
+        "ViewMode": 4,
+        "ViewOffsetX0": 0,
+        "ViewOffsetX1": 0,
+        "ViewOffsetX2": 0,
+        "ViewOffsetX3": 0,
+        "ViewOffsetY0": 0,
+        "ViewOffsetY1": 0,
+        "ViewOffsetY2": 0,
+        "ViewOffsetY3": 0,
+        "ViewScale0": {
+          "__type": "float",
+          "value": 1
+        },
+        "ViewScale1": {
+          "__type": "float",
+          "value": 1
+        },
+        "ViewScale2": {
+          "__type": "float",
+          "value": 1
+        },
+        "ViewScale3": {
+          "__type": "float",
+          "value": 1
+        }
+      },
+      "Node8CheckEnabled": false,
+      "Node8CheckExists": false,
+      "Node8CheckValue": true,
+      "Node8LockForPublic": false,
+      "Node8PreviewUseAlpha": false,
+      "Node8VirtualID": "",
+      "Node9": {
+        "__type": "container",
+        "__count": 43,
+        "CommentSizeX": 0,
+        "CommentSizeY": 0,
+        "DependencyIndex": 9,
+        "EnablePreview": true,
+        "IsSubGraph0": false,
+        "IsSubGraph1": false,
+        "IsSubGraph2": false,
+        "IsSubGraph3": false,
+        "LevelID": 4,
+        "MetaData": "",
+        "NodeCount": 0,
+        "NodeType": 1,
+        "Ports": {
+          "__type": "container",
+          "__count": 22,
+          "Depth": {
+            "__type": "container",
+            "__count": 9,
+            "ClassType1": "FLOAT",
+            "ClassType2": "",
+            "ConnectionCount": 0,
+            "ID": "Depth",
+            "IOType": 0,
+            "MetaData": "",
+            "Property": {
+              "__type": "container",
+              "__count": 1,
+              "Variables": {
+                "__type": "container",
+                "__count": 1,
+                "VariableX": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "000000000000f03f",
+                    "size": 8
+                  },
+                  "Size": 8,
+                  "Type": 0
+                }
+              }
+            },
+            "SubPropertyCount": 0,
+            "Wireless": false
+          },
+          "DepthMode": {
+            "__type": "container",
+            "__count": 9,
+            "ClassType1": "COMBO",
+            "ClassType2": "",
+            "ConnectionCount": 0,
+            "ID": "DepthMode",
+            "IOType": 0,
+            "MetaData": "",
+            "Property": {
+              "__type": "container",
+              "__count": 1,
+              "Variables": {
+                "__type": "container",
+                "__count": 4,
+                "ItemCount": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "03000000",
+                    "size": 4
+                  },
+                  "Size": 4,
+                  "Type": 2
+                },
+                "ItemIndex": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "00000000",
+                    "size": 4
+                  },
+                  "Size": 4,
+                  "Type": 2
+                },
+                "ItemList": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "size": 117,
+                    "hex": "09094e6f6e2d4c696e656172202d204e6f726d616c697a6564205b3020746f20..."
+                  },
+                  "Size": 117,
+                  "Type": 3
+                },
+                "ItemName": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": "Non-Linear - Normalized [0 to 1] )",
+                  "Size": 34,
+                  "Type": 3
+                }
+              }
+            },
+            "SubPropertyCount": 0,
+            "Wireless": false
+          },
+          "DontFreezeSpec": {
+            "__type": "container",
+            "__count": 9,
+            "ClassType1": "BOOL",
+            "ClassType2": "",
+            "ConnectionCount": 0,
+            "ID": "DontFreezeSpec",
+            "IOType": 0,
+            "MetaData": "",
+            "Property": {
+              "__type": "container",
+              "__count": 1,
+              "Variables": {
+                "__type": "container",
+                "__count": 1,
+                "VariableX": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "00",
+                    "size": 1
+                  },
+                  "Size": 1,
+                  "Type": 1
+                }
+              }
+            },
+            "SubPropertyCount": 0,
+            "Wireless": false
+          },
+          "FinalColor": {
+            "__type": "container",
+            "__count": 10,
+            "ClassType1": "COLOR",
+            "ClassType2": "",
+            "Connection0": {
+              "__type": "container",
+              "__count": 2,
+              "NodeLevelID": 0,
+              "PortID": "vertexColor"
+            },
+            "ConnectionCount": 1,
+            "ID": "FinalColor",
+            "IOType": 0,
+            "MetaData": "",
+            "Property": {
+              "__type": "container",
+              "__count": 1,
+              "Variables": {
+                "__type": "container",
+                "__count": 4,
+                "VariableA": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "000000000000f03f",
+                    "size": 8
+                  },
+                  "Size": 8,
+                  "Type": 0
+                },
+                "VariableB": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "000000000000f03f",
+                    "size": 8
+                  },
+                  "Size": 8,
+                  "Type": 0
+                },
+                "VariableG": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "000000000000f03f",
+                    "size": 8
+                  },
+                  "Size": 8,
+                  "Type": 0
+                },
+                "VariableR": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "000000000000f03f",
+                    "size": 8
+                  },
+                  "Size": 8,
+                  "Type": 0
+                }
+              }
+            },
+            "SubPropertyCount": 0,
+            "Wireless": false
+          },
+          "FinalColor1": {
+            "__type": "container",
+            "__count": 9,
+            "ClassType1": "COLOR",
+            "ClassType2": "",
+            "ConnectionCount": 0,
+            "ID": "FinalColor1",
+            "IOType": 0,
+            "MetaData": "",
+            "Property": {
+              "__type": "container",
+              "__count": 1,
+              "Variables": {
+                "__type": "container",
+                "__count": 4,
+                "VariableA": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "000000000000f03f",
+                    "size": 8
+                  },
+                  "Size": 8,
+                  "Type": 0
+                },
+                "VariableB": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "000000000000f03f",
+                    "size": 8
+                  },
+                  "Size": 8,
+                  "Type": 0
+                },
+                "VariableG": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "000000000000f03f",
+                    "size": 8
+                  },
+                  "Size": 8,
+                  "Type": 0
+                },
+                "VariableR": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "000000000000f03f",
+                    "size": 8
+                  },
+                  "Size": 8,
+                  "Type": 0
+                }
+              }
+            },
+            "SubPropertyCount": 0,
+            "Wireless": false
+          },
+          "FinalColor2": {
+            "__type": "container",
+            "__count": 9,
+            "ClassType1": "COLOR",
+            "ClassType2": "",
+            "ConnectionCount": 0,
+            "ID": "FinalColor2",
+            "IOType": 0,
+            "MetaData": "",
+            "Property": {
+              "__type": "container",
+              "__count": 1,
+              "Variables": {
+                "__type": "container",
+                "__count": 4,
+                "VariableA": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "000000000000f03f",
+                    "size": 8
+                  },
+                  "Size": 8,
+                  "Type": 0
+                },
+                "VariableB": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "000000000000f03f",
+                    "size": 8
+                  },
+                  "Size": 8,
+                  "Type": 0
+                },
+                "VariableG": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "000000000000f03f",
+                    "size": 8
+                  },
+                  "Size": 8,
+                  "Type": 0
+                },
+                "VariableR": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "000000000000f03f",
+                    "size": 8
+                  },
+                  "Size": 8,
+                  "Type": 0
+                }
+              }
+            },
+            "SubPropertyCount": 0,
+            "Wireless": false
+          },
+          "FinalColor3": {
+            "__type": "container",
+            "__count": 9,
+            "ClassType1": "COLOR",
+            "ClassType2": "",
+            "ConnectionCount": 0,
+            "ID": "FinalColor3",
+            "IOType": 0,
+            "MetaData": "",
+            "Property": {
+              "__type": "container",
+              "__count": 1,
+              "Variables": {
+                "__type": "container",
+                "__count": 4,
+                "VariableA": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "000000000000f03f",
+                    "size": 8
+                  },
+                  "Size": 8,
+                  "Type": 0
+                },
+                "VariableB": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "000000000000f03f",
+                    "size": 8
+                  },
+                  "Size": 8,
+                  "Type": 0
+                },
+                "VariableG": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "000000000000f03f",
+                    "size": 8
+                  },
+                  "Size": 8,
+                  "Type": 0
+                },
+                "VariableR": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "000000000000f03f",
+                    "size": 8
+                  },
+                  "Size": 8,
+                  "Type": 0
+                }
+              }
+            },
+            "SubPropertyCount": 0,
+            "Wireless": false
+          },
+          "GSplatPointSize": {
+            "__type": "container",
+            "__count": 9,
+            "ClassType1": "FLOAT",
+            "ClassType2": "",
+            "ConnectionCount": 0,
+            "ID": "GSplatPointSize",
+            "IOType": 0,
+            "MetaData": "",
+            "Property": {
+              "__type": "container",
+              "__count": 1,
+              "Variables": {
+                "__type": "container",
+                "__count": 1,
+                "VariableX": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "0000000000000000",
+                    "size": 8
+                  },
+                  "Size": 8,
+                  "Type": 0
+                }
+              }
+            },
+            "SubPropertyCount": 0,
+            "Wireless": false
+          },
+          "GSplatRotation": {
+            "__type": "container",
+            "__count": 9,
+            "ClassType1": "FLOAT",
+            "ClassType2": "",
+            "ConnectionCount": 0,
+            "ID": "GSplatRotation",
+            "IOType": 0,
+            "MetaData": "",
+            "Property": {
+              "__type": "container",
+              "__count": 1,
+              "Variables": {
+                "__type": "container",
+                "__count": 4,
+                "VariableW": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "000000000000f03f",
+                    "size": 8
+                  },
+                  "Size": 8,
+                  "Type": 0
+                },
+                "VariableX": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "0000000000000000",
+                    "size": 8
+                  },
+                  "Size": 8,
+                  "Type": 0
+                },
+                "VariableY": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "0000000000000000",
+                    "size": 8
+                  },
+                  "Size": 8,
+                  "Type": 0
+                },
+                "VariableZ": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "0000000000000000",
+                    "size": 8
+                  },
+                  "Size": 8,
+                  "Type": 0
+                }
+              }
+            },
+            "SubPropertyCount": 0,
+            "Wireless": false
+          },
+          "GSplatScale": {
+            "__type": "container",
+            "__count": 9,
+            "ClassType1": "FLOAT",
+            "ClassType2": "",
+            "ConnectionCount": 0,
+            "ID": "GSplatScale",
+            "IOType": 0,
+            "MetaData": "",
+            "Property": {
+              "__type": "container",
+              "__count": 1,
+              "Variables": {
+                "__type": "container",
+                "__count": 3,
+                "VariableX": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "0000000000000000",
+                    "size": 8
+                  },
+                  "Size": 8,
+                  "Type": 0
+                },
+                "VariableY": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "0000000000000000",
+                    "size": 8
+                  },
+                  "Size": 8,
+                  "Type": 0
+                },
+                "VariableZ": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "0000000000000000",
+                    "size": 8
+                  },
+                  "Size": 8,
+                  "Type": 0
+                }
+              }
+            },
+            "SubPropertyCount": 0,
+            "Wireless": false
+          },
+          "Motion Vector Pass": {
+            "__type": "container",
+            "__count": 9,
+            "ClassType1": "COMBO",
+            "ClassType2": "",
+            "ConnectionCount": 0,
+            "ID": "Motion Vector Pass",
+            "IOType": 0,
+            "MetaData": "",
+            "Property": {
+              "__type": "container",
+              "__count": 1,
+              "Variables": {
+                "__type": "container",
+                "__count": 4,
+                "ItemCount": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "03000000",
+                    "size": 4
+                  },
+                  "Size": 4,
+                  "Type": 2
+                },
+                "ItemIndex": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "00000000",
+                    "size": 4
+                  },
+                  "Size": 4,
+                  "Type": 2
+                },
+                "ItemList": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": "Write Velocity and Depth : Discard Velocity but Write Depth : Discard Velocity and Depth",
+                  "Size": 88,
+                  "Type": 3
+                },
+                "ItemName": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": "Write Velocity and Depth",
+                  "Size": 24,
+                  "Type": 3
+                }
+              }
+            },
+            "SubPropertyCount": 0,
+            "Wireless": false
+          },
+          "Negative": {
+            "__type": "container",
+            "__count": 9,
+            "ClassType1": "BOOL",
+            "ClassType2": "",
+            "ConnectionCount": 0,
+            "ID": "Negative",
+            "IOType": 0,
+            "MetaData": "",
+            "Property": {
+              "__type": "container",
+              "__count": 1,
+              "Variables": {
+                "__type": "container",
+                "__count": 1,
+                "VariableX": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "00",
+                    "size": 1
+                  },
+                  "Size": 1,
+                  "Type": 1
+                }
+              }
+            },
+            "SubPropertyCount": 0,
+            "Wireless": false
+          },
+          "PrevWorldPosition": {
+            "__type": "container",
+            "__count": 9,
+            "ClassType1": "FLOAT",
+            "ClassType2": "",
+            "ConnectionCount": 0,
+            "ID": "PrevWorldPosition",
+            "IOType": 0,
+            "MetaData": "",
+            "Property": {
+              "__type": "container",
+              "__count": 1,
+              "Variables": {
+                "__type": "container",
+                "__count": 3,
+                "VariableX": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "0000000000000000",
+                    "size": 8
+                  },
+                  "Size": 8,
+                  "Type": 0
+                },
+                "VariableY": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "0000000000000000",
+                    "size": 8
+                  },
+                  "Size": 8,
+                  "Type": 0
+                },
+                "VariableZ": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "0000000000000000",
+                    "size": 8
+                  },
+                  "Size": 8,
+                  "Type": 0
+                }
+              }
+            },
+            "SubPropertyCount": 0,
+            "Wireless": false
+          },
+          "RayDirection": {
+            "__type": "container",
+            "__count": 9,
+            "ClassType1": "FLOAT",
+            "ClassType2": "",
+            "ConnectionCount": 0,
+            "ID": "RayDirection",
+            "IOType": 0,
+            "MetaData": "",
+            "Property": {
+              "__type": "container",
+              "__count": 1,
+              "Variables": {
+                "__type": "container",
+                "__count": 3,
+                "VariableX": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "0000000000000000",
+                    "size": 8
+                  },
+                  "Size": 8,
+                  "Type": 0
+                },
+                "VariableY": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "000000000000f03f",
+                    "size": 8
+                  },
+                  "Size": 8,
+                  "Type": 0
+                },
+                "VariableZ": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "0000000000000000",
+                    "size": 8
+                  },
+                  "Size": 8,
+                  "Type": 0
+                }
+              }
+            },
+            "SubPropertyCount": 0,
+            "Wireless": false
+          },
+          "RayOrigin": {
+            "__type": "container",
+            "__count": 9,
+            "ClassType1": "FLOAT",
+            "ClassType2": "",
+            "ConnectionCount": 0,
+            "ID": "RayOrigin",
+            "IOType": 0,
+            "MetaData": "",
+            "Property": {
+              "__type": "container",
+              "__count": 1,
+              "Variables": {
+                "__type": "container",
+                "__count": 3,
+                "VariableX": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "0000000000000000",
+                    "size": 8
+                  },
+                  "Size": 8,
+                  "Type": 0
+                },
+                "VariableY": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "0000000000000000",
+                    "size": 8
+                  },
+                  "Size": 8,
+                  "Type": 0
+                },
+                "VariableZ": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "0000000000000000",
+                    "size": 8
+                  },
+                  "Size": 8,
+                  "Type": 0
+                }
+              }
+            },
+            "SubPropertyCount": 0,
+            "Wireless": false
+          },
+          "ShowPrevPos": {
+            "__type": "container",
+            "__count": 9,
+            "ClassType1": "BOOL",
+            "ClassType2": "",
+            "ConnectionCount": 0,
+            "ID": "ShowPrevPos",
+            "IOType": 0,
+            "MetaData": "",
+            "Property": {
+              "__type": "container",
+              "__count": 1,
+              "Variables": {
+                "__type": "container",
+                "__count": 1,
+                "VariableX": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "00",
+                    "size": 1
+                  },
+                  "Size": 1,
+                  "Type": 1
+                }
+              }
+            },
+            "SubPropertyCount": 0,
+            "Wireless": false
+          },
+          "Targets": {
+            "__type": "container",
+            "__count": 9,
+            "ClassType1": "COMBO",
+            "ClassType2": "",
+            "ConnectionCount": 0,
+            "ID": "Targets",
+            "IOType": 0,
+            "MetaData": "",
+            "Property": {
+              "__type": "container",
+              "__count": 1,
+              "Variables": {
+                "__type": "container",
+                "__count": 4,
+                "ItemCount": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "04000000",
+                    "size": 4
+                  },
+                  "Size": 4,
+                  "Type": 2
+                },
+                "ItemIndex": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "00000000",
+                    "size": 4
+                  },
+                  "Size": 4,
+                  "Type": 2
+                },
+                "ItemList": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": "1 : 2 : 3 : 4",
+                  "Size": 13,
+                  "Type": 3
+                },
+                "ItemName": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": "1",
+                  "Size": 1,
+                  "Type": 3
+                }
+              }
+            },
+            "SubPropertyCount": 0,
+            "Wireless": false
+          },
+          "Type": {
+            "__type": "container",
+            "__count": 9,
+            "ClassType1": "COMBO",
+            "ClassType2": "",
+            "ConnectionCount": 0,
+            "ID": "Type",
+            "IOType": 0,
+            "MetaData": "",
+            "Property": {
+              "__type": "container",
+              "__count": 1,
+              "Variables": {
+                "__type": "container",
+                "__count": 4,
+                "ItemCount": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "04000000",
+                    "size": 4
+                  },
+                  "Size": 4,
+                  "Type": 2
+                },
+                "ItemIndex": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "00000000",
+                    "size": 4
+                  },
+                  "Size": 4,
+                  "Type": 2
+                },
+                "ItemList": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": "3D : Post Effect : Hair : Gaussian Splatting",
+                  "Size": 44,
+                  "Type": 3
+                },
+                "ItemName": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": "3D",
+                  "Size": 2,
+                  "Type": 3
+                }
+              }
+            },
+            "SubPropertyCount": 0,
+            "Wireless": false
+          },
+          "WorldNormal": {
+            "__type": "container",
+            "__count": 9,
+            "ClassType1": "FLOAT",
+            "ClassType2": "",
+            "ConnectionCount": 0,
+            "ID": "WorldNormal",
+            "IOType": 0,
+            "MetaData": "",
+            "Property": {
+              "__type": "container",
+              "__count": 1,
+              "Variables": {
+                "__type": "container",
+                "__count": 3,
+                "VariableX": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "0000000000000000",
+                    "size": 8
+                  },
+                  "Size": 8,
+                  "Type": 0
+                },
+                "VariableY": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "000000000000f03f",
+                    "size": 8
+                  },
+                  "Size": 8,
+                  "Type": 0
+                },
+                "VariableZ": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "0000000000000000",
+                    "size": 8
+                  },
+                  "Size": 8,
+                  "Type": 0
+                }
+              }
+            },
+            "SubPropertyCount": 0,
+            "Wireless": false
+          },
+          "WorldPosition": {
+            "__type": "container",
+            "__count": 10,
+            "ClassType1": "FLOAT",
+            "ClassType2": "",
+            "Connection0": {
+              "__type": "container",
+              "__count": 2,
+              "NodeLevelID": 1,
+              "PortID": "VectorOut"
+            },
+            "ConnectionCount": 1,
+            "ID": "WorldPosition",
+            "IOType": 0,
+            "MetaData": "",
+            "Property": {
+              "__type": "container",
+              "__count": 1,
+              "Variables": {
+                "__type": "container",
+                "__count": 3,
+                "VariableX": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "0000000000000000",
+                    "size": 8
+                  },
+                  "Size": 8,
+                  "Type": 0
+                },
+                "VariableY": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "0000000000000000",
+                    "size": 8
+                  },
+                  "Size": 8,
+                  "Type": 0
+                },
+                "VariableZ": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "0000000000000000",
+                    "size": 8
+                  },
+                  "Size": 8,
+                  "Type": 0
+                }
+              }
+            },
+            "SubPropertyCount": 0,
+            "Wireless": false
+          },
+          "WorldTangent": {
+            "__type": "container",
+            "__count": 9,
+            "ClassType1": "FLOAT",
+            "ClassType2": "",
+            "ConnectionCount": 0,
+            "ID": "WorldTangent",
+            "IOType": 0,
+            "MetaData": "",
+            "Property": {
+              "__type": "container",
+              "__count": 1,
+              "Variables": {
+                "__type": "container",
+                "__count": 3,
+                "VariableX": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "0000000000000000",
+                    "size": 8
+                  },
+                  "Size": 8,
+                  "Type": 0
+                },
+                "VariableY": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "0000000000000000",
+                    "size": 8
+                  },
+                  "Size": 8,
+                  "Type": 0
+                },
+                "VariableZ": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "000000000000f03f",
+                    "size": 8
+                  },
+                  "Size": 8,
+                  "Type": 0
+                }
+              }
+            },
+            "SubPropertyCount": 0,
+            "Wireless": false
+          },
+          "WriteDepth": {
+            "__type": "container",
+            "__count": 9,
+            "ClassType1": "BOOL",
+            "ClassType2": "",
+            "ConnectionCount": 0,
+            "ID": "WriteDepth",
+            "IOType": 0,
+            "MetaData": "",
+            "Property": {
+              "__type": "container",
+              "__count": 1,
+              "Variables": {
+                "__type": "container",
+                "__count": 1,
+                "VariableX": {
+                  "__type": "container",
+                  "__count": 3,
+                  "Data": {
+                    "__type": "blob",
+                    "hex": "00",
+                    "size": 1
+                  },
+                  "Size": 1,
+                  "Type": 1
+                }
+              }
+            },
+            "SubPropertyCount": 0,
+            "Wireless": false
+          }
+        },
+        "PositionX": 495,
+        "PositionY": 120,
+        "Preview2SizeX": 128,
+        "Preview2SizeY": 128,
+        "RedirectClassTypeA1": "",
+        "RedirectClassTypeA2": "",
+        "RedirectClassTypeB1": "",
+        "RedirectClassTypeB2": "",
+        "Selected": false,
+        "ShowPreview": false,
+        "TemplateID": "nodes_main_graph",
+        "TemplatePreviousIDs": "",
+        "TemplateSubGraph": "",
+        "TemplateVersionMajor": 1,
+        "TemplateVersionMinor": 0,
+        "Title1": "Shader",
+        "Title2": "3D",
+        "ViewMode": 4,
+        "ViewOffsetX0": 0,
+        "ViewOffsetX1": 0,
+        "ViewOffsetX2": 0,
+        "ViewOffsetX3": 0,
+        "ViewOffsetY0": 0,
+        "ViewOffsetY1": 0,
+        "ViewOffsetY2": 0,
+        "ViewOffsetY3": 0,
+        "ViewScale0": {
+          "__type": "float",
+          "value": 1
+        },
+        "ViewScale1": {
+          "__type": "float",
+          "value": 1
+        },
+        "ViewScale2": {
+          "__type": "float",
+          "value": 1
+        },
+        "ViewScale3": {
+          "__type": "float",
+          "value": 1
+        }
+      },
+      "Node9CheckEnabled": false,
+      "Node9CheckExists": false,
+      "Node9CheckValue": true,
+      "Node9LockForPublic": false,
+      "Node9PreviewUseAlpha": false,
+      "Node9VirtualID": ""
+    },
+    "CommentSizeX": 100,
+    "CommentSizeY": 40,
+    "DependencyIndex": -1,
+    "EnablePreview": true,
+    "IsSubGraph0": true,
+    "IsSubGraph1": true,
+    "IsSubGraph2": true,
+    "IsSubGraph3": true,
+    "LevelID": 0,
+    "MetaData": "",
+    "NodeCount": 11,
+    "NodeType": 3,
+    "PositionX": 0,
+    "PositionY": 0,
+    "Preview2SizeX": 128,
+    "Preview2SizeY": 128,
+    "RedirectClassTypeA1": "",
+    "RedirectClassTypeA2": "",
+    "RedirectClassTypeB1": "",
+    "RedirectClassTypeB2": "",
+    "Selected": false,
+    "ShowPreview": false,
+    "TemplateID": "nodes_main_subgraph",
+    "TemplatePreviousIDs": "",
+    "TemplateSubGraph": "",
+    "TemplateVersionMajor": 1,
+    "TemplateVersionMinor": 0,
+    "Title1": "",
+    "Title2": "",
+    "ViewMode": 4,
+    "ViewOffsetX0": 0,
+    "ViewOffsetX1": 0,
+    "ViewOffsetX2": 0,
+    "ViewOffsetX3": 0,
+    "ViewOffsetY0": 0,
+    "ViewOffsetY1": 0,
+    "ViewOffsetY2": 0,
+    "ViewOffsetY3": 0,
+    "ViewScale0": {
+      "__type": "float",
+      "value": 1
+    },
+    "ViewScale1": {
+      "__type": "float",
+      "value": 1
+    },
+    "ViewScale2": {
+      "__type": "float",
+      "value": 1
+    },
+    "ViewScale3": {
+      "__type": "float",
+      "value": 1
+    }
+  },
+  "NodesCheckEnabled": false,
+  "NodesCheckExists": false,
+  "NodesCheckValue": true,
+  "NodesLockForPublic": false,
+  "NodesPreviewUseAlpha": false,
+  "NodesVirtualID": "",
+  "SystemID": "dev.snap.shaders"
+}

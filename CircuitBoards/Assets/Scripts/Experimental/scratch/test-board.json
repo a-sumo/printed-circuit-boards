@@ -1,0 +1,506 @@
+{
+  "board": {
+    "outline": [
+      [
+        100,
+        80
+      ],
+      [
+        140,
+        80
+      ],
+      [
+        140,
+        110
+      ],
+      [
+        100,
+        110
+      ],
+      [
+        100,
+        80
+      ]
+    ],
+    "thickness": 1.6
+  },
+  "nets": {
+    "0": "",
+    "1": "GND",
+    "2": "VCC",
+    "3": "/SDA",
+    "4": "/SCL"
+  },
+  "traces": [
+    {
+      "points": [
+        [
+          110,
+          90
+        ],
+        [
+          125,
+          90
+        ]
+      ],
+      "width": 0.25,
+      "layer": "F.Cu",
+      "net": 2
+    },
+    {
+      "points": [
+        [
+          125,
+          90
+        ],
+        [
+          130,
+          95
+        ]
+      ],
+      "width": 0.25,
+      "layer": "F.Cu",
+      "net": 2
+    },
+    {
+      "points": [
+        [
+          110,
+          95
+        ],
+        [
+          120,
+          95
+        ]
+      ],
+      "width": 0.25,
+      "layer": "F.Cu",
+      "net": 1
+    },
+    {
+      "points": [
+        [
+          120,
+          95
+        ],
+        [
+          120,
+          100
+        ]
+      ],
+      "width": 0.25,
+      "layer": "F.Cu",
+      "net": 1
+    },
+    {
+      "points": [
+        [
+          110,
+          100
+        ],
+        [
+          125,
+          100
+        ]
+      ],
+      "width": 0.15,
+      "layer": "F.Cu",
+      "net": 3
+    },
+    {
+      "points": [
+        [
+          125,
+          100
+        ],
+        [
+          130,
+          100
+        ]
+      ],
+      "width": 0.15,
+      "layer": "F.Cu",
+      "net": 3
+    },
+    {
+      "points": [
+        [
+          110,
+          105
+        ],
+        [
+          125,
+          105
+        ]
+      ],
+      "width": 0.15,
+      "layer": "F.Cu",
+      "net": 4
+    },
+    {
+      "points": [
+        [
+          125,
+          105
+        ],
+        [
+          130,
+          105
+        ]
+      ],
+      "width": 0.15,
+      "layer": "F.Cu",
+      "net": 4
+    },
+    {
+      "points": [
+        [
+          120,
+          100
+        ],
+        [
+          120,
+          105
+        ]
+      ],
+      "width": 0.25,
+      "layer": "B.Cu",
+      "net": 1
+    },
+    {
+      "points": [
+        [
+          130,
+          95
+        ],
+        [
+          135,
+          95
+        ]
+      ],
+      "width": 0.25,
+      "layer": "F.Cu",
+      "net": 2
+    }
+  ],
+  "vias": [
+    {
+      "pos": [
+        120,
+        100
+      ],
+      "size": 0.8,
+      "drill": 0.4,
+      "net": 1
+    },
+    {
+      "pos": [
+        130,
+        95
+      ],
+      "size": 0.8,
+      "drill": 0.4,
+      "net": 2
+    }
+  ],
+  "footprints": [
+    {
+      "name": "R_0402",
+      "ref": "R1",
+      "value": "10k",
+      "pos": [
+        110,
+        90
+      ],
+      "rot": 0,
+      "layer": "F.Cu",
+      "pads": [
+        {
+          "pos": [
+            -0.5,
+            0
+          ],
+          "size": [
+            0.5,
+            0.5
+          ],
+          "shape": "roundrect",
+          "type": "smd",
+          "net": 2,
+          "drill": null
+        },
+        {
+          "pos": [
+            0.5,
+            0
+          ],
+          "size": [
+            0.5,
+            0.5
+          ],
+          "shape": "roundrect",
+          "type": "smd",
+          "net": 0,
+          "drill": null
+        }
+      ],
+      "courtyard": [
+        [
+          -1,
+          -0.5
+        ],
+        [
+          1,
+          -0.5
+        ],
+        [
+          1,
+          0.5
+        ],
+        [
+          -1,
+          0.5
+        ],
+        [
+          -1,
+          -0.5
+        ]
+      ],
+      "fab": []
+    },
+    {
+      "name": "R_0402",
+      "ref": "R2",
+      "value": "4.7k",
+      "pos": [
+        110,
+        95
+      ],
+      "rot": 0,
+      "layer": "F.Cu",
+      "pads": [
+        {
+          "pos": [
+            -0.5,
+            0
+          ],
+          "size": [
+            0.5,
+            0.5
+          ],
+          "shape": "roundrect",
+          "type": "smd",
+          "net": 1,
+          "drill": null
+        },
+        {
+          "pos": [
+            0.5,
+            0
+          ],
+          "size": [
+            0.5,
+            0.5
+          ],
+          "shape": "roundrect",
+          "type": "smd",
+          "net": 0,
+          "drill": null
+        }
+      ],
+      "courtyard": [],
+      "fab": []
+    },
+    {
+      "name": "C_0402",
+      "ref": "C1",
+      "value": "100nF",
+      "pos": [
+        110,
+        100
+      ],
+      "rot": 0,
+      "layer": "F.Cu",
+      "pads": [
+        {
+          "pos": [
+            -0.5,
+            0
+          ],
+          "size": [
+            0.5,
+            0.5
+          ],
+          "shape": "roundrect",
+          "type": "smd",
+          "net": 3,
+          "drill": null
+        },
+        {
+          "pos": [
+            0.5,
+            0
+          ],
+          "size": [
+            0.5,
+            0.5
+          ],
+          "shape": "roundrect",
+          "type": "smd",
+          "net": 0,
+          "drill": null
+        }
+      ],
+      "courtyard": [],
+      "fab": []
+    },
+    {
+      "name": "SOIC-8_3.9x4.9mm_P1.27mm",
+      "ref": "U1",
+      "value": "ATtiny85",
+      "pos": [
+        130,
+        100
+      ],
+      "rot": 0,
+      "layer": "F.Cu",
+      "pads": [
+        {
+          "pos": [
+            -2.7,
+            -1.905
+          ],
+          "size": [
+            1.5,
+            0.6
+          ],
+          "shape": "rect",
+          "type": "smd",
+          "net": 2,
+          "drill": null
+        },
+        {
+          "pos": [
+            -2.7,
+            -0.635
+          ],
+          "size": [
+            1.5,
+            0.6
+          ],
+          "shape": "rect",
+          "type": "smd",
+          "net": 3,
+          "drill": null
+        },
+        {
+          "pos": [
+            -2.7,
+            0.635
+          ],
+          "size": [
+            1.5,
+            0.6
+          ],
+          "shape": "rect",
+          "type": "smd",
+          "net": 4,
+          "drill": null
+        },
+        {
+          "pos": [
+            -2.7,
+            1.905
+          ],
+          "size": [
+            1.5,
+            0.6
+          ],
+          "shape": "rect",
+          "type": "smd",
+          "net": 1,
+          "drill": null
+        },
+        {
+          "pos": [
+            2.7,
+            1.905
+          ],
+          "size": [
+            1.5,
+            0.6
+          ],
+          "shape": "rect",
+          "type": "smd",
+          "net": 0,
+          "drill": null
+        },
+        {
+          "pos": [
+            2.7,
+            0.635
+          ],
+          "size": [
+            1.5,
+            0.6
+          ],
+          "shape": "rect",
+          "type": "smd",
+          "net": 0,
+          "drill": null
+        },
+        {
+          "pos": [
+            2.7,
+            -0.635
+          ],
+          "size": [
+            1.5,
+            0.6
+          ],
+          "shape": "rect",
+          "type": "smd",
+          "net": 0,
+          "drill": null
+        },
+        {
+          "pos": [
+            2.7,
+            -1.905
+          ],
+          "size": [
+            1.5,
+            0.6
+          ],
+          "shape": "rect",
+          "type": "smd",
+          "net": 2,
+          "drill": null
+        }
+      ],
+      "courtyard": [
+        [
+          -2,
+          -2.5
+        ],
+        [
+          2,
+          -2.5
+        ],
+        [
+          2,
+          2.5
+        ],
+        [
+          -2,
+          2.5
+        ],
+        [
+          -2,
+          -2.5
+        ]
+      ],
+      "fab": []
+    }
+  ]
+}
